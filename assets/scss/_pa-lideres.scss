@@ -1,0 +1,38 @@
+.pa-lideres {
+  .pa-lider-thumb {
+    border: 5px solid var(--pa-color-default-aux);
+    transition: border 0.5s;
+  }
+
+  .pa-linkback,
+  .pa-lider-contact {
+    a {
+      color: var(--pa-color-default);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--pa-color-gray01);
+
+    .pa-link-perfil {
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    &:hover {
+      color: var(--pa-color-gray01);
+
+      .pa-link-perfil {
+        visibility: visible !important;
+        color: var(--pa-color-default);
+        opacity: 1;
+      }
+
+      .pa-lider-thumb {
+        border: 5px solid var(--pa-color-default);
+      }
+    }
+  }
+}
