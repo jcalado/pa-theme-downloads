@@ -1,0 +1,15 @@
+{
+    "name": "igrejaadventista/pa-theme-downloads",
+    "type": "wordpress-theme",
+    "repositories":[
+		{
+			"type":"composer",
+			"url":"https://wpackagist.org"
+		}
+	],
+    "autoload": {
+        "psr-4": {
+            "Blocks\\": "Blocks/"
+        }
+    }
+}
