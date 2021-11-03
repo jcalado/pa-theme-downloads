@@ -1,5 +1,27 @@
 <?php
 
+/**
+ * getPostEditorial Get the post editorial
+ *
+ * @param string $post_id The post ID
+ * @return mixed
+ */
+function getPostEditorial($post_id) {
+  if($term = get_the_terms($post_id, 'xtt-pa-editorias'))
+      return $term[0];
+
+  return null;
+}
+
+
+
+
+
+
+
+
+
+
 /** 
  * videoLength Format video length in 'mm:ss'
  *
