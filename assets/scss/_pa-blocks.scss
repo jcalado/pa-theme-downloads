@@ -1,6 +1,6 @@
-.pa-w-list-videos {
+.pa-w-list-posts-column {
   .img-container {
-    width: 46.8%;
+    width: 43.3%;
   }
 }
 
@@ -11,4 +11,8 @@
       font-weight: 600;
     }
   }
+}
+
+.ratio-56x31 {
+  --bs-aspect-ratio: calc(62 / 112 * 100%);
 }

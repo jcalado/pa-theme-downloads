@@ -2,5 +2,5 @@
   --pa-color-default: #{$color};
   --pa-color-default-dark: #{darken($color, 11%)};
   --pa-color-default-light: #{saturate(lighten($color, 10%), 0%)};
-  --pa-color-default-aux: #{desaturate(lighten($color, 48%), 30%)};
+  --pa-color-default-aux: #{lighten($color, 45%)};
 }

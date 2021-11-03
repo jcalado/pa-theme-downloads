@@ -1,13 +1,13 @@
 <?php
 
 /**
- * getPostEditorial Get the post editorial
+ * Search the first department of the post
  *
  * @param string $post_id The post ID
  * @return mixed
  */
-function getPostEditorial($post_id) {
-  if($term = get_the_terms($post_id, 'xtt-pa-editorias'))
+function getDepartment($post_id) {
+  if($term = get_the_terms($post_id, 'xtt-pa-departamentos'))
       return $term[0];
 
   return null;
@@ -51,19 +51,6 @@ function getPrioritySeat($post_id): string {
         return $term[0]->name;
 
     return __('There is no headquarter office linked to this post.', 'iasd');
-}
-
-/**
- * Search the first department of the post
- *
- * @param string $post_id The post ID
- * @return mixed
- */
-function getDepartment($post_id) {
-    if($term = get_the_terms($post_id, 'xtt-pa-departamentos'))
-        return $term[0];
-
-    return null;
 }
 
 /**
