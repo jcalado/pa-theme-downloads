@@ -4,7 +4,7 @@ namespace Blocks;
 
 use Blocks\PACarouselVideos\PACarouselVideos;
 use Blocks\PAFeaturePost\PAFeaturePost;
-use Blocks\PAListVideosColumn\PAListVideosColumn;
+use Blocks\PAListPostsColumn\PAListPostsColumn;
 
 class ChildBlocks
 {
@@ -22,7 +22,7 @@ class ChildBlocks
     {
         $newBlocks = [
             PAFeaturePost::class,
-            PAListVideosColumn::class,
+            PAListPostsColumn::class,
             PACarouselVideos::class
         ];
 

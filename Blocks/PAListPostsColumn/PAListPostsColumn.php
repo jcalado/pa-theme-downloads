@@ -1,6 +1,6 @@
 <?php
 
-namespace Blocks\PAListVideosColumn;
+namespace Blocks\PAListPostsColumn;
 
 use Blocks\Block;
 use Extended\LocalData;
@@ -10,21 +10,19 @@ use WordPlate\Acf\Fields\ButtonGroup;
 use WordPlate\Acf\Fields\Text;
 
 /**
- * Class PAListVideosColumn
- * @package Blocks\PAListVideosColumn
+ * Class PAListPostsColumn
+ * @package Blocks\PAListPostsColumn
  */
-class PAListVideosColumn extends Block
-{
+class PAListPostsColumn extends Block {
 
-	public function __construct()
-	{
+	public function __construct() {
 		// Set block settings
 		parent::__construct([
-			'title'       => __('IASD - Vídeos - List(B)', 'iasd'),
-			'description' => __('Block to show videos contents in list format.', 'iasd'),
+			'title'       => __('IASD - Posts - List(B)', 'iasd'),
+			'description' => __('Block to show posts contents in list format.', 'iasd'),
 			'category'    => 'pa-adventista',
-			'keywords'    => ['list', 'video'],
-			'icon'        => 'playlist-video',
+			'keywords'    => ['list', 'posts'],
+			'icon'        => 'list-view',
 		]);
 
 		add_filter('acf/fields/localposts_data/query/name=items_popular', array($this, 'filter'));
@@ -35,12 +33,11 @@ class PAListVideosColumn extends Block
 	 *
 	 * @return array Fields array
 	 */
-	protected function setFields(): array
-	{
+	protected function setFields(): array {
 		return array_merge(
 			[
 				Text::make(__('Title', 'iasd'), 'title')
-					->defaultValue(__('IASD - Vídeos - List(B)', 'iasd'))
+					->defaultValue(__('IASD - Posts - List(B)', 'iasd'))
 					->required(),
 
 				ButtonGroup::make('Modo', 'mode')
@@ -50,8 +47,8 @@ class PAListVideosColumn extends Block
 					])
 					->defaultValue('latest'),
 
-					LocalData::make(__('Videos', 'iasd'), 'items_latest')
-					->instructions(__('Select videos', 'iasd'))
+					LocalData::make(__('Posts', 'iasd'), 'items_latest')
+					->instructions(__('Select posts', 'iasd'))
 					->postTypes(['post'])
 					->initialLimit(4)
 					->manualItems(false)
@@ -66,8 +63,8 @@ class PAListVideosColumn extends Block
 						ConditionalLogic::if('mode')->equals('latest')
 					]),
 
-					LocalData::make(__('Videos', 'iasd'), 'items_popular')
-					->instructions(__('Select videos', 'iasd'))
+					LocalData::make(__('Posts', 'iasd'), 'items_popular')
+					->instructions(__('Select posts', 'iasd'))
 					->postTypes(['post'])
 					->initialLimit(4)
 					->manualItems(false)
@@ -91,8 +88,7 @@ class PAListVideosColumn extends Block
 	 *
 	 * @return array
 	 */
-	public function with(): array
-	{
+	public function with(): array {
 		$mode = get_field('mode');
 
 		return [
