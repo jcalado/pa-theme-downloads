@@ -1,7 +1,5 @@
 <?php
 
-use WordPlate\Acf\Fields\Number;
-use WordPlate\Acf\Fields\Oembed;
 use WordPlate\Acf\Location;
 
 class PaAcfPostFields {
@@ -16,11 +14,7 @@ class PaAcfPostFields {
             'key'   => 'video_info',
             'style' => 'default',
             'fields' => [
-                Oembed::make(__('Video', 'iasd'), 'video_url')
-                    ->required(),
-                Number::make(__('Lenght', 'iasd'), 'video_length')
-                    ->instructions(__('It will be get when saving the post.', 'iasd'))
-                    ->readOnly(),
+                
             ],
             'location' => [
                 Location::if('post_type', 'post'),
