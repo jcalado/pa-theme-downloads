@@ -1,16 +1,36 @@
 {
-    "name": "igrejaadventista/pa-theme-downloads",
-    "type": "wordpress-theme",
-    "repositories":[
-		{
-			"type":"composer",
-			"url":"https://wpackagist.org"
+  "name": "igrejaadventista/pa-theme-downloads",
+  "type": "wordpress-theme",
+  "repositories": [
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    },
+    {
+			"type": "package",
+			"package": {
+				"name": "lordealeister/popular-posts",
+				"type": "wordpress-plugin",
+				"version": "dev-release/1.2.3",
+				"dist": {
+					"url": "https://github.com/lordealeister/popular-posts/releases/download/1.2.3/popular-posts-1.2.3.zip",
+					"type": "zip"
+				},
+				"autoload": {
+					"files": [
+						"popular-posts.php"
+					]
+				}
+			}
 		}
 	],
-    "autoload": {
-        "psr-4": {
-            "Extended\\": "Extended/",
-            "Blocks\\": "Blocks/"
-        }
+  "autoload": {
+    "psr-4": {
+      "Extended\\": "Extended/",
+      "Blocks\\": "Blocks/"
     }
+  },
+  "require": {
+		"lordealeister/popular-posts": "dev-release/1.2.3"
+	}
 }
