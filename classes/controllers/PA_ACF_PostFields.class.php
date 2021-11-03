@@ -2,7 +2,6 @@
 
 use WordPlate\Acf\Fields\Number;
 use WordPlate\Acf\Fields\Oembed;
-use WordPlate\Acf\Fields\Text;
 use WordPlate\Acf\Location;
 
 class PaAcfPostFields {
@@ -13,28 +12,17 @@ class PaAcfPostFields {
 
     function createACFFields() {
         register_extended_field_group([
-            'title' => 'Informações do vídeo',
+            'title' => __('Video info', 'iasd'),
+            'key'   => 'video_info',
             'style' => 'default',
             'fields' => [
-                Oembed::make('Vídeo', 'video_url')
+                Oembed::make(__('Video', 'iasd'), 'video_url')
                     ->required(),
-                Number::make('Duração', 'video_length')
-                    ->instructions('Será obtido ao salvar o post')
+                Number::make(__('Lenght', 'iasd'), 'video_length')
+                    ->instructions(__('It will be get when saving the post.', 'iasd'))
                     ->readOnly(),
             ],
             'location' => [
-                Location::if('post_taxonomy', 'xtt-pa-format:video'),
-            ]
-        ]);
-
-        register_extended_field_group([
-            'title'      => 'Informações de autor',
-            'style'      => 'default',
-            'position'   => 'side',
-            'fields'     => [
-                Text::make('Autor', 'custom_author'),
-            ],
-            'location'   => [
                 Location::if('post_type', 'post'),
             ]
         ]);
@@ -42,4 +30,4 @@ class PaAcfPostFields {
 
 }
 
-new PaAcfPostFields();
+$PaAcfPostFields = new PaAcfPostFields();

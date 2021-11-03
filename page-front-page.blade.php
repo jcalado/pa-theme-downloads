@@ -6,6 +6,12 @@
 
 @section('content')
 
-@include('template-parts.home')
+<div class="pa-content py-5">
+	<div class="container">
+
+        {!! the_content() !!}
+
+    </div>
+</div>
 
 @endsection

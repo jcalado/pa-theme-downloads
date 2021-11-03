@@ -1,39 +1,14 @@
-.pa-w-list-columns {
-    .pa-author-item {
-        margin-bottom: 1.25rem; // 20px
-    }
-
-    .ratio {
-        height: 105px;
-        width: 105px;
-    }
-
-    h3 {
-        font-size: 1.125rem; // 18px
-    }
+.pa-w-list-videos {
+  .img-container {
+    width: 46.8%;
+  }
 }
 
-.pa-w-contact {
-    background-color: var(--pa-color-gray06);
-
-    &__icon {
-        color: var(--pa-color-default) !important;
-        font-size: 2rem; // 32px
+.pa-w-list-posts {
+  @media(min-width: 768px) and (max-width: 991px) {
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
     }
-
-    &__title {
-        font-size: 1.125rem; // 18px
-    }
-
-    a {
-        color: var(--pa-color-default) !important;
-      
-        &:hover {
-          color: var(--pa-color-default-light);
-        }
-
-        i {
-            margin-right: 12px;
-        }
-    }
+  }
 }

@@ -1,9 +1,8 @@
 style.css
 style.css.map
 mix-manifest.json
-yarn.lock
 .sass-cache
 node_modules
 vendor
-composer.lock
 assets/js
+composer.lock

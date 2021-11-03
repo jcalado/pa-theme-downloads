@@ -1,38 +1,65 @@
-<header class="mb-4">
-    <h1 class="fw-bold mb-3">{!! single_post_title() !!}</h1>
-
-    <h2 class="mb-3 pb-3">{!! \Illuminate\Support\Str::of(get_the_excerpt())->limit(250) !!}</h3>
-
-    @if(!empty($format = getPostFormat(get_the_ID())) && $format->slug != 'artigo' && is_singular('post'))        
-        <div class="pa-post-meta mb-1">Por 
-            <span>{!! !empty($custom_author = get_field('custom_author')) ? $custom_author : get_the_author() !!}</span>@if($region = getPostRegion(get_the_ID()))<em class="pa-pipe">|</em><span class="ms-2"><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i> {{ $region->name }}</span>@endif
+{{-- Player --}}
+@hasfield('video_url', get_the_ID())
+    <div class="row mb-3">
+        <div class="col-12">
+          @hasfield('video_url', get_the_ID())
+            <div class="embed-container">
+              {!! get_field('video_url', get_the_ID()) !!}  
+            </div>
+          @endfield
         </div>
-    @endif
+    </div>
+@endfield
 
-    <div class="pa-post-meta">{!! the_date() !!}</div>
+<div class="row my-4">
+    <div class="col-md mb-4 mb-md-0 d-flex flex-column align-items-start">
+        {{-- Title --}}
+        <h1 class="single-title mb-2">{{ the_title() }}</h1>
 
-    <hr class="my-45">
+        {{-- Tempo do vídeo --}}
+        <div class="figure-caption d-flex align-items-center justify-content-start">
+            @hasfield('video_url', get_the_ID())
+                <span class="pa-video-time rounded-1">
+                    <i class="far fa-clock me-1"></i>        
 
-    <div class="d-flex justify-content-between">
-        <div class="pa-share d-none d-xl-block">
-            @php require(get_template_directory() . '/components/parts/share.php') @endphp
+                    @videolength(get_the_ID())
+                </span>
+
+                <span class="mx-2">|</span>
+            @endfield
+
+            <span>@getPrioritySeat(get_the_ID()) </span> 
         </div>
+    </div>
+    
+    {{-- Shere --}}
+    <div class="col-auto">
+        <div class="pa-share">
+            <ul class="list-inline">
+                <li class="list-inline-item">{{ __('Share:', 'iasd') }} </li>
 
-        <div class="">
-            <ul class="pa-accessibility list-inline">
-                <li class="pa-text-dec list-inline-item"><a href="#" class="rounded p-2" onclick="window.TextSize.pa_diminui_texto(event)">-A</a></li>
-                <li class="pa-text-inc list-inline-item"><a href="#" class="rounded p-2" onclick="window.TextSize.pa_aumenta_texto(event)">+A</a></li>
+                {{-- Twitter --}}
+                <li class="list-inline-item">
+                    <a target="_blank" rel="noopener" href="@php(linkToShare(get_the_ID(), 'twitter'))">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
 
-                @if(get_post_meta(get_the_ID(), 'amazon_polly_enable', true))
-                    <li class="pa-text-listen list-inline-item">
-                        <a href="#" class="rounded p-2" onclick="pa_play(event, this)">
-                            <i class="fas fa-volume-up"></i> Ouvir Texto
-                        </a>
-                        
-                        <audio id="pa-accessibility-player" src="{{ get_post_meta(get_the_ID(), 'amazon_polly_audio_link_location', true) }}" controls></audio>
-                    </li>
-                @endif
+                {{-- Facebook --}}
+                <li class="list-inline-item">
+                    <a target="_blank" rel="noopener" href="@php(linkToShare(get_the_ID(), 'facebook'))">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+
+                {{-- Whatssapp --}}
+                <li class="list-inline-item">
+                    <a target="_blank" rel="noopener" href="@php(linkToShare(get_the_ID(), 'whatsapp'))" >
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+            
             </ul>
         </div>
     </div>
-</header>
+</div>

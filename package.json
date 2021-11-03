@@ -1,5 +1,5 @@
 {
-  "name": "pa-thema-sedes",
+  "name": "pa-thema-videos",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -37,11 +37,5 @@
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
     "vue-template-compiler": "^2.6.14"
-  },
-  "dependencies": {
-    "slim-js": "5.0.9"
-  },
-  "browserslist": [
-    "chrome 79"
-  ]
+  }
 }

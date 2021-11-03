@@ -29,7 +29,7 @@ blade_directive('getHeaderTitle', function($expression) {
 
 blade_directive('hasfield', function($expression) {
     if(Str::contains($expression, ',')):
-        $expression = PA_Util::parse($expression);
+        $expression = PaUtil::parse($expression);
 
         return "<?php if(get_field({$expression->get(0)}, {$expression->get(1)})): ?>";
     endif;

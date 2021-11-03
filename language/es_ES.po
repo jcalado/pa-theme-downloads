@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-10-25 10:20-0300\n"
+"PO-Revision-Date: 2021-10-25 10:20-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html__;esc_html_e;esc_html_x;esc_attr__;"
+"esc_attr_e;esc_attr_x\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#: components/header/title.blade.php:5
+msgid "Adventist videos"
+msgstr "Vídeos adventistas"
+
+#: template-parts/feature.blade.php:3 Blocks/PAFeaturePost/PAFeaturePost.php:42
+msgid "Feature"
+msgstr "Destaque"
+
+#: template-parts/single/header.blade.php:39
+msgid "Share:"
+msgstr "Compartilhar:"
+
+#: template-parts/single/related-posts.blade.php:9
+msgid "Related video"
+msgstr "Vídeos relacionados"
+
+#: Blocks/PACarouselVideos/PACarouselVideos.php:21
+msgid "IASD - Videos - Carousel"
+msgstr ""
+
+#: Blocks/PACarouselVideos/PACarouselVideos.php:44
+#: Blocks/PAFeaturePost/PAFeaturePost.php:41
+#: Blocks/PAListVideosColumn/PAListVideosColumn.php:42
+msgid "Title"
+msgstr "Título"
+
+#: Blocks/PACarouselVideos/PACarouselVideos.php:49
+#: Blocks/PAListVideosColumn/PAListVideosColumn.php:48
+msgid "Recents"
+msgstr "Recentes"
+
+#: Blocks/PACarouselVideos/PACarouselVideos.php:50
+#: Blocks/PAListVideosColumn/PAListVideosColumn.php:49
+msgid "Popular"
+msgstr "Populares"
+
+#: Blocks/PACarouselVideos/PACarouselVideos.php:54
+#: Blocks/PACarouselVideos/PACarouselVideos.php:70
+#: Blocks/PAFeaturePost/PAFeaturePost.php:44
+#: Blocks/PAListVideosColumn/PAListVideosColumn.php:53
+#: Blocks/PAListVideosColumn/PAListVideosColumn.php:69
+msgid "Videos"
+msgstr "Vídeos"
+
+#: Blocks/PACarouselVideos/PACarouselVideos.php:55
+#: Blocks/PACarouselVideos/PACarouselVideos.php:71
+#: Blocks/PAFeaturePost/PAFeaturePost.php:45
+#: Blocks/PAListVideosColumn/PAListVideosColumn.php:54
+#: Blocks/PAListVideosColumn/PAListVideosColumn.php:70
+msgid "Select videos"
+msgstr "Vídeos relacionados"
+
+#: Blocks/PAFeaturePost/PAFeaturePost.php:20
+msgid "IASD - Videos - Feature"
+msgstr ""
+
+#: Blocks/PAFeaturePost/PAFeaturePost.php:21
+msgid "Block to show a single video content on feature format."
+msgstr "Bloco para exibir um único vídeo no formato de destaque."
+
+#: Blocks/PAListVideosColumn/PAListVideosColumn.php:23
+#: Blocks/PAListVideosColumn/PAListVideosColumn.php:43
+msgid "IASD - Vídeos - List(B)"
+msgstr ""
+
+#: Blocks/PAListVideosColumn/PAListVideosColumn.php:24
+msgid "Block to show videos contents in list format."
+msgstr "Bloco para exibir vídeos no formato de lista."
+
+#: classes/PA_Helpers.php:31
+msgid "There is no headquarter office linked to this post."
+msgstr "Não tem nenhuma Sede Proprietária linkada a este post."
+
+#: classes/controllers/PA_ACF_PostFields.class.php:15
+msgid "Video info"
+msgstr "Informação do vídeo"
+
+#: classes/controllers/PA_ACF_PostFields.class.php:19
+msgid "Video"
+msgstr "Vídeo"
+
+#: classes/controllers/PA_ACF_PostFields.class.php:21
+msgid "Lenght"
+msgstr "Duração"
+
+#: classes/controllers/PA_ACF_PostFields.class.php:22
+msgid "It will be get when saving the post."
+msgstr "Será obtido ao salvar o post."
+
+#~ msgid "Mode"
+#~ msgstr "Modo"
+
+#~ msgid "Latest"
+#~ msgstr "Últimos"
+
+#~ msgid "Video select"
+#~ msgstr "Selecionar vídeo"
+
+#~ msgid "Quantity"
+#~ msgstr "Quantidade"
+
+#~ msgid "Featured posts"
+#~ msgstr "Posts em destaque"

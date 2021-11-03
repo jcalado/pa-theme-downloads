@@ -1,26 +1,32 @@
 @extends('layouts.app')
 
-@php setup_postdata(get_post()); @endphp
-
 @section('content')
-    <div class="pa-content-container pt-5 mt-3">
+    <div class="pa-content py-5">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-md-center">
                 {{-- Main --}}
-                <article class="col-12 col-md-8">          
-                    {{-- Post header --}}
+                <section class="col-auto col-md-8{{ is_active_sidebar('single') ? ' col-xl-8' : '' }}">          
+                    {{-- Post de destaque --}}
                     @include('template-parts.single.header')
 
                     {{-- Conteúdo do post --}}
-                    <div class="pa-content">
-                        {!! the_content() !!}
-                    </div>
+                    {!! the_content() !!}
 
-                    <div class="pa-break d-block my-5 py-2"></div>
+                    <hr class="separator">
 
-                    {{-- Post footer --}}
-                    @include('template-parts.single.footer')
-                </article>
+                    {{-- Post relacionados --}}
+                    @include('template-parts.single.related-posts')
+
+                    {{-- Post relacionados --}}
+                    @include('template-parts.single.comments')
+                </section>
+
+                {{-- Sidebar --}}
+                @if(is_active_sidebar('single'))
+                    <aside class="col-md-4 d-none d-xl-block">
+                        @php(dynamic_sidebar('single'))
+                    </aside>
+                @endif
             </div>
         </div>
     </div>

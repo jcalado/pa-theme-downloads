@@ -8,27 +8,7 @@ mix
     .sass('assets/scss/style.scss', 'style.css');
 
 mix
-    .js('assets/scripts/script.js', './assets/js')
-    .webpackConfig({
-        module: {
-            rules: [
-                {
-                    test: /\.js?$/,
-                    exclude: /node_modules(?!\/slim-js)/,
-                    use: [
-                        {
-                            loader: 'babel-loader',
-                            options: Config.babel(),
-                        },
-                    ],
-                },
-            ],
-        },
-    });
-
-mix.options({
-    processCssUrls: false,
-});
+    .js('assets/scripts/script.js', './assets/js');
 
 mix
     .sourceMaps(false, 'source-map')

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-class PA_Util {
+class PaUtil {
 
     /**
      * Parse expression passed to directive.
