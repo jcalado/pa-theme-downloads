@@ -1,0 +1,22 @@
+.archive {
+  .pa-blog-item {
+    .img-container {
+      flex: 0 0 auto;
+      width: 50.2%;
+
+      @media(min-width: 769px) {
+        width: 28.1%;
+      }
+    }
+
+    p {
+      font-size: 0.875rem; // 14px
+    }
+
+    .card-title {
+      @media(max-width: 572px) {
+        font-size: 0.938rem; // 15px
+      }
+    }
+  }
+}
