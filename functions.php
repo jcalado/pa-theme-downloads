@@ -51,78 +51,10 @@ add_action('pre_get_posts', function($query) {
     if(is_admin() || !is_tax() || !$query->is_main_query())
         return $query;
 
-    global $queryFeatured;
-    $object = get_queried_object();
-    
-    $queryFeatured = new WP_Query(
-        array(
-            'posts_per_page' => 1,
-            'post_status'	 => 'publish',
-            'post__in'       => get_option('sticky_posts'),
-            'tax_query'      => array(
-                array(
-                    'taxonomy' => $object->taxonomy,
-                    'terms'    => array($object->term_id),
-                ),
-            ),
-        )
-    );
-
-    if(empty($queryFeatured->found_posts)):
-        $queryFeatured = new WP_Query(
-            array(
-                'posts_per_page' 	   => 1,
-                'post_status'	 	   => 'publish',
-                'ignore_sticky_posts ' => true,
-                'tax_query'            => array(
-                    array(
-                        'taxonomy' => $object->taxonomy,
-                        'terms'    => array($object->term_id),
-                    ),
-                ),
-            )
-        );
-    endif;
-
-    $query->set('posts_per_page', 15);
-    $query->set('ignore_sticky_posts', true);
-    $query->set('post__not_in', !empty($queryFeatured->found_posts) ? array($queryFeatured->posts[0]->ID) : null);
+    $query->set('posts_per_page', 10);
 
     return $query;
-});
-
-/**
-* Filter save post to get video length
-*/
-add_action('acf/save_post', function($post_id) {
-    if(get_post_type($post_id) != 'post')
-        return;
-
-    $url = parse_url(get_field('video_url', $post_id, false));
-    $host = '';
-    $id = '';
-
-    if(empty($url))
-        return;
-
-    if(str_contains($url['host'], 'youtube') || str_contains($url['host'], 'youtu.be')):
-        $host = 'youtube';
-
-        if(array_key_exists('query', $url)):
-            parse_str($url['query'], $params);
-            $id = $params['v'];
-        else:
-            $id = str_replace('/', '', $url['path']);
-        endif;
-    elseif(str_contains($url['host'], 'vimeo')):
-        $host = 'vimeo';
-        $parts = explode('/', $url['path']);
-        $id = $parts[count($parts) - 1];
-    endif;
-
-    if(!empty($host) && !empty($id))
-        getVideoLength($post_id, $host, $id);
-});
+}, 11);
 
 add_filter('acf/fields/relationship/query', 'my_acf_fields_relationship_query', 10, 3);
 function my_acf_fields_relationship_query( $args ) {
