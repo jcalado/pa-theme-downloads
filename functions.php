@@ -16,6 +16,8 @@ add_filter('popular-posts/settings/url', function() {
     return THEME_URI . 'vendor/lordealeister/popular-posts/';
 });
 
+require_once(dirname(__FILE__) . '/core/PA_Theme_Downloads_Install.php');
+
 require_once(dirname(__FILE__) . '/classes/controllers/PA_ACF_PostFields.class.php');
 require_once(dirname(__FILE__) . '/classes/controllers/PA_EnqueueFiles.class.php');
 require_once(dirname(__FILE__) . '/classes/controllers/PA_Util.class.php');
