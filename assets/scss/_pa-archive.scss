@@ -19,4 +19,21 @@
       }
     }
   }
+
+  aside {
+    &::before {
+      background-color: var(--pa-color-gray06);
+      content: "";
+      position: absolute;
+      bottom: -96px;
+      left: 0;
+      right: -100%;
+      top: -48px;
+    }
+
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
 }

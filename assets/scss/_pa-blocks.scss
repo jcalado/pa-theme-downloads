@@ -13,6 +13,16 @@
   }
 }
 
+.pa-w-list-links {
+  a {
+    color: var(--pa-color-gray03) !important;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .ratio-56x31 {
   --bs-aspect-ratio: calc(62 / 112 * 100%);
 }

@@ -8,7 +8,7 @@
 	<div class="pa-content py-5">
 		<div class="container">
 			<div class="row justify-content-md-center">
-				<section class="col-12 col-md-8">
+				<section class="col-12 col-md-8 pe-xl-4">
           @if(get_query_var('paged') < 1 && $queryFeatured->found_posts > 0)
             @php
               get_template_part('template-parts/global/feature', 'feature', [
@@ -36,7 +36,7 @@
 				</section>
 
 				@if(is_active_sidebar('archive'))
-					<aside class="col-md-4 d-none d-xl-block">
+					<aside class="col-md-4 d-none d-xl-block position-relative ps-4">
 						@php(dynamic_sidebar('archive'))
 					</aside>
 				@endif

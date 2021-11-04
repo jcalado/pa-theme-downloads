@@ -4,6 +4,7 @@ namespace Blocks;
 
 use Blocks\PACarouselPosts\PACarouselPosts;
 use Blocks\PAFeaturePost\PAFeaturePost;
+use Blocks\PAListLinks\PAListLinks;
 use Blocks\PAListPostsColumn\PAListPostsColumn;
 
 class ChildBlocks
@@ -23,7 +24,8 @@ class ChildBlocks
         $newBlocks = [
             PAFeaturePost::class,
             PAListPostsColumn::class,
-            PACarouselPosts::class
+            PACarouselPosts::class,
+            PAListLinks::class,
         ];
 
         return array_merge($blocks, $newBlocks);
