@@ -49,7 +49,7 @@ class PAListPostsCards extends Block {
 
         LocalData::make(__('Posts', 'iasd'), 'items_latest')
 					->instructions(__('Select posts', 'iasd'))
-					->postTypes(['post'])
+					->postTypes(['post', 'kit'])
 					->initialLimit(5)
 					->manualItems(false)
 					->filterTaxonomies([
@@ -65,7 +65,7 @@ class PAListPostsCards extends Block {
 
         LocalData::make(__('Posts', 'iasd'), 'items_popular')
 					->instructions(__('Select posts', 'iasd'))
-					->postTypes(['post'])
+					->postTypes(['post', 'kit'])
 					->initialLimit(5)
 					->manualItems(false)
 					->filterTaxonomies([
