@@ -1,65 +1,35 @@
-{{-- Player --}}
-@hasfield('video_url', get_the_ID())
-    <div class="row mb-3">
-        <div class="col-12">
-          @hasfield('video_url', get_the_ID())
-            <div class="embed-container">
-              {!! get_field('video_url', get_the_ID()) !!}  
+<div class="post-info container-fluid px-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <div class="row align-items-center">
+          <div class="img-container mb-3 mb-xl-0">
+            <div class="ratio ratio-56x31">
+              <figure class="figure m-xl-0">
+                <img src="{{ check_immg(get_the_ID(), 'medium') }}" class="figure-img img-fluid rounded m-0 w-100" alt="{!! wp_strip_all_tags(get_the_title()) !!}">
+              </figure>	
             </div>
-          @endfield
+          </div>
+
+          <div class="col">
+            <h2 class="post-info__title border-0 p-0 fw-bold m-o">{!! wp_strip_all_tags(get_the_title()) !!}</h2>
+
+            <hr />
+
+            <div class="row align-items-center justify-content-between">
+              <div class="pa-post-meta col-auto order-1"><i class="far fa-calendar me-2"></i>{!! get_the_date() !!}</div>
+
+              <div class="pa-share col-auto order-3 order-xl-2 mt-2 mt-xl-0">
+                @php require(get_template_directory() . '/components/parts/share.php') @endphp
+              </div>
+
+              @notempty($tag = getPrioritySeat(get_the_ID()))
+                <span class="post-info__tag col-12 mt-2 order-2 order-xl-3">{{ $tag->name }}</span>
+              @endnotempty
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-@endfield
-
-<div class="row my-4">
-    <div class="col-md mb-4 mb-md-0 d-flex flex-column align-items-start">
-        {{-- Title --}}
-        <h1 class="single-title mb-2">{{ the_title() }}</h1>
-
-        {{-- Tempo do vídeo --}}
-        <div class="figure-caption d-flex align-items-center justify-content-start">
-            @hasfield('video_url', get_the_ID())
-                <span class="pa-video-time rounded-1">
-                    <i class="far fa-clock me-1"></i>        
-
-                    @videolength(get_the_ID())
-                </span>
-
-                <span class="mx-2">|</span>
-            @endfield
-
-            <span>@getPrioritySeat(get_the_ID()) </span> 
-        </div>
-    </div>
-    
-    {{-- Shere --}}
-    <div class="col-auto">
-        <div class="pa-share">
-            <ul class="list-inline">
-                <li class="list-inline-item">{{ __('Share:', 'iasd') }} </li>
-
-                {{-- Twitter --}}
-                <li class="list-inline-item">
-                    <a target="_blank" rel="noopener" href="@php(linkToShare(get_the_ID(), 'twitter'))">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-
-                {{-- Facebook --}}
-                <li class="list-inline-item">
-                    <a target="_blank" rel="noopener" href="@php(linkToShare(get_the_ID(), 'facebook'))">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-
-                {{-- Whatssapp --}}
-                <li class="list-inline-item">
-                    <a target="_blank" rel="noopener" href="@php(linkToShare(get_the_ID(), 'whatsapp'))" >
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </li>
-            
-            </ul>
-        </div>
-    </div>
+  </div>
 </div>
