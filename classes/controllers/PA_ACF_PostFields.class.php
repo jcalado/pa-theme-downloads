@@ -32,6 +32,7 @@ class PaAcfPostFields {
                 'width' => 33,
               ]),
             Number::make(__('Size', 'iasd'), 'size')
+              ->min(0)
               ->required()
               ->append('MB')
               ->wrapper([
