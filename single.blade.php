@@ -4,31 +4,18 @@
   <div class="pa-content pb-5">
     @include('template-parts.single.header')
 
-        <div class="container">
-            <div class="row justify-content-md-center">
-                {{-- Main --}}
-                <section class="col-auto col-md-8{{ is_active_sidebar('single') ? ' col-xl-8' : '' }}">          
-                  
+    <div class="container pt-5">
+      <div class="row justify-content-center">
+        <section class="col-auto col-md-8">     
+          <h2 class="mb-3">Detalhes do arquivo</h2>     
+          
+          <p class="post-excerpt mb-4">{!! get_the_excerpt() !!}</p>
+              
+          @include('template-parts.single.related-posts')
 
-                    {{-- Conteúdo do post --}}
-                    {!! the_content() !!}
-
-                    <hr class="separator">
-
-                    {{-- Post relacionados --}}
-                    @include('template-parts.single.related-posts')
-
-                    {{-- Post relacionados --}}
-                    @include('template-parts.single.comments')
-                </section>
-
-                {{-- Sidebar --}}
-                @if(is_active_sidebar('single'))
-                    <aside class="col-md-4 d-none d-xl-block">
-                        @php(dynamic_sidebar('single'))
-                    </aside>
-                @endif
-            </div>
-        </div>
+          @include('template-parts.single.comments')
+        </section>
+      </div>
     </div>
+  </div>
 @endsection
