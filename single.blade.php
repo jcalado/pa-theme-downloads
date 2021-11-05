@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="pa-content py-5">
+  <div class="pa-content pb-5">
+    @include('template-parts.single.header')
+
         <div class="container">
             <div class="row justify-content-md-center">
                 {{-- Main --}}
                 <section class="col-auto col-md-8{{ is_active_sidebar('single') ? ' col-xl-8' : '' }}">          
-                    {{-- Post de destaque --}}
-                    @include('template-parts.single.header')
+                  
 
                     {{-- Conteúdo do post --}}
                     {!! the_content() !!}

@@ -13,7 +13,18 @@ function getDepartment($post_id) {
   return null;
 }
 
+/**
+ * Search the first priority seat of the post
+ *
+ * @param string $post_id The post ID
+ * @return mixed
+ */
+function getPrioritySeat($post_id) {
+  if($term = get_the_terms($post_id, 'xtt-pa-owner'))
+      return $term[0];
 
+  return null;
+}
 
 
 
@@ -40,18 +51,7 @@ function videoLength(int $post_id = 0): string {
 	    return sprintf('%02d:%02d', ($length / 60 % 60), $length % 60);
 }
 
-/**
- * Search the first priority seat of the post
- *
- * @param string $post_id The post ID
- * @return string
- */
-function getPrioritySeat($post_id): string {
-    if($term = get_the_terms($post_id, 'xtt-pa-owner'))
-        return $term[0]->name;
 
-    return __('There is no headquarter office linked to this post.', 'iasd');
-}
 
 /**
  * Search the related posts

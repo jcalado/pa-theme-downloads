@@ -42,3 +42,39 @@
   position: relative;
   z-index: 2;
 }
+
+.post-info {
+  background-color: var(--pa-color-gray06);
+  padding-bottom: 2.5rem; // 40px
+  padding-top: 2.5rem; // 40px
+
+  .img-container {
+    width: 100%;
+
+    @media(min-width: 1200px) {
+      width: 36.6%;
+    }
+  }
+
+  .pa-share {
+    .list-inline {
+      margin: 0;
+    }
+  }
+
+  .pa-post-meta {
+    color: #717171;
+    font-size: 0.875rem; // 14px
+  }
+
+  &__title {
+    color: var(--pa-color-default);
+    font-size: 1.875rem !important; // 30px
+    text-transform: none !important;
+  }
+
+  &__tag {
+    color: var(--pa-color-default);
+    font-size: 0.875rem; // 14px
+  }
+}

@@ -7,12 +7,11 @@ Version: 1.0
 Template: pa-theme-sedes
 
 */
-@import "pa-archive";
 @import "pa-mixins";
 @import "pa-variables";
 @import "pa-components";
 @import "pa-blocks";
-
+@import "pa-archive";
 // @import "pa-cpt-projects";
 // @import "pa-front-page";
 // @import "pa-lideres";
