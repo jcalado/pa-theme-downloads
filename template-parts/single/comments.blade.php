@@ -8,7 +8,7 @@
         
         var disqus_config = function () {
             this.page.url = '{{ get_permalink() }}';  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = 'videos_{{ LANG }}_{{ get_the_ID() }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            this.page.identifier = 'downloads_{{ LANG }}_{{ get_the_ID() }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             this.page.title = '{{ the_title() }}';
         };
         
