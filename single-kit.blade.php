@@ -8,7 +8,7 @@
       <div class="row justify-content-center">
         <section class="col-auto col-md-8">     
           <div class="mb-5">
-            @include('template-parts.single.list-downloads', [
+            @include('template-parts.single.list-kit-downloads', [
               'downloads' => get_field('downloads'),
             ])
           </div>

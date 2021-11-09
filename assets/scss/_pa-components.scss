@@ -141,3 +141,34 @@
     }
   }
 }
+
+.accordion-kits {
+  .accordion-button {
+    padding: 0.75rem; // 12px
+
+    @media(min-width: 1024px) {
+      padding: 1rem; // 16px
+    }
+
+    &:not(.collapsed) {
+      background-color: inherit;
+      color: inherit;
+    }
+  }
+
+  .img-container {
+    width: 45.3%;
+
+    @media(min-width: 1024px) {
+      width: 12.4%;
+    }
+
+    .ratio {
+      --bs-aspect-ratio: calc(96 / 148 * 100%);
+
+      @media(min-width: 1024px) {
+        --bs-aspect-ratio: calc(66 / 102 * 100%);
+      }
+    }
+  }
+}
