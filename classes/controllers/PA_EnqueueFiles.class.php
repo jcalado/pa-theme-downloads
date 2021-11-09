@@ -7,7 +7,8 @@ class PaEnqueueFiles {
 	}
 
 	public function RegisterChildAssets() {
-		wp_enqueue_style( 'pa-child-style', get_stylesheet_uri());
+		wp_enqueue_style('pa-child-style', get_stylesheet_uri());
+    wp_enqueue_script('pa-child-script', get_stylesheet_directory_uri() . '/assets/js/script.js', ['scripts'], null, true);
 	}
 
 	function enqueueAssets() {

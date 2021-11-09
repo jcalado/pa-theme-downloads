@@ -26,8 +26,40 @@ function getPrioritySeat($post_id) {
   return null;
 }
 
+/**
+ * Search the related posts
+ *
+ * @param string $post_id The post ID
+ * @param int $limit Maximum posts per query. Default = 3
+ * @return array
+ */
+function getRelatedPosts($post_id, $limit = 3): array {
+  if(get_the_terms($post_id, 'xtt-pa-projetos') || get_the_terms($post_id, 'xtt-pa-departamentos')):
+    $terms_projetos = get_the_terms($post_id, 'xtt-pa-projetos') ? wp_list_pluck(get_the_terms($post_id, 'xtt-pa-projetos'), 'term_id') : null;
+    $terms_deptos   = get_the_terms($post_id, 'xtt-pa-departamentos') ? wp_list_pluck(get_the_terms($post_id, 'xtt-pa-departamentos'), 'term_id') : null;
+    
+    $args = array(
+      'post_type'      => 'post',
+      'post__not_in'   => array($post_id),
+      'posts_per_page' => $limit,
+      'tax_query'      => array(
+        'relation'     => 'OR',
+        array(
+          'taxonomy' => 'xtt-pa-projetos',
+          'terms'    => $terms_projetos,
+        ),
+        array(
+          'taxonomy' => 'xtt-pa-departamentos',
+          'terms'    => $terms_deptos,
+        ),
+      ),
+    );
+    
+    return get_posts($args);
+  endif;
 
-
+  return array();
+}
 
 
 
@@ -49,43 +81,6 @@ function videoLength(int $post_id = 0): string {
         return sprintf('%02d:%02d:%02d', ($length / 3600), ($length / 60 % 60), $length % 60);
     else
 	    return sprintf('%02d:%02d', ($length / 60 % 60), $length % 60);
-}
-
-
-
-/**
- * Search the related posts
- *
- * @param string $post_id The post ID
- * @param int $limit Maximum posts per query. Default = 6
- * @return array
- */
-function getRelatedPosts($post_id, $limit = 6): array {
-    if(get_the_terms($post_id, 'xtt-pa-projetos') || get_the_terms($post_id, 'xtt-pa-departamentos')):
-      $terms_projetos = get_the_terms($post_id, 'xtt-pa-projetos') ? wp_list_pluck(get_the_terms($post_id, 'xtt-pa-projetos'), 'term_id') : null;
-      $terms_deptos   = get_the_terms($post_id, 'xtt-pa-departamentos') ? wp_list_pluck(get_the_terms($post_id, 'xtt-pa-departamentos'), 'term_id') : null;
-      
-      $args = array(
-        'post_type'      => 'post',
-        'post__not_in'   => array($post_id),
-        'posts_per_page' => $limit,
-        'tax_query'      => array(
-          'relation'     => 'OR',
-          array(
-            'taxonomy' => 'xtt-pa-projetos',
-            'terms'    => $terms_projetos,
-          ),
-          array(
-            'taxonomy' => 'xtt-pa-departamentos',
-            'terms'    => $terms_deptos,
-          ),
-        ),
-      );
-      
-      return get_posts($args);
-    endif;
-
-    return array();
 }
 
 /**

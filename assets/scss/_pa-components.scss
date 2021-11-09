@@ -133,3 +133,11 @@
     white-space: nowrap;
   }
 }
+
+.pa-glide-related-posts {
+  .glide__slides {
+    @media(min-width: 1024px) {
+      transform: none !important;
+    }
+  }
+}
