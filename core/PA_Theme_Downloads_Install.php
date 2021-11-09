@@ -42,7 +42,7 @@ class PAThemeDownloadsInstall {
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array('slug' => 'kit'),
+			'rewrite'            => array('slug' => 'kits'),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
