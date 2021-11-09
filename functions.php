@@ -33,17 +33,22 @@ add_filter('blade/view/paths', function ($paths) {
 });
 
 add_filter('template_include', function ($template) {
-    $path = explode('/', $template);
-    $template_chosen = basename(end($path), '.php');
-    $template_chosen = str_replace('.blade', '', $template_chosen);
-    $grandchild_template = dirname(__FILE__) . '/' . $template_chosen . '.blade.php';
+  if(is_singular('kit') && file_exists(dirname(__FILE__) . '/single-kit.blade.php')):
+    blade('single-kit');
+    return '';
+  endif;
+  
+  $path = explode('/', $template);
+  $template_chosen = basename(end($path), '.php');
+  $template_chosen = str_replace('.blade', '', $template_chosen);
+  $grandchild_template = dirname(__FILE__) . '/' . $template_chosen . '.blade.php';
 
-    if(file_exists($grandchild_template)):
-        blade($template_chosen);
-        return '';
-    endif;
+  if(file_exists($grandchild_template)):
+    blade($template_chosen);
+    return '';
+  endif;
 
-    return $template;
+  return $template;
 });
 
 /**

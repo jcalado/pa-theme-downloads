@@ -42,7 +42,7 @@ class PAThemeDownloadsInstall {
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array('slug' => 'press'),
+			'rewrite'            => array('slug' => 'kit'),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
@@ -52,6 +52,10 @@ class PAThemeDownloadsInstall {
 		);
 			
 		register_post_type('kit', $args);
+
+		register_taxonomy_for_object_type('xtt-pa-projetos', 'kit');
+    register_taxonomy_for_object_type('xtt-pa-departamentos', 'kit');
+    register_taxonomy_for_object_type('xtt-pa-owner', 'kit');
 	}
 
 	function setWidgets() {
