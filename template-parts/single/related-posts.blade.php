@@ -1,43 +1,39 @@
-@php
-    $relatedPosts = getRelatedPosts(get_the_ID());
-@endphp
-
-@empty(!$relatedPosts)
-    {{-- Title --}}
-    <div class="row mb-4">
-        <div class="col-12">
-            <h2>{{ __('Related video', 'iasd') }}</h2>
-        </div>
+@notempty($relatedPosts = getRelatedPosts(get_the_ID()))
+  <div class="row mb-3 mb-xl-4">
+    <div class="col-12">
+      <h2 class="mb-0 mb-xl-2">{{ __('Related files', 'iasd') }}</h2>
     </div>
+  </div>
 
-    {{-- Vídeos --}}
-    <div class="pa-blog-itens mb-4">
-        <h2 class="mb-4">{{ isset($title) ? $title : single_term_title() }}</h2>
-        
-        <div class="row pa-w-list-videos">
-            @foreach($relatedPosts as $post)
-                <div class="pa-blog-item mb-4 mb-md-4 border-0 col-12 col-md-4 position-relative">
-                    <div class="ratio ratio-16x9 mb-2">
-                        <figure class="figure">
-                            <img src="{{ check_immg($post->ID, 'medium') }}" class="figure-img img-fluid rounded m-0 w-100 h-100 object-cover" alt="{{ get_the_title($post->ID) }}">
+  <div class="row pa-blog-itens mb-4 mx-sm-0">
+    <div class="pa-glide-related-posts pa-carousel-download pa-widget px-0">
+      <div class="glide__track ps-1 ps-sm-0" data-glide-el="track">
+        <div class="glide__slides ps-1 ps-sm-0">
+          @foreach($relatedPosts as $post)
+            <div class="glide__slide px-1">
+              <div class="card border-0 shadow-sm">
+                <figure class="ratio ratio-16x9 bg-light rounded-bottom overflow-hidden mb-2">
+                  <img src="{{ check_immg($post->ID, 'medium') }}" class="card-img-top"	alt="{!! wp_strip_all_tags(get_the_title($post->ID)) !!}" />
+                </figure>
 
-                            @hasfield('video_length', $post->ID)
-                                <div class="figure-caption position-absolute w-100 h-100 d-block">
-                                    <span class="pa-video-time position-absolute px-2 rounded-1">
-                                        <i class="far fa-clock me-1" aria-hidden="true"></i> @videolength($post->ID)
-                                    </span>
-                                </div>
-                            @endfield
-                        </figure>	
-                    </div>
+                <div class="card-body p-3">
+                  @notempty($department = getDepartment($post->ID))
+                    <span class="pa-tag rounded-1 text-uppercase d-inline-block px-2 mb-2">{{ $department->name }}</span>
+                  @endnotempty
 
-                    <a class="stretched-link" href="{{ get_the_permalink($post->ID) }}" title="{{ get_the_title($post->ID) }}">
-                        <h3 class="card-title fw-bold h6 pa-truncate-2">{!! get_the_title($post->ID) !!}</h3>
-                    </a>
+                  <h3 class="card-title fw-bold h6 mb-3 pa-truncate-2">{!! wp_strip_all_tags(get_the_title($post->ID)) !!}</h3>
+                  
+                  <a href="{{ get_the_permalink($post->ID) }}" class="border border-1 px-4 py-1 rounded-pill btn-outline-primary text-uppercase fw-bold" title="{!! wp_strip_all_tags(get_the_title($post->ID)) !!}">
+                    Ver mais
+                  </a>
                 </div>
-            @endforeach
+              </div>
+            </div>
+          @endforeach
         </div>
+      </div>
     </div>
-@endempty
+  </div>
+@endnotempty
 
 
