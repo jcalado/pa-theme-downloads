@@ -14,22 +14,30 @@
       <div class="glide__track ps-1 ps-sm-0" data-glide-el="track">
         <div class="glide__slides ps-1 ps-sm-0">
           @foreach($relatedPosts as $post)
-            <div class="glide__slide px-1">
+            <div class="glide__slide px-1 h-auto">
               <div class="card border-0 shadow-sm">
                 <figure class="ratio ratio-16x9 bg-light rounded-bottom overflow-hidden mb-2">
                   <img src="{{ check_immg($post->ID, 'medium') }}" class="card-img-top"	alt="{!! wp_strip_all_tags(get_the_title($post->ID)) !!}" />
                 </figure>
 
-                <div class="card-body p-3">
+                <div class="card-body p-3 d-flex flex-column">
                   @notempty($department = getDepartment($post->ID))
-                    <span class="pa-tag rounded-1 text-uppercase d-inline-block px-2 mb-2">{{ $department->name }}</span>
+                    <div>
+                      <span class="pa-tag rounded-1 text-uppercase d-inline-block px-2 mb-2">{{ $department->name }}</span>
+                    </div>
                   @endnotempty
 
-                  <h3 class="card-title fw-bold h6 mb-3 pa-truncate-2">{!! wp_strip_all_tags(get_the_title($post->ID)) !!}</h3>
+                  <h3 class="card-title fw-bold h6 mb-3 pa-truncate-2 flex-grow-1">{!! wp_strip_all_tags(get_the_title($post->ID)) !!}</h3>
                   
-                  <a href="{{ get_the_permalink($post->ID) }}" class="border border-1 px-4 py-1 rounded-pill btn-outline-primary text-uppercase fw-bold" title="{!! wp_strip_all_tags(get_the_title($post->ID)) !!}">
-                    Ver mais
-                  </a>
+                  <div>
+                    <a 
+                      href="{{ get_the_permalink($post->ID) }}" 
+                      class="border border-1 px-4 py-1 rounded-pill btn-outline-primary text-uppercase fw-bold" 
+                      title="{!! wp_strip_all_tags(get_the_title($post->ID)) !!}"
+                    >
+                      Ver mais
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
