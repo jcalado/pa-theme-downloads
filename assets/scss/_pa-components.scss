@@ -195,3 +195,11 @@
     text-transform: none;
   }
 }
+
+.pa-carousel-download {
+  .glide__slide {
+    .card {
+      height: calc(100% - 16px);
+    }
+  }
+}
