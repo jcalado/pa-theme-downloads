@@ -7,15 +7,17 @@
     <div class="container pt-5">
       <div class="row justify-content-center">
         <section class="col-auto col-md-8">     
-          <div class="mb-5">
+          <div class="mb-5 pb-4">
+            <h2 class="mb-4">Materiais do kit</h2>
+
             @include('template-parts.single.list-kit-downloads', [
               'downloads' => get_field('downloads'),
             ])
           </div>
           
-          @include('template-parts.single.comments')
-          
-          @include('template-parts.single.related-posts')
+          @include('template-parts.single.related-posts', [
+            'title' => 'Kits relacionados'
+          ])
         </section>
       </div>
     </div>

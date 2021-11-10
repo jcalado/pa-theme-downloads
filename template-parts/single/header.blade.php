@@ -6,7 +6,7 @@
           <div class="img-container mb-3 mb-xl-0">
             <div class="ratio ratio-56x31">
               <figure class="figure m-xl-0">
-                <img src="{{ check_immg(get_the_ID(), 'medium') }}" class="figure-img img-fluid rounded m-0 w-100" alt="{!! wp_strip_all_tags(get_the_title()) !!}">
+                <img src="{{ check_immg(get_the_ID(), 'medium') }}" class="figure-img img-fluid rounded m-0 w-100 h-100 object-cover" alt="{!! wp_strip_all_tags(get_the_title()) !!}">
               </figure>	
             </div>
           </div>
