@@ -1,10 +1,10 @@
 
-body {
-  @include color(#940029);
+:root {
+  --bs-primary-rgb: 227, 101, 32 !important;
 }
 
-.depto-noticias {
-  @include color(#448D21);
+body {
+  @include color(#940029);
 }
 
 .depto-downloads {

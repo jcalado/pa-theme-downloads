@@ -8,7 +8,7 @@
 
         <th class="pa-downloads-table__fit px-0 border-0 text-end d-none d-lg-table-cell" scope="col">{{ __('Download', 'iasd') }}</th>
 
-        <th class="px-0 border-0 d-block d-lg-none" scope="col">{{ __('Download files', 'iasd') }}</th>
+        <th class="px-0 border-0 d-block d-lg-none" scope="col">{{ __('Arquivos para download', 'iasd') }}</th>
       </tr>
     </thead> 
 
