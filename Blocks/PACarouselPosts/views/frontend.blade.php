@@ -3,7 +3,7 @@
 @else 
   @notempty($items) 
     <div class="pa-widget pa-carousel-download col-12 mb-5">
-      <div class="pa-glide-videos">
+      <div class="pa-glide-posts">
         @notempty($title)
           <div class="d-flex mb-4">
             <h2 class="flex-grow-1">{!! $title !!}</h2>	
@@ -28,33 +28,37 @@
           </div>
         @endnotempty
         
-        <div class="glide__track" data-glide-el="track">
-          <div class="glide__slides">
-            @foreach($items as $id)
-              <div class="glide__slide h-auto">
-                <div class="card border-0">
-                  <figure class="ratio ratio-16x9 bg-light rounded-bottom overflow-hidden mb-2">
-                    <img src="{{ check_immg($id, 'medium') }}" class="card-img-top"	alt="{!! wp_strip_all_tags(get_the_title($id)) !!}" />
-                  </figure>
+        <div class="row mx-sm-0">
+          <div class="glide__track ps-2 ps-sm-0 pe-0" data-glide-el="track">
+            <div class="glide__slides">
+              @foreach($items as $id)
+                <div class="glide__slide px-1 h-auto">
+                  <div class="card border-0 shadow-sm">
+                    <figure class="ratio ratio-16x9 bg-light rounded-bottom overflow-hidden mb-2">
+                      <img src="{{ check_immg($id, 'medium') }}" class="card-img-top"	alt="{!! wp_strip_all_tags(get_the_title($id)) !!}" />
+                    </figure>
+  
+                    <div class="card-body p-3 d-flex flex-column">
+                      @notempty($department = getDepartment($id))
+                        <div>
+                          <span class="pa-tag rounded-1 text-uppercase d-inline-block px-2 mb-2">{{ $department->name }}</span>
+                        </div>
+                      @endnotempty
+  
+                      <h3 class="card-title fw-bold h6 mb-3 pa-truncate-2">{!! wp_strip_all_tags(get_the_title($id)) !!}</h3>
 
-                  <div class="card-body p-0 d-flex flex-column">
-                    @notempty($department = getDepartment($id))
+                      <div class="flex-grow-1"></div>
+                      
                       <div>
-                        <span class="pa-tag rounded-1 text-uppercase d-inline-block px-2 mb-2">{{ $department->name }}</span>
+                        <a href="{{ get_the_permalink($id) }}" class="border border-1 px-4 py-1 rounded-pill btn-outline-primary text-uppercase fw-bold" title="{!! wp_strip_all_tags(get_the_title($id)) !!}">
+                          Ver mais
+                        </a>
                       </div>
-                    @endnotempty
-
-                    <h3 class="card-title fw-bold h6 mb-3 pa-truncate-2 flex-grow-1">{!! wp_strip_all_tags(get_the_title($id)) !!}</h3>
-                    
-                    <div>
-                      <a href="{{ get_the_permalink($id) }}" class="border border-1 px-4 py-1 rounded-pill btn-outline-primary text-uppercase fw-bold" title="{!! wp_strip_all_tags(get_the_title($id)) !!}">
-                        Ver mais
-                      </a>
                     </div>
                   </div>
                 </div>
-              </div>
-            @endforeach
+              @endforeach
+            </div>
           </div>
         </div>
       </div>

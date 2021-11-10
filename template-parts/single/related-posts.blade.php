@@ -27,7 +27,9 @@
                     </div>
                   @endnotempty
 
-                  <h3 class="card-title fw-bold h6 mb-3 pa-truncate-2 flex-grow-1">{!! wp_strip_all_tags(get_the_title($post->ID)) !!}</h3>
+                  <h3 class="card-title fw-bold h6 mb-3 pa-truncate-2">{!! wp_strip_all_tags(get_the_title($post->ID)) !!}</h3>
+
+                  <div class="flex-grow-1"></div>
                   
                   <div>
                     <a 
