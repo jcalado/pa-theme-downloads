@@ -15,6 +15,12 @@
             @include('template-parts.single.list-downloads', [
               'downloads' => get_field('downloads'),
             ])
+
+            <div class="row justify-content-center justify-content-lg-start">
+              <div class="col-auto mt-4">
+                @include('template-parts.single.link-report')
+              </div>
+            </div>
           </div>
           
           @include('template-parts.single.comments')

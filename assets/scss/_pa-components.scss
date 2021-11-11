@@ -179,10 +179,6 @@
     }
   }
 
-  .fa-info-circle {
-    width: 14px;
-  }
-
   &__tag,
   .accordion-footer {
     font-size: 0.875rem; // 14px
@@ -201,5 +197,13 @@
     .card {
       height: calc(100% - 16px);
     }
+  }
+}
+
+.pa-link-report {
+  font-size: 0.875rem; // 14px
+  
+  .fa-info-circle {
+    width: 14px;
   }
 }
