@@ -56,12 +56,12 @@ add_filter('template_include', function ($template) {
 * Modify category query
 */
 add_action('pre_get_posts', function($query) {
-    if(is_admin() || !is_tax() || !$query->is_main_query())
-        return $query;
+  if(is_admin() || !$query->is_main_query() || !$query->is_archive)
+      return $query;
 
-    $query->set('posts_per_page', 10);
+  $query->set('posts_per_page', 10);
 
-    return $query;
+  return $query;
 }, 11);
 
 add_filter('acf/fields/relationship/query', 'my_acf_fields_relationship_query', 10, 3);
