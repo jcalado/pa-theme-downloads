@@ -202,8 +202,73 @@
 
 .pa-link-report {
   font-size: 0.875rem; // 14px
-  
+
   .fa-info-circle {
     width: 14px;
+  }
+}
+
+#pa-modal-report {
+  .btn-close {
+    background: none;
+    opacity: 1;
+    height: 28px;
+    right: 8px;
+    top: -31px;
+    width: 28px;
+  }
+
+  .modal-dialog {
+    max-width: 466px;
+  }
+
+  .modal-header {
+    padding: 1.063rem 1.25rem; // 17px 20px
+
+    @media(min-width: 992px) {
+      padding: 2.25rem 2.25rem 1.688rem 2.25rem; // 36px 36px 27px 36px
+    }
+  }
+
+  .modal-title {
+    font-size: 1rem; // 16px
+
+    @media(min-width: 992px) {
+      font-size: 1.125rem; // 18px
+    }
+  }
+
+  .modal-body {
+    padding-left: 1.25rem; // 20px
+    padding-right: 1.25rem; // 20px
+
+    @media(min-width: 992px) {
+      padding-left: 2.25rem; // 36px
+      padding-right: 2.25rem; // 36px
+    }
+  }
+
+  label {
+    color: var(--pa-color-gray03);
+  }
+
+  .form-control {
+    color: var(--pa-color-gray03) !important;
+    font-size: 0.875rem; // 14px
+    line-height: 19px;
+  }
+
+  .btn {
+    font-size: 0.938rem; // 15px
+    line-height: 1.5rem; // 24px
+    text-transform: none;
+
+    @media(max-width: 991px) {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: var(--pa-color-default-light);
+    }
   }
 }
