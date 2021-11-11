@@ -11,6 +11,12 @@
     "psr-4": {
       "Extended\\": "Extended/",
       "Blocks\\": "Blocks/"
-    }
+    },
+    "files": [
+      "vendor/lordealeister/popular-posts/popular-posts.php"
+    ]
+  },
+  "require": {
+    "lordealeister/popular-posts": "^1.3"
   }
 }
