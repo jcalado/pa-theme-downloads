@@ -9,6 +9,15 @@ class PaEnqueueFiles {
 	public function RegisterChildAssets() {
 		wp_enqueue_style('pa-child-style', get_stylesheet_uri());
     wp_enqueue_script('pa-child-script', get_stylesheet_directory_uri() . '/assets/js/script.js', ['scripts'], null, true);
+    wp_enqueue_script('recaptcha', 'https://www.google.com/recaptcha/api.js?render=6LfdTS0dAAAAAMZRMBNJqSAvv7hnC7KGWmRffpY3', ['scripts'], null, true);
+
+    wp_localize_script(
+			'pa-child-script',
+			'pa',
+			array(
+				'url' => admin_url('admin-ajax.php'),
+			)
+		);
 	}
 
 	function enqueueAssets() {

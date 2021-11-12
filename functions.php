@@ -20,6 +20,7 @@ require_once(dirname(__FILE__) . '/vendor/lordealeister/popular-posts/popular-po
 require_once(dirname(__FILE__) . '/core/PA_Theme_Downloads_Install.php');
 require_once(dirname(__FILE__) . '/classes/controllers/PA_ACF_PostFields.class.php');
 require_once(dirname(__FILE__) . '/classes/controllers/PA_ACF_KitFields.class.php');
+require_once(dirname(__FILE__) . '/classes/controllers/PA_Ajax.class.php');
 require_once(dirname(__FILE__) . '/classes/controllers/PA_EnqueueFiles.class.php');
 require_once(dirname(__FILE__) . '/classes/controllers/PA_Util.class.php');
 require_once(dirname(__FILE__) . '/classes/controllers/PA_RewriteRules.class.php');
