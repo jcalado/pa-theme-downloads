@@ -27,6 +27,19 @@ function getPrioritySeat($post_id) {
 }
 
 /**
+ * Search the first project of the post
+ *
+ * @param string $post_id The post ID
+ * @return mixed
+ */
+function getProject($post_id) {
+  if($term = get_the_terms($post_id, 'xtt-pa-projetos'))
+      return $term[0];
+
+  return null;
+}
+
+/**
  * Search the related posts
  *
  * @param string $post_id The post ID
@@ -61,65 +74,15 @@ function getRelatedPosts($post_id, $post_type = 'post', $limit = 3): array {
   return array();
 }
 
-
-
-
-
-/** 
- * videoLength Format video length in 'mm:ss'
- *
- * @param  int $post_id The post ID
- * @return string Formated length string
- */
-function videoLength(int $post_id = 0): string {
-    $length = get_field('video_length', !empty($post_id) ? $post_id : get_the_ID());
-
-    if(empty($length))
-        return "";
-
-    if($length / 3600 >= 1)
-        return sprintf('%02d:%02d:%02d', ($length / 3600), ($length / 60 % 60), $length % 60);
-    else
-	    return sprintf('%02d:%02d', ($length / 60 % 60), $length % 60);
-}
-
-/**
- * Create a share link
- *
- * @param string $post_id The post ID
- * @param string $social A Social Network [Twitter, Facebook or Whatsapp].
- * @return void
- */
-function linkToShare($post_id, $social): void {
-    $texto = get_the_excerpt($post_id);
-    $url = get_permalink($post_id);
-    $titulo = get_the_title($post_id);
-    $site = get_bloginfo('name');
-    $via = "IASD";
-    
-    switch($social):
-        case('twitter'):
-            echo "https://twitter.com/intent/tweet?text=" . urlencode(wp_html_excerpt($texto, (247 - strlen($via)), '...')) . "&via=" . $via . "&url=" . urlencode($url);
-
-            break;
-        case('facebook'):
-            echo "https://www.facebook.com/sharer/sharer.php?u=" . urlencode($url);
-
-            break;
-        case('whatsapp'):
-            echo "https://api.whatsapp.com/send?text=" . urlencode($titulo) . "%20-%20" . $site . "%20-%20" . urlencode($url);
-
-            break;
-        default:
-            die();
-    endswitch;
-}
-
 function getHeaderTitle($post_id = NULL) {
-  if(is_tax()) //is archive
+  if(is_post_type_archive('kit'))
+    $title = get_queried_object()->label;
+  elseif(is_tax()) //is archive
     $title = get_taxonomy(get_queried_object()->taxonomy)->label . ' | ' . get_queried_object()->name;
+  elseif(is_singular('kit')) //is single
+    $title = 'Kits' . ' | ' . getProject($post_id)->name;
   elseif(is_single()) //is single
-    $title = get_taxonomy('xtt-pa-departamentos')->label . ' | ' . getDepartment($post_id)->name;
+    $title = getDepartment($post_id)->name;
   else
     $title = get_the_title(); //default
 
@@ -132,20 +95,4 @@ function getHeaderTitle($post_id = NULL) {
   endforeach;
 
   return $title;
-}
-
-/**
- * getVideoLength Get video length and save data
- *
- * @param  int    $post_id The post ID
- * @param  string $video_host The video host
- * @param  string $video_id The video ID
- * @return void
- */
-function getVideoLength(int $post_id, string $video_host, string $video_id): void {
-    $json = file_get_contents("https://api.feliz7play.com/v4/{$video_host}info?video_id={$video_id}");
-    $obj = json_decode($json);
-
-    if(!empty($obj))
-        update_field('video_length', $obj->time, $post_id);
 }

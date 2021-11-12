@@ -7,7 +7,7 @@
 
       <div class="row">
         @foreach ($items as $id)
-          <div class="card col-12 mb-0 mt-3 border-0">
+          <div class="card col-12 mb-3 border-0">
             <a href="{{ get_the_permalink($id) }}" title="{!! wp_strip_all_tags(get_the_title($id)) !!}">
               <div class="row">
                 <div class="img-container">
@@ -36,7 +36,7 @@
 				<a 
 					href="{{ $link['url'] ?? '#' }}" 
 					target="{{ $link['target'] ?? '_self' }}"
-					class="pa-all-content d-inline-block mt-2"
+					class="pa-all-content d-inline-block mt-1"
 				>
 					{!! $link['title'] !!}
 				</a>
