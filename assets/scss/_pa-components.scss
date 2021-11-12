@@ -267,7 +267,9 @@
       width: 100%;
     }
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       background-color: var(--pa-color-default-light);
     }
   }

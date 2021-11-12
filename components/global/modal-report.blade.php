@@ -9,10 +9,10 @@
         </button>
       </div>
       <div class="modal-body pt-0 pb-4">
-        <form id="form-report" class="needs-validation" novalidate>
+        <form id="form-report" novalidate>
           <div class="input-group has-validation mb-3">
             <label for="report-title" class="form-label fw-bold">Título da mensagem</label>
-            <input id="report-title" class="form-control rounded px-3 w-100" type="email" placeholder="Digite um título" required />
+            <input id="report-title" name="report-title" class="form-control rounded px-3 w-100" type="text" placeholder="Digite um título" required />
 
             <div class="invalid-feedback">
               Escreva um título para a mensagem.
@@ -21,12 +21,14 @@
 
           <div class="input-group has-validation mb-3">
             <label for="report-message" class="form-label fw-bold">Mensagem</label>
-            <textarea id="report-message" class="form-control rounded px-3 w-100" rows="4" placeholder="Escreva o problema encontrado" required></textarea>
+            <textarea id="report-message" name="report-message" class="form-control rounded px-3 w-100" rows="4" placeholder="Escreva o problema encontrado" required></textarea>
 
             <div class="invalid-feedback">
               Escreva o conteúdo da mensagem.
             </div>
           </div>
+
+          <input id="report-permalink" name="report-permalink" type="hidden" />
 
           <div class="d-flex justify-content-end">
             <button type="submit" class="btn btn-primary rounded">Enviar</button>

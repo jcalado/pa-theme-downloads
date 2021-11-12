@@ -18,7 +18,7 @@
 
             <div class="row justify-content-center justify-content-lg-start">
               <div class="col-auto mt-4">
-                @include('template-parts.single.link-report')
+                @include('components.global.link-report')
               </div>
             </div>
           </div>

@@ -36,7 +36,9 @@
 
               <div class="accordion-footer d-flex align-items-center justify-content-between">
                 <div class="col pe-2 d-flex">
-                  @include('template-parts.single.link-report')
+                  @include('components.global.link-report', [
+                    'permalink' => get_the_permalink($id),
+                  ])
                 </div>
 
                 <div class="col-auto d-flex">
