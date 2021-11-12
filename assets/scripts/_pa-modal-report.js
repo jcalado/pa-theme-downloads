@@ -1,5 +1,6 @@
 export function pa_modal_report() {
   const modal = document.getElementById('pa-modal-report');
+  const modal_callback = document.getElementById('pa-modal-report-callback');
 	const form = document.getElementById('form-report');
   const report_permalink = document.getElementById('report-permalink');
 
@@ -29,17 +30,17 @@ export function pa_modal_report() {
         window.grecaptcha
           .execute('6LfdTS0dAAAAAMZRMBNJqSAvv7hnC7KGWmRffpY3', {action: 'submit'})
           .then((token) => {
-            var data = Object.fromEntries(new FormData(form));
+            let data = Object.fromEntries(new FormData(form));
             data.token = token;
-            pa_send_report(data);
-            // Add your logic to submit to your backend server here.
-        });
+
+            pa_send_report(data, modal, modal_callback);
+          });
       });
     }, false);
   }
 }
 
-function pa_send_report(data) {
+function pa_send_report(data, modal, modal_callback) {
   const request = new XMLHttpRequest();
   data.action = 'send_report';
 
@@ -48,14 +49,14 @@ function pa_send_report(data) {
   request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
   request.onreadystatechange = () => { 
-    console.log(request.response);
-    // if(request.readyState !== 4 || 
-    //   request.status !== 200 ||
-    //   !request.response.success)
-    //   return;
+    if(request.readyState !== 4)
+      return;
+    
+    modal_callback.classList.toggle('error', request.status !== 200 || !request.response.success);
+    modal_callback.classList.toggle('success', request.status === 200 && request.response.success);
 
-    // if(request.response.score >= 0.5)
-    //   console.log(request.response);
+    window.bootstrap.Modal.getOrCreateInstance(modal).hide();
+    window.bootstrap.Modal.getOrCreateInstance(modal_callback).show();
   };
 
   request.send(Object.keys(data).map(key => key + '=' + data[key]).join('&'));

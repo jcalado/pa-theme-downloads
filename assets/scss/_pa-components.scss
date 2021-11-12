@@ -208,18 +208,22 @@
   }
 }
 
-#pa-modal-report {
+.pa-modal-report {
   .btn-close {
     background: none;
     opacity: 1;
     height: 28px;
-    right: 8px;
-    top: -31px;
+    right: 0;
+    top: -39px;
     width: 28px;
   }
 
   .modal-dialog {
     max-width: 466px;
+  }
+
+  .modal-content {
+    min-height: 360px;
   }
 
   .modal-header {
@@ -271,6 +275,32 @@
     &:focus,
     &:active {
       background-color: var(--pa-color-default-light);
+    }
+  }
+}
+
+#pa-modal-report-callback {
+  .modal-dialog {
+    max-width: 360px !important;
+  }
+
+  &.error {
+    .error {
+      display: flex;
+    }
+
+    .success {
+      display: none;
+    }
+  }
+
+  &.success {
+    .error {
+      display: none;
+    }
+
+    .success {
+      display: error;
     }
   }
 }
