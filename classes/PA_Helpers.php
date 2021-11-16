@@ -7,7 +7,7 @@
  * @return mixed
  */
 function getDepartment($post_id) {
-  if($term = get_the_terms($post_id, 'xtt-pa-departamentos'))
+  if(!empty($term = get_the_terms($post_id, 'xtt-pa-departamentos')) && !is_wp_error($term))
       return $term[0];
 
   return null;

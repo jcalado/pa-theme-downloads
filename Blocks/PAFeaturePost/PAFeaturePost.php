@@ -62,7 +62,7 @@ class PAFeaturePost extends Block {
 	public function with(): array {
 		return [
 			'title'	=> get_field('title'),
-			'id'	=> !empty($items = get_field('items')) ? $items['data'][0]['id'] : null,
+			'id'	=> !empty($items = get_field('items')) && array_key_exists('data', $items) ? $items['data'][0]['id'] : null,
 		];
 	}
 }
