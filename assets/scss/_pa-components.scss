@@ -200,6 +200,10 @@
   .glide__slide {
     .card {
       height: calc(100% - 16px);
+
+      a {
+        font-size: 0.875rem; // 14px
+      }
     }
   }
 }
