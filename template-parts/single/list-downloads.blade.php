@@ -2,9 +2,9 @@
   <table class="pa-downloads-table table table-hover">
     <thead>
       <tr>
-        <th class="px-0 border-0 d-none d-lg-table-cell" scope="col">{{ __('Name', 'iasd') }}</th>
+        <th class="px-0 border-0 d-none d-lg-table-cell" scope="col">{{ __('Nome', 'iasd') }}</th>
 
-        <th class="px-3 border-0 d-none d-lg-table-cell" scope="col">{{ __('Size', 'iasd') }}</th>
+        <th class="px-3 border-0 d-none d-lg-table-cell" scope="col">{{ __('Tamanho', 'iasd') }}</th>
 
         <th class="pa-downloads-table__fit px-0 border-0 text-end d-none d-lg-table-cell" scope="col">{{ __('Download', 'iasd') }}</th>
 
@@ -25,7 +25,7 @@
           <td class="p-3">{{ $download['size'] . 'MB' }}</td>
 
           <td class="pa-downloads-table__fit py-3 px-0 px-lg-3 fw-bold">
-            <a class="text-decoration-none" href="{{ $download['link'] }}" target="_blank">
+            <a class="text-decoration-none d-flex align-items-center" href="{{ $download['link'] }}" target="_blank">
               <i class="fas fa-download me-2"></i>
               
               <span class="d-none d-lg-inline-block">Baixar</span> 
