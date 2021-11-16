@@ -9,7 +9,7 @@ export function pa_slider_related_posts() {
 
 	nodes.forEach(function(node) {
 		var glide = new window.Glide(node, {
-			type: 'carousel',
+			type: 'slider',
 			perView: 3,
 			startAt: 0,
 			gap: 24,

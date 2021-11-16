@@ -80,9 +80,9 @@ function getHeaderTitle($post_id = NULL) {
   elseif(is_tax()) //is archive
     $title = get_taxonomy(get_queried_object()->taxonomy)->label . ' | ' . get_queried_object()->name;
   elseif(is_singular('kit')) //is single
-    $title = 'Kits' . ' | ' . getProject($post_id)->name;
+    $title = 'Kits' . ' | ' . (!empty($project = getProject($post_id)) ? $project->name : get_the_title());
   elseif(is_single()) //is single
-    $title = getDepartment($post_id)->name;
+    $title = !empty($department = getDepartment($post_id)) ? $department->name : get_the_title();
   else
     $title = get_the_title(); //default
 
