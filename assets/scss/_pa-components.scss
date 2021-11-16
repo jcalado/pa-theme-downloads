@@ -100,6 +100,10 @@
     tr {
       &:hover {
         box-shadow: inset 0 0 0 9999px #F2F6FD !important;
+
+        td:first-of-type {
+          color: var(--pa-color-default);
+        }
       }
 
       & * {
@@ -180,6 +184,7 @@
   }
 
   .fa-info-circle {
+    height: 14px;
     width: 14px;
   }
 
