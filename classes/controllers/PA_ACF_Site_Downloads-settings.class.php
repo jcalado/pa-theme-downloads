@@ -1,13 +1,13 @@
 <?php
 
 use WordPlate\Acf\Fields\Email;
+use WordPlate\Acf\Fields\Password;
 use WordPlate\Acf\Fields\TrueFalse;
 use WordPlate\Acf\Location;
 
-
 class PaAcfSiteDownloadsSettings {
 
-	public function __construct(){
+	public function __construct() {
 		add_action('after_setup_theme', [$this, 'createAcfFields']);
 	}
 
@@ -24,6 +24,16 @@ class PaAcfSiteDownloadsSettings {
             'width' => 50,
           ]),
         Email::make(__('Send email to', 'iasd'), 'report_email')
+          ->wrapper([
+            'width' => 50,
+          ]),
+        Password::make(__('reCAPTCHA site key', 'iasd'), 'report_recaptcha_site_key')
+          ->instructions(__('Se não configurada, o site não ativará o captcha, podendo assim ficar vulnerável a spam.', 'iasd'))
+          ->wrapper([
+            'width' => 50,
+          ]),
+        Password::make(__('reCAPTCHA secret key', 'iasd'), 'report_recaptcha_secret_key')
+          ->instructions(__('Se não configurada, o site não ativará o captcha, podendo assim ficar vulnerável a spam.', 'iasd'))
           ->wrapper([
             'width' => 50,
           ]),
