@@ -27,7 +27,16 @@ class PAAjax {
       $response['score'] < 0.5)
       wp_send_json_error();
 
-    wp_send_json_success();
+    $mail = wp_mail(
+      get_field('report_email', 'option'), 
+      __('Novo problema reportado: ') . sanitize_text_field($_POST['report-title']),
+      '<strong>' . __('Título', 'iasd') .': </strong>' . sanitize_text_field($_POST['report-title']) .
+      '<br /><strong>' . __('Url', 'iasd') .': </strong>' . sanitize_text_field($_POST['report-permalink']) .
+      '<br /><strong>' . __('Mensagem', 'iasd') .': </strong>' . sanitize_text_field($_POST['report-message']),
+      ['Content-Type: text/html; charset=UTF-8']
+    );
+
+    return empty($mail) ? wp_send_json_error() : wp_send_json_success();
   }
 
 }

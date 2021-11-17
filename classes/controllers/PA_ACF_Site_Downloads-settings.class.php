@@ -23,7 +23,7 @@ class PaAcfSiteDownloadsSettings {
           ->wrapper([
             'width' => 50,
           ]),
-        Email::make(__('Sender email', 'iasd'))
+        Email::make(__('Send email to', 'iasd'), 'report_email')
           ->wrapper([
             'width' => 50,
           ]),
