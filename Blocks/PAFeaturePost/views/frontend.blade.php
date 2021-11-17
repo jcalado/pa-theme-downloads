@@ -13,7 +13,7 @@
 
               <figcaption class="figure-caption position-absolute w-100 p-3 rounded-bottom">
                 @notempty($department = getDepartment($id))
-                  <span class="pa-tag rounded-1 text-uppercase mb-2 d-inline-block px-2">{{ $department->name }}</span>
+                  <span class="pa-tag rounded-1 text-uppercase mb-2 d-none d-md-inline-block px-2">{{ $department->name }}</span>
                 @endnotempty
                 
                 <h3 class="h5 pt-2 pa-truncate-2">{!! get_the_title($id) !!}</h3>
