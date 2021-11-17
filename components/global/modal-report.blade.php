@@ -32,7 +32,11 @@
             <input id="report-permalink" name="report-permalink" type="hidden" />
 
             <div class="d-flex justify-content-end">
-              <button type="submit" class="btn btn-primary rounded">Enviar</button>
+              <button type="submit" class="form-report__button btn btn-primary rounded">
+                <span class="form-report__spinner spinner-grow spinner-grow-sm visually-hidden" role="status" aria-hidden="true"></span>
+                <span class="form-report__sending visually-hidden">Enviando...</span>
+                <span class="form-report__text">Enviar</span>
+              </button>
             </div>
           </form>
         </div>

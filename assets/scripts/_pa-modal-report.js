@@ -3,61 +3,78 @@ export function pa_modal_report() {
   const modal_callback = document.getElementById('pa-modal-report-callback');
 	const form = document.getElementById('form-report');
   const report_permalink = document.getElementById('report-permalink');
+  let request = null;
 
-  if(modal) {
-    modal.addEventListener('show.bs.modal', (event) => {
-      if(form) {
-        form.reset();
-        form.classList.remove('was-validated');  
-      }
-        
-      if(report_permalink)
-        report_permalink.value = event.relatedTarget.getAttribute('data-bs-permalink');
-    })
-  }
-
-  if(form) {
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      event.stopPropagation();
+  if(!form || !modal || !modal_callback)
+    return;
   
-      form.classList.add('was-validated');
+  modal.addEventListener('show.bs.modal', (event) => {
+    request?.abort()
+    form.reset();
+    form.classList.remove('was-validated');  
+    pa_manage_form(form, false);
+      
+    if(report_permalink)
+      report_permalink.value = event.relatedTarget.getAttribute('data-bs-permalink');
+  });
 
-      if(!form.checkValidity())
-        return;
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
 
-      window.grecaptcha.ready(() => {
-        window.grecaptcha
-          .execute('6LfdTS0dAAAAAMZRMBNJqSAvv7hnC7KGWmRffpY3', {action: 'submit'})
-          .then((token) => {
-            let data = Object.fromEntries(new FormData(form));
-            data.token = token;
+    form.classList.add('was-validated');
 
-            pa_send_report(data, modal, modal_callback);
-          });
-      });
-    }, false);
-  }
+    if(!form.checkValidity())
+      return;
+
+    pa_manage_form(form, true);
+      
+    pa_report_token().then((token) => {
+      let data = Object.fromEntries(new FormData(form));
+      data.token = token;
+
+      request = pa_send_report(data);
+      request.onloadend = (request) => { 
+        if(request.target.readyState !== 4 || request.target.status !== 200)
+          return;
+
+        this.request = null;
+        pa_manage_form(form, false);
+
+        modal_callback.classList.toggle('error', request.target.status !== 200 || !request.target.response.success);
+        modal_callback.classList.toggle('success', request.target.status === 200 && request.target.response.success);
+    
+        window.bootstrap.Modal.getOrCreateInstance(modal).hide();
+        window.bootstrap.Modal.getOrCreateInstance(modal_callback).show();
+      };
+    });
+  }, false);
 }
 
-function pa_send_report(data, modal, modal_callback) {
+function pa_report_token() {
+  return window.grecaptcha.execute('6LfdTS0dAAAAAMZRMBNJqSAvv7hnC7KGWmRffpY3', {action: 'submit'});
+}
+
+function pa_send_report(data) {
   const request = new XMLHttpRequest();
   data.action = 'send_report';
 
   request.responseType = 'json';
   request.open('POST', window.pa.url, true);
   request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-
-  request.onreadystatechange = () => { 
-    if(request.readyState !== 4)
-      return;
-    
-    modal_callback.classList.toggle('error', request.status !== 200 || !request.response.success);
-    modal_callback.classList.toggle('success', request.status === 200 && request.response.success);
-
-    window.bootstrap.Modal.getOrCreateInstance(modal).hide();
-    window.bootstrap.Modal.getOrCreateInstance(modal_callback).show();
-  };
-
   request.send(Object.keys(data).map(key => key + '=' + data[key]).join('&'));
+
+  return request;
+}
+
+function pa_manage_form(form, sending) {
+  const button = form.querySelector('.form-report__button');
+
+  if(!button)
+    return;
+
+  button.toggleAttribute('disabled', sending);
+  button.querySelector('.form-report__spinner')?.classList.toggle('visually-hidden', !sending);
+  button.querySelector('.form-report__sending')?.classList.toggle('visually-hidden', !sending);
+  button.querySelector('.form-report__text')?.classList.toggle('visually-hidden', sending);
 }
