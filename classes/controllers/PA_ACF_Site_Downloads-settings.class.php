@@ -19,6 +19,7 @@ class PaAcfSiteDownloadsSettings {
       'fields' => [
         TrueFalse::make(__('Enable report', 'iasd'), 'report_enabled')
           ->stylisedUi()
+          ->defaultValue(true)
           ->wrapper([
             'width' => 50,
           ]),
