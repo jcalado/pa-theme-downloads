@@ -1,7 +1,5 @@
 <?php
 
-
-
 class PAAjax {
 
   public function __construct() {
@@ -23,7 +21,11 @@ class PAAjax {
     
     $response = json_decode(curl_exec($ch), true);
 
-    // var_dump($response);
+    if(!is_array($response) || 
+      !array_key_exists('success', $response) || 
+      empty($response['success']) || 
+      $response['score'] < 0.5)
+      wp_send_json_error();
 
     wp_send_json_success();
   }
