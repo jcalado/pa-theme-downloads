@@ -1,6 +1,6 @@
 <a 
   href="#" 
-  class="pa-link-report text-primary text-decoration-none d-inline-flex" 
+  class="pa-link-report text-primary text-decoration-none d-inline-flex align-items-center" 
   data-bs-toggle="modal" 
   data-bs-target="#pa-modal-report"
   data-bs-permalink="{{ !empty($permalink) ? $permalink : get_the_permalink() }}"

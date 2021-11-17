@@ -88,7 +88,7 @@ class PACarouselPosts extends Block {
 
     return [
       'title'	=> get_field('title'),
-      'items'	=> array_column(get_field("items_{$mode}")['data'], 'id'),
+      'items'	=> !empty($items = get_field("items_{$mode}")) && array_key_exists('data', $items) ? array_column($items['data'], 'id') : null,
     ];
   }
 

@@ -34,7 +34,7 @@
               @foreach($items as $id)
                 <div class="glide__slide px-1 h-auto">
                   <div class="card border-0 shadow-sm">
-                    <figure class="ratio ratio-16x9 bg-light rounded-bottom overflow-hidden mb-2">
+                    <figure class="ratio ratio-16x9 bg-light rounded-bottom overflow-hidden m-0">
                       <img src="{{ check_immg($id, 'medium') }}" class="card-img-top"	alt="{!! wp_strip_all_tags(get_the_title($id)) !!}" />
                     </figure>
   

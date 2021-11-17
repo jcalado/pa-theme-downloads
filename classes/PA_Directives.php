@@ -2,13 +2,6 @@
 
 use Illuminate\Support\Str;
 
-blade_directive('videolength', function($expression) {
-    if(empty($expression))
-        return "<?= videoLength() ?>";
-
-    return "<?= videoLength({$expression}) ?>";
-});
-
 blade_directive('getPrioritySeat', function($expression) {
     if(empty($expression))
         return "o ID do post é obrigatório.";

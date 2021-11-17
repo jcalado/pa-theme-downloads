@@ -5,12 +5,13 @@
         flex: 0 0 auto;
         width: 50.2%;
 
-        @media(min-width: 769px) {
+        @media(min-width: 576px) {
           width: 28.1%;
         }
       }
 
-      p {
+      p,
+      a {
         font-size: 0.875rem; // 14px
       }
 
