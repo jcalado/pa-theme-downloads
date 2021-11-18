@@ -39,15 +39,15 @@ export function pa_modal_report() {
 
   const send = () => {
     request = pa_send_report(data);
-    request.onloadend = (request) => { 
-      if(request.target.readyState !== 4 || request.target.status !== 200)
+    request.onloadend = (requestData) => { 
+      if(requestData.target.readyState !== 4 || requestData.target.status !== 200)
         return;
 
-      this.request = null;
+      request = null;
       pa_manage_form(false);
 
-      modal_callback.classList.toggle('error', request.target.status !== 200 || !request.target.response.success);
-      modal_callback.classList.toggle('success', request.target.status === 200 && request.target.response.success);
+      modal_callback.classList.toggle('error', requestData.target.status !== 200 || !requestData.target.response.success);
+      modal_callback.classList.toggle('success', requestData.target.status === 200 && requestData.target.response.success);
   
       window.bootstrap.Modal.getOrCreateInstance(modal).hide();
       window.bootstrap.Modal.getOrCreateInstance(modal_callback).show();

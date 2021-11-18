@@ -3,6 +3,7 @@
 class PAAjax {
 
   public function __construct() {
+    add_action('wp_ajax_send_report', [$this, 'sendReport']); 
     add_action('wp_ajax_nopriv_send_report', [$this, 'sendReport']); 
   }
 
@@ -11,7 +12,6 @@ class PAAjax {
     $token = sanitize_text_field(array_key_exists('token', $_POST) ? $_POST['token'] : '');
 
     if(!empty($secret) && !empty($token)):
-      // var_dump(123);
       $url = 'https://www.google.com/recaptcha/api/siteverify';
       $params = "secret={$secret}&response={$token}";
       
