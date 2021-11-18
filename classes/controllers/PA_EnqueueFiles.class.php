@@ -9,6 +9,26 @@ class PaEnqueueFiles {
 	public function RegisterChildAssets() {
 		wp_enqueue_style('pa-child-style', get_stylesheet_uri());
     wp_enqueue_script('pa-child-script', get_stylesheet_directory_uri() . '/assets/js/script.js', ['scripts'], null, true);
+
+    if(!empty($site_key = get_field('report_recaptcha_site_key', 'option'))):
+      wp_enqueue_script('recaptcha', "https://www.google.com/recaptcha/api.js?render={$site_key}", ['scripts'], null, true);
+
+      wp_localize_script(
+        'recaptcha',
+        'recaptcha',
+        array(
+          'site_key' => $site_key,
+        )
+      );
+    endif;
+
+    wp_localize_script(
+			'pa-child-script',
+			'pa',
+			array(
+				'url' => admin_url('admin-ajax.php'),
+			)
+		);
 	}
 
 	function enqueueAssets() {

@@ -187,11 +187,6 @@
     }
   }
 
-  .fa-info-circle {
-    height: 14px;
-    width: 14px;
-  }
-
   &__tag,
   .accordion-footer {
     font-size: 0.875rem; // 14px
@@ -213,6 +208,113 @@
       a {
         font-size: 0.875rem; // 14px
       }
+    }
+  }
+}
+
+.pa-link-report {
+  font-size: 0.875rem; // 14px
+
+  .fa-info-circle {
+    height: 14px;
+    width: 14px;
+  }
+}
+
+.pa-modal-report {
+  .btn-close {
+    background: none;
+    opacity: 1;
+    height: 28px;
+    right: 0;
+    top: -39px;
+    width: 28px;
+  }
+
+  .modal-dialog {
+    max-width: 466px;
+  }
+
+  .modal-content {
+    min-height: 360px;
+  }
+
+  .modal-header {
+    padding: 1.063rem 1.25rem; // 17px 20px
+
+    @media(min-width: 992px) {
+      padding: 2.25rem 2.25rem 1.688rem 2.25rem; // 36px 36px 27px 36px
+    }
+  }
+
+  .modal-title {
+    font-size: 1rem; // 16px
+
+    @media(min-width: 992px) {
+      font-size: 1.125rem; // 18px
+    }
+  }
+
+  .modal-body {
+    padding-left: 1.25rem; // 20px
+    padding-right: 1.25rem; // 20px
+
+    @media(min-width: 992px) {
+      padding-left: 2.25rem; // 36px
+      padding-right: 2.25rem; // 36px
+    }
+  }
+
+  label {
+    color: var(--pa-color-gray03);
+  }
+
+  .form-control {
+    color: var(--pa-color-gray03) !important;
+    font-size: 0.875rem; // 14px
+    line-height: 19px;
+  }
+
+  .btn {
+    background: var(--pa-color-default) !important;
+    font-size: 0.938rem; // 15px
+    line-height: 1.5rem; // 24px
+    text-transform: none;
+
+    @media(max-width: 991px) {
+      width: 100%;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--pa-color-default-light) !important;
+    }
+  }
+}
+
+#pa-modal-report-callback {
+  .modal-dialog {
+    max-width: 360px !important;
+  }
+
+  &.error {
+    .error {
+      display: flex;
+    }
+
+    .success {
+      display: none;
+    }
+  }
+
+  &.success {
+    .error {
+      display: none;
+    }
+
+    .success {
+      display: error;
     }
   }
 }
