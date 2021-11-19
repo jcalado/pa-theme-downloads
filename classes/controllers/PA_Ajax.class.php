@@ -45,4 +45,4 @@ class PAAjax {
 
 }
 
-new PAAjax();
+$PAAjax = new PAAjax();

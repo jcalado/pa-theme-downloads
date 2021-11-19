@@ -66,4 +66,4 @@ class PAThemeDownloadsInstall {
 
 }
 
-new PAThemeDownloadsInstall();
+$PAThemeDownloadsInstall = new PAThemeDownloadsInstall();
