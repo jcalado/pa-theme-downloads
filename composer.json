@@ -1,0 +1,19 @@
+{
+  "name": "igrejaadventista/pa-theme-downloads",
+  "type": "wordpress-theme",
+  "repositories": [
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    }
+	],
+  "autoload": {
+    "psr-4": {
+      "Extended\\": "Extended/",
+      "Blocks\\": "Blocks/"
+    }
+  },
+  "require": {
+    "lordealeister/popular-posts": "1.3.1"
+  }
+}

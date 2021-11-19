@@ -1,0 +1,12 @@
+
+:root {
+  --bs-primary-rgb: 227, 101, 32 !important;
+}
+
+body {
+  @include color(#940029);
+}
+
+.depto-downloads {
+  @include color(#E36520);
+}

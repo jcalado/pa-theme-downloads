@@ -1,0 +1,42 @@
+.archive {
+  .pa-blog-itens {
+    .pa-blog-item {
+      .img-container {
+        flex: 0 0 auto;
+        width: 50.2%;
+
+        @media(min-width: 576px) {
+          width: 28.1%;
+        }
+      }
+
+      p,
+      a {
+        font-size: 0.875rem; // 14px
+      }
+
+      .card-title {
+        @media(max-width: 572px) {
+          font-size: 0.938rem; // 15px
+        }
+      }
+    }
+  }
+
+  aside {
+    &::before {
+      background-color: var(--pa-color-gray06);
+      content: "";
+      position: absolute;
+      bottom: -96px;
+      left: 0;
+      right: -100%;
+      top: -48px;
+    }
+
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
