@@ -46,4 +46,4 @@ class PaAcfSiteDownloadsSettings {
 
 }
 
-new PaAcfSiteDownloadsSettings();
+$PaAcfSiteDownloadsSettings = new PaAcfSiteDownloadsSettings();

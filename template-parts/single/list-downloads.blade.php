@@ -1,5 +1,6 @@
 @notempty($downloads)
   <table class="pa-downloads-table table table-hover">
+    <caption class="d-none">Downloads</caption>
     <thead>
       <tr>
         <th class="px-0 border-0 d-none d-lg-table-cell" scope="col">{{ __('Nome', 'iasd') }}</th>
