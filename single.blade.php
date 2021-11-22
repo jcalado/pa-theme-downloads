@@ -9,7 +9,7 @@
         <section class="col-auto col-md-8">     
           <h2 class="mb-3">Detalhes do arquivo</h2>     
           
-          <p class="post-excerpt mb-4">{!! get_the_excerpt() !!}</p>
+          <p class="post-excerpt mb-4">{!! get_the_content() !!}</p>
 
           <div class="mb-5">
             @include('template-parts.single.list-downloads', [

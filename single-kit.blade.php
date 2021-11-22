@@ -11,7 +11,7 @@
             <h2 class="mb-4">Materiais do kit</h2>
 
             @include('template-parts.single.list-kit-downloads', [
-              'downloads' => get_field('downloads'),
+              'downloads' => explode(",", get_field('downloads_kits')['sticky']),
             ])
           </div>
           
