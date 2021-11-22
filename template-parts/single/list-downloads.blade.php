@@ -1,5 +1,5 @@
 @notempty($downloads)
-  <table class="pa-downloads-table table table-hover">
+  <table class="pa-downloads-table table table-hover align-middle">
     <caption class="d-none"><?= __('Download', 'iasd')  ?></caption>
     <thead>
       <tr>
@@ -16,7 +16,7 @@
     <tbody>
       @foreach($downloads as $download)
         <tr>
-          <td class="py-3 px-0 px-lg-3">
+          <td class="py-3 px-0 pe-lg-3">
             <span class="pa-truncate-1" title="{!! $loop->iteration . '. ' . wp_strip_all_tags($download['name']) !!}">
               <span class="pa-tag rounded-1 text-uppercase d-inline-block px-1 me-2">{{ $download['format'] }}</span>
               {!! $loop->iteration . '. ' . wp_strip_all_tags($download['name']) !!}
