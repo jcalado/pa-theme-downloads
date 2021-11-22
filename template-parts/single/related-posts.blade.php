@@ -37,7 +37,7 @@
                       class="border border-1 px-4 py-1 rounded-pill btn-outline-primary text-uppercase fw-bold" 
                       title="{!! wp_strip_all_tags(get_the_title($post->ID)) !!}"
                     >
-                      Ver mais
+                    <?= __('View more', 'iasd')  ?>
                     </a>
                   </div>
                 </div>

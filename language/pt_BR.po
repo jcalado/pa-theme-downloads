@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-10-22 14:50-0300\n"
-"PO-Revision-Date: 2021-10-25 10:21-0300\n"
+"POT-Creation-Date: 2021-11-22 15:04-0300\n"
+"PO-Revision-Date: 2021-11-22 15:31-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -20,94 +20,336 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
 
-#: components/header/title.blade.php:5
-msgid "Adventist videos"
-msgstr "Vídeos adventistas"
-
-#: template-parts/feature.blade.php:3 Blocks/PAFeaturePost/PAFeaturePost.php:42
-msgid "Feature"
-msgstr "Destaque"
-
-#: template-parts/single/header.blade.php:39
-msgid "Share:"
-msgstr "Compartilhar:"
-
-#: template-parts/single/related-posts.blade.php:9
-msgid "Related video"
-msgstr "Vídeos relacionados"
-
-#: Blocks/PACarouselVideos/PACarouselVideos.php:21
-msgid "IASD - Videos - Carousel"
+#: Blocks/PACarouselPosts/PACarouselPosts.php:20
+msgid "IASD - Carousel - Posts"
 msgstr ""
 
-#: Blocks/PACarouselVideos/PACarouselVideos.php:44
-#: Blocks/PAFeaturePost/PAFeaturePost.php:41
-#: Blocks/PAListVideosColumn/PAListVideosColumn.php:42
+#: Blocks/PACarouselPosts/PACarouselPosts.php:21
+msgid "Block from downloads content on carousel format."
+msgstr "Bloco para exibir conteúdos em destaque no formato de slides."
+
+#: Blocks/PACarouselPosts/PACarouselPosts.php:37
+#: Blocks/PAFeaturePost/PAFeaturePost.php:37
+#: Blocks/PAListLinks/PAListLinks.php:34
+#: Blocks/PAListPostsCards/PAListPostsCards.php:39
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:39
+#: classes/controllers/PA_Ajax.class.php:42
 msgid "Title"
 msgstr "Título"
 
-#: Blocks/PACarouselVideos/PACarouselVideos.php:49
-#: Blocks/PAListVideosColumn/PAListVideosColumn.php:48
+#: Blocks/PACarouselPosts/PACarouselPosts.php:42
+#: Blocks/PAListPostsCards/PAListPostsCards.php:45
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:45
 msgid "Recents"
 msgstr "Recentes"
 
-#: Blocks/PACarouselVideos/PACarouselVideos.php:50
-#: Blocks/PAListVideosColumn/PAListVideosColumn.php:49
+#: Blocks/PACarouselPosts/PACarouselPosts.php:43
+#: Blocks/PAListPostsCards/PAListPostsCards.php:46
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:46
 msgid "Popular"
 msgstr "Populares"
 
-#: Blocks/PACarouselVideos/PACarouselVideos.php:54
-#: Blocks/PACarouselVideos/PACarouselVideos.php:70
-#: Blocks/PAFeaturePost/PAFeaturePost.php:44
-#: Blocks/PAListVideosColumn/PAListVideosColumn.php:53
-#: Blocks/PAListVideosColumn/PAListVideosColumn.php:69
-msgid "Videos"
-msgstr "Vídeos"
-
-#: Blocks/PACarouselVideos/PACarouselVideos.php:55
-#: Blocks/PACarouselVideos/PACarouselVideos.php:71
-#: Blocks/PAFeaturePost/PAFeaturePost.php:45
-#: Blocks/PAListVideosColumn/PAListVideosColumn.php:54
-#: Blocks/PAListVideosColumn/PAListVideosColumn.php:70
-msgid "Select videos"
-msgstr "Vídeos relacionados"
-
-#: Blocks/PAFeaturePost/PAFeaturePost.php:20
-msgid "IASD - Videos - Feature"
+#: Blocks/PACarouselPosts/PACarouselPosts.php:47
+#: Blocks/PACarouselPosts/PACarouselPosts.php:63
+#: Blocks/PAFeaturePost/PAFeaturePost.php:40
+#: Blocks/PAListPostsCards/PAListPostsCards.php:50
+#: Blocks/PAListPostsCards/PAListPostsCards.php:66
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:50
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:66
+msgid "Posts"
 msgstr ""
 
-#: Blocks/PAFeaturePost/PAFeaturePost.php:21
-msgid "Block to show a single video content on feature format."
-msgstr "Bloco para exibir um único vídeo no formato de destaque."
+#: Blocks/PACarouselPosts/PACarouselPosts.php:48
+#: Blocks/PACarouselPosts/PACarouselPosts.php:64
+#: Blocks/PAFeaturePost/PAFeaturePost.php:41
+#: Blocks/PAListPostsCards/PAListPostsCards.php:51
+#: Blocks/PAListPostsCards/PAListPostsCards.php:67
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:51
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:67
+msgid "Select posts"
+msgstr "Selecione as postagens"
 
-#: Blocks/PAListVideosColumn/PAListVideosColumn.php:23
-#: Blocks/PAListVideosColumn/PAListVideosColumn.php:43
-msgid "IASD - Vídeos - List(B)"
+#: Blocks/PAFeaturePost/PAFeaturePost.php:17
+msgid "IASD - Downloads - Feature"
 msgstr ""
 
-#: Blocks/PAListVideosColumn/PAListVideosColumn.php:24
-msgid "Block to show videos contents in list format."
-msgstr "Bloco para exibir vídeos no formato de lista."
+#: Blocks/PAFeaturePost/PAFeaturePost.php:18
+msgid "Block to show a single post content on feature format."
+msgstr ""
+"Bloco para mostrar um único conteúdo de postagem em formato de recurso."
 
-#: classes/PA_Helpers.php:31
-msgid "There is no headquarter office linked to this post."
-msgstr "Não tem nenhuma Sede Proprietária linkada a este post."
+#: Blocks/PAFeaturePost/PAFeaturePost.php:38
+msgid "Feature"
+msgstr "Destaque"
 
-#: classes/controllers/PA_ACF_PostFields.class.php:15
-msgid "Video info"
-msgstr "Informação do vídeo"
+#: Blocks/PAListLinks/PAListLinks.php:19 Blocks/PAListLinks/PAListLinks.php:35
+msgid "IASD - List - Links"
+msgstr ""
 
-#: classes/controllers/PA_ACF_PostFields.class.php:19
-msgid "Video"
-msgstr "Vídeo"
+#: Blocks/PAListLinks/PAListLinks.php:20
+msgid "Block to show links in list format."
+msgstr "Bloco para mostrar links em formato de lista."
 
+#: Blocks/PAListLinks/PAListLinks.php:38
+msgid "Links"
+msgstr ""
+
+#: Blocks/PAListLinks/PAListLinks.php:40
+msgid "Add link"
+msgstr "Adicionar link"
+
+#: Blocks/PAListPostsCards/PAListPostsCards.php:21
+#: Blocks/PAListPostsCards/PAListPostsCards.php:40
+msgid "IASD - Posts - Cards"
+msgstr ""
+
+#: Blocks/PAListPostsCards/PAListPostsCards.php:22
+msgid "Block to show posts contents in card list format."
+msgstr ""
+"Bloco para mostrar o conteúdo das postagens no formato de lista de cartões."
+
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:21
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:40
+msgid "IASD - Posts - List(B)"
+msgstr ""
+
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:22
+msgid "Block to show posts contents in list format."
+msgstr "Bloco para mostrar o conteúdo das postagens em formato de lista."
+
+#: archive.blade.php:22
+msgid "Materials"
+msgstr "Materiais"
+
+#: classes/PA_Directives.php:7 classes/PA_Directives.php:14
+msgid "Post ID is required."
+msgstr "Post ID é obrigatório."
+
+#: classes/controllers/PA_ACF_KitFields.class.php:14
+#: classes/controllers/PA_ACF_PostFields.class.php:17
+msgid "Downloads"
+msgstr ""
+
+#: classes/controllers/PA_ACF_KitFields.class.php:18
 #: classes/controllers/PA_ACF_PostFields.class.php:21
-msgid "Lenght"
-msgstr "Duração"
+msgid "List"
+msgstr "Lista"
 
-#: classes/controllers/PA_ACF_PostFields.class.php:22
-msgid "It will be get when saving the post."
-msgstr "Será obtido ao salvar o post."
+#: classes/controllers/PA_ACF_PostFields.class.php:27
+msgid "Name"
+msgstr "Nome"
+
+#: classes/controllers/PA_ACF_PostFields.class.php:29
+msgid "Format"
+msgstr "Formato"
+
+#: classes/controllers/PA_ACF_PostFields.class.php:34
+msgid "Size"
+msgstr "Tamanho"
+
+#: classes/controllers/PA_ACF_PostFields.class.php:41
+msgid "Link"
+msgstr ""
+
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:19
+msgid "Report settings"
+msgstr "Configurações de relatório"
+
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:23
+msgid "Enable report"
+msgstr "Habilitar relatório"
+
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:29
+msgid "Send email to"
+msgstr "Enviar um email para"
+
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:33
+msgid "reCAPTCHA site key"
+msgstr ""
+
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:34
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:39
+msgid ""
+"If not configured, the site will not activate the captcha and may thus be "
+"vulnerable to spam."
+msgstr ""
+"Se não configurada, o site não ativar o captcha, podendo assim ficar "
+"vulnerável a spam."
+
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:38
+msgid "reCAPTCHA secret key"
+msgstr ""
+
+#: classes/controllers/PA_Ajax.class.php:41
+msgid "New problem reported: "
+msgstr "Novo problema reportado: "
+
+#: classes/controllers/PA_Ajax.class.php:43
+msgid "Url"
+msgstr ""
+
+#: classes/controllers/PA_Ajax.class.php:44
+#: components/global/modal-report.blade.php:23
+msgid "Message"
+msgstr "Mensagem"
+
+#: components/global/link-report.blade.php:9
+msgid "Report problem"
+msgstr "Reportar problema"
+
+#: components/global/modal-report.blade.php:10
+msgid "I want to report an error"
+msgstr "Eu quero relatar um erro"
+
+#: components/global/modal-report.blade.php:15
+msgid "Message title"
+msgstr "Título da mensagem"
+
+#: components/global/modal-report.blade.php:16
+msgid "Enter a title"
+msgstr "Insira um título"
+
+#: components/global/modal-report.blade.php:18
+msgid "Write a title for the message."
+msgstr "Escreva um título para a mensagem."
+
+#: components/global/modal-report.blade.php:24
+msgid "Write the problem you found"
+msgstr "Escreva o problema que você encontrou"
+
+#: components/global/modal-report.blade.php:27
+msgid "Write the message content."
+msgstr "Escreva o conteúdo da mensagem."
+
+#: components/global/modal-report.blade.php:36
+msgid "Sending..."
+msgstr "Enviando …"
+
+#: components/global/modal-report.blade.php:37
+msgid "To send"
+msgstr "Enviar"
+
+#: components/global/modal-report.blade.php:54
+msgid "Thanks for cooperating"
+msgstr "Obrigado por cooperar"
+
+#: components/global/modal-report.blade.php:55
+msgid "Error"
+msgstr "Erro"
+
+#: components/global/modal-report.blade.php:57
+msgid "Your message has been sent successfully!"
+msgstr "Sua mensagem foi enviada com sucesso!"
+
+#: components/global/modal-report.blade.php:58
+msgid "There was an error in sending"
+msgstr "Ocorreu um erro no envio"
+
+#: components/global/modal-report.blade.php:60
+msgid "To close"
+msgstr "Fechar"
+
+#: components/menu/header-logo.php:3
+msgid "Seventh-day Adventist Church"
+msgstr "Igreja Adventista do Sétimo Dia"
+
+#: core/PA_Theme_Downloads_Install.php:23
+msgid "Kit"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:24
+#: core/PA_Theme_Downloads_Install.php:25
+msgid "Kits"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:26
+msgid "Add kit"
+msgstr "Adicionar kit"
+
+#: core/PA_Theme_Downloads_Install.php:27
+msgid "Add New"
+msgstr "Adicionar novo"
+
+#: core/PA_Theme_Downloads_Install.php:28
+msgid "Add New kit"
+msgstr "Adicionar novo kit"
+
+#: core/PA_Theme_Downloads_Install.php:29
+msgid "New kit"
+msgstr "Novo kit"
+
+#: core/PA_Theme_Downloads_Install.php:30
+msgid "Edit kit"
+msgstr "Editar kit"
+
+#: core/PA_Theme_Downloads_Install.php:31
+msgid "View kit"
+msgstr "Var kit"
+
+#: core/PA_Theme_Downloads_Install.php:32
+msgid "All kits"
+msgstr "Todos os kits"
+
+#: core/PA_Theme_Downloads_Install.php:33
+msgid "Search kit"
+msgstr "Procurar kit"
+
+#: core/PA_Theme_Downloads_Install.php:34
+msgid "No kit found."
+msgstr "Nenhum kit encontrado."
+
+#: core/PA_Theme_Downloads_Install.php:35
+msgid "No kit found in Trash."
+msgstr "Nenhum kit foi encontrado na lixeira."
+
+#: single-kit.blade.php:11
+msgid "Kit materials"
+msgstr "Kit do meterial"
+
+#: single.blade.php:10
+msgid "File details"
+msgstr "Detalhes do arquivo"
+
+#: template-parts/global/card-post.blade.php:27
+#: template-parts/single/related-posts.blade.php:40
+msgid "View more"
+msgstr "View more"
+
+#: template-parts/single/list-downloads.blade.php:3
+#: template-parts/single/list-downloads.blade.php:32
+msgid "Download"
+msgstr ""
+
+#: template-parts/single/list-kit-downloads.blade.php:45
+msgid "Access content"
+msgstr "Acessar conteúdo"
+
+#~ msgid "Adventist videos"
+#~ msgstr "Vídeos adventistas"
+
+#~ msgid "Share:"
+#~ msgstr "Compartilhar:"
+
+#~ msgid "Related video"
+#~ msgstr "Vídeos relacionados"
+
+#~ msgid "Videos"
+#~ msgstr "Vídeos"
+
+#~ msgid "There is no headquarter office linked to this post."
+#~ msgstr "Não tem nenhuma Sede Proprietária linkada a este post."
+
+#~ msgid "Video info"
+#~ msgstr "Informação do vídeo"
+
+#~ msgid "Video"
+#~ msgstr "Vídeo"
+
+#~ msgid "Lenght"
+#~ msgstr "Duração"
+
+#~ msgid "It will be get when saving the post."
+#~ msgstr "Será obtido ao salvar o post."
 
 #~ msgid "Mode"
 #~ msgstr "Modo"

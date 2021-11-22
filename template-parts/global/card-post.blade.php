@@ -24,7 +24,7 @@
           </div>
 
           <a href="{{ get_the_permalink($post->ID) }}" class="d-none d-sm-inline-block pa-see-more border border-1 px-4 py-1 rounded-pill btn-outline-primary text-uppercase fw-bold" title="{!! wp_strip_all_tags(get_the_title($post->ID)) !!}">
-            Ver mais
+            <?= __('View more', 'iasd')  ?>
           </a>
         </div>
       </div>

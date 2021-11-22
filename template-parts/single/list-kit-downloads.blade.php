@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="col-auto d-flex">
-                  <a href="{{ get_the_permalink($id) }}" role="button" class="accordion-kits__permalink text-primary fw-bold text-decoration-none col-auto">Acessar conteúdo<i class="fas fa-arrow-right ms-2"></i></a>
+                  <a href="{{ get_the_permalink($id) }}" role="button" class="accordion-kits__permalink text-primary fw-bold text-decoration-none col-auto"><?= __('Access content', 'iasd')  ?><i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
             </div>

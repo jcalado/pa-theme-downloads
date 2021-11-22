@@ -1,6 +1,6 @@
 @notempty($downloads)
   <table class="pa-downloads-table table table-hover">
-    <caption class="d-none">Downloads</caption>
+    <caption class="d-none"><?= __('Download', 'iasd')  ?></caption>
     <thead>
       <tr>
         <th class="px-0 border-0 d-none d-lg-table-cell" scope="col">{{ __('Nome', 'iasd') }}</th>
@@ -29,7 +29,7 @@
             <a class="text-decoration-none d-flex align-items-center" href="{{ $download['link'] }}" target="_blank">
               <i class="fas fa-download me-2"></i>
               
-              <span class="d-none d-lg-inline-block">Baixar</span> 
+              <span class="d-none d-lg-inline-block"><?= __('Download', 'iasd')  ?></span> 
             </a>
           </td>
         </tr>

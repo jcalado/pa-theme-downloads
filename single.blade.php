@@ -7,7 +7,7 @@
     <div class="container pt-5">
       <div class="row justify-content-center">
         <section class="col-auto col-md-8">     
-          <h2 class="mb-3">Detalhes do arquivo</h2>     
+          <h2 class="mb-3"><?= __('File details', 'iasd') ?></h2>     
           
           <p class="post-excerpt mb-4">{!! get_the_excerpt() !!}</p>
 
