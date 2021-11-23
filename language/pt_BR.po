@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-11-22 15:04-0300\n"
-"PO-Revision-Date: 2021-11-22 15:31-0300\n"
+"POT-Creation-Date: 2021-11-23 18:34-0300\n"
+"PO-Revision-Date: 2021-11-23 18:34-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -19,6 +19,118 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: assets\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#: archive.blade.php:22
+msgid "Materials"
+msgstr "Materiais"
+
+#: components/global/link-report.blade.php:9
+msgid "Report problem"
+msgstr "Reportar problema"
+
+#: components/global/modal-report.blade.php:10
+msgid "I want to report an error"
+msgstr "Eu quero relatar um erro"
+
+#: components/global/modal-report.blade.php:15
+msgid "Message title"
+msgstr "Título da mensagem"
+
+#: components/global/modal-report.blade.php:18
+msgid "Write a title for the message."
+msgstr "Escreva um título para a mensagem."
+
+#: components/global/modal-report.blade.php:23
+#: classes/controllers/PA_Ajax.class.php:44
+msgid "Message"
+msgstr "Mensagem"
+
+#: components/global/modal-report.blade.php:27
+msgid "Write the message content."
+msgstr "Escreva o conteúdo da mensagem."
+
+#: components/global/modal-report.blade.php:36
+msgid "Sending..."
+msgstr "Enviando …"
+
+#: components/global/modal-report.blade.php:37
+msgid "To send"
+msgstr "Enviar"
+
+#: components/global/modal-report.blade.php:54
+msgid "Thanks for cooperating"
+msgstr "Obrigado por cooperar"
+
+#: components/global/modal-report.blade.php:55
+msgid "Error"
+msgstr "Erro"
+
+#: components/global/modal-report.blade.php:57
+msgid "Your message has been sent successfully!"
+msgstr "Sua mensagem foi enviada com sucesso!"
+
+#: components/global/modal-report.blade.php:58
+msgid "There was an error in sending"
+msgstr "Ocorreu um erro no envio"
+
+#: components/global/modal-report.blade.php:60
+msgid "To close"
+msgstr "Fechar"
+
+#: components/header/title.blade.php:5
+#, fuzzy
+#| msgid "Adventist videos"
+msgid "Adventist downloads"
+msgstr "Vídeos adventistas"
+
+#: single-kit.blade.php:11 single-kit.blade.php:19
+msgid "Kit materials"
+msgstr "Kit do meterial"
+
+#: single.blade.php:10
+msgid "File details"
+msgstr "Detalhes do arquivo"
+
+#: template-parts/feature.blade.php:3 Blocks/PAFeaturePost/PAFeaturePost.php:38
+msgid "Feature"
+msgstr "Destaque"
+
+#: template-parts/global/card-post.blade.php:27
+#: template-parts/single/related-posts.blade.php:40
+msgid "View more"
+msgstr "View more"
+
+#: template-parts/single/list-downloads.blade.php:3
+#: template-parts/single/list-downloads.blade.php:10
+#: template-parts/single/list-downloads.blade.php:32
+msgid "Download"
+msgstr ""
+
+#: template-parts/single/list-downloads.blade.php:6
+msgid "Nome"
+msgstr ""
+
+#: template-parts/single/list-downloads.blade.php:8
+msgid "Tamanho"
+msgstr ""
+
+#: template-parts/single/list-downloads.blade.php:12
+msgid "Arquivos para download"
+msgstr ""
+
+#: template-parts/single/list-kit-downloads.blade.php:24
+#: classes/controllers/PA_ACF_KitFields.class.php:13
+#: classes/controllers/PA_ACF_PostFields.class.php:17
+msgid "Downloads"
+msgstr ""
+
+#: template-parts/single/list-kit-downloads.blade.php:45
+msgid "Access content"
+msgstr "Acessar conteúdo"
+
+#: template-parts/single/related-posts.blade.php:8
+msgid "Arquivos relacionados"
+msgstr ""
 
 #: Blocks/PACarouselPosts/PACarouselPosts.php:20
 msgid "IASD - Carousel - Posts"
@@ -78,10 +190,6 @@ msgid "Block to show a single post content on feature format."
 msgstr ""
 "Bloco para mostrar um único conteúdo de postagem em formato de recurso."
 
-#: Blocks/PAFeaturePost/PAFeaturePost.php:38
-msgid "Feature"
-msgstr "Destaque"
-
 #: Blocks/PAListLinks/PAListLinks.php:19 Blocks/PAListLinks/PAListLinks.php:35
 msgid "IASD - List - Links"
 msgstr ""
@@ -117,20 +225,11 @@ msgstr ""
 msgid "Block to show posts contents in list format."
 msgstr "Bloco para mostrar o conteúdo das postagens em formato de lista."
 
-#: archive.blade.php:22
-msgid "Materials"
-msgstr "Materiais"
-
 #: classes/PA_Directives.php:7 classes/PA_Directives.php:14
 msgid "Post ID is required."
 msgstr "Post ID é obrigatório."
 
-#: classes/controllers/PA_ACF_KitFields.class.php:14
-#: classes/controllers/PA_ACF_PostFields.class.php:17
-msgid "Downloads"
-msgstr ""
-
-#: classes/controllers/PA_ACF_KitFields.class.php:18
+#: classes/controllers/PA_ACF_KitFields.class.php:17
 #: classes/controllers/PA_ACF_PostFields.class.php:21
 msgid "List"
 msgstr "Lista"
@@ -188,67 +287,6 @@ msgstr "Novo problema reportado: "
 msgid "Url"
 msgstr ""
 
-#: classes/controllers/PA_Ajax.class.php:44
-#: components/global/modal-report.blade.php:23
-msgid "Message"
-msgstr "Mensagem"
-
-#: components/global/link-report.blade.php:9
-msgid "Report problem"
-msgstr "Reportar problema"
-
-#: components/global/modal-report.blade.php:10
-msgid "I want to report an error"
-msgstr "Eu quero relatar um erro"
-
-#: components/global/modal-report.blade.php:15
-msgid "Message title"
-msgstr "Título da mensagem"
-
-#: components/global/modal-report.blade.php:16
-msgid "Enter a title"
-msgstr "Insira um título"
-
-#: components/global/modal-report.blade.php:18
-msgid "Write a title for the message."
-msgstr "Escreva um título para a mensagem."
-
-#: components/global/modal-report.blade.php:24
-msgid "Write the problem you found"
-msgstr "Escreva o problema que você encontrou"
-
-#: components/global/modal-report.blade.php:27
-msgid "Write the message content."
-msgstr "Escreva o conteúdo da mensagem."
-
-#: components/global/modal-report.blade.php:36
-msgid "Sending..."
-msgstr "Enviando …"
-
-#: components/global/modal-report.blade.php:37
-msgid "To send"
-msgstr "Enviar"
-
-#: components/global/modal-report.blade.php:54
-msgid "Thanks for cooperating"
-msgstr "Obrigado por cooperar"
-
-#: components/global/modal-report.blade.php:55
-msgid "Error"
-msgstr "Erro"
-
-#: components/global/modal-report.blade.php:57
-msgid "Your message has been sent successfully!"
-msgstr "Sua mensagem foi enviada com sucesso!"
-
-#: components/global/modal-report.blade.php:58
-msgid "There was an error in sending"
-msgstr "Ocorreu um erro no envio"
-
-#: components/global/modal-report.blade.php:60
-msgid "To close"
-msgstr "Fechar"
-
 #: components/menu/header-logo.php:3
 msgid "Seventh-day Adventist Church"
 msgstr "Igreja Adventista do Sétimo Dia"
@@ -302,30 +340,11 @@ msgstr "Nenhum kit encontrado."
 msgid "No kit found in Trash."
 msgstr "Nenhum kit foi encontrado na lixeira."
 
-#: single-kit.blade.php:11
-msgid "Kit materials"
-msgstr "Kit do meterial"
+#~ msgid "Enter a title"
+#~ msgstr "Insira um título"
 
-#: single.blade.php:10
-msgid "File details"
-msgstr "Detalhes do arquivo"
-
-#: template-parts/global/card-post.blade.php:27
-#: template-parts/single/related-posts.blade.php:40
-msgid "View more"
-msgstr "View more"
-
-#: template-parts/single/list-downloads.blade.php:3
-#: template-parts/single/list-downloads.blade.php:32
-msgid "Download"
-msgstr ""
-
-#: template-parts/single/list-kit-downloads.blade.php:45
-msgid "Access content"
-msgstr "Acessar conteúdo"
-
-#~ msgid "Adventist videos"
-#~ msgstr "Vídeos adventistas"
+#~ msgid "Write the problem you found"
+#~ msgstr "Escreva o problema que você encontrou"
 
 #~ msgid "Share:"
 #~ msgstr "Compartilhar:"
