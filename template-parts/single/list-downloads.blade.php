@@ -3,13 +3,13 @@
     <caption class="d-none"><?= __('Download', 'iasd')  ?></caption>
     <thead>
       <tr>
-        <th class="px-0 border-0 d-none d-lg-table-cell" scope="col">{{ __('Nome', 'iasd') }}</th>
+        <th class="px-0 border-0 d-none d-lg-table-cell" scope="col">{{ __('Name', 'iasd') }}</th>
 
-        <th class="px-3 border-0 d-none d-lg-table-cell" scope="col">{{ __('Tamanho', 'iasd') }}</th>
+        <th class="px-3 border-0 d-none d-lg-table-cell" scope="col">{{ __('Size', 'iasd') }}</th>
 
         <th class="pa-downloads-table__fit px-0 border-0 text-end d-none d-lg-table-cell" scope="col">{{ __('Download', 'iasd') }}</th>
 
-        <th class="px-0 border-0 d-block d-lg-none" scope="col">{{ __('Arquivos para download', 'iasd') }}</th>
+        <th class="px-0 border-0 d-block d-lg-none" scope="col">{{ __('Files for download', 'iasd') }}</th>
       </tr>
     </thead> 
 

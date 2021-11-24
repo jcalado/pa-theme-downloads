@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-11-22 16:00-0300\n"
-"PO-Revision-Date: 2021-11-22 16:00-0300\n"
+"POT-Creation-Date: 2021-11-23 19:54-0300\n"
+"PO-Revision-Date: 2021-11-23 19:56-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_html__;esc_html_e;esc_html_x;esc_attr__;"
 "esc_attr_e;esc_attr_x\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -19,6 +19,118 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: assets\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#: archive.blade.php:22
+msgid "Materials"
+msgstr "Materiales"
+
+#: components/global/link-report.blade.php:9
+msgid "Report problem"
+msgstr "Reportar problema"
+
+#: components/global/modal-report.blade.php:10
+msgid "I want to report an error"
+msgstr "Quiero reportar un error"
+
+#: components/global/modal-report.blade.php:15
+msgid "Message title"
+msgstr "Título del mensaje"
+
+#: components/global/modal-report.blade.php:18
+msgid "Write a title for the message."
+msgstr "Escribe un título para el mensaje."
+
+#: components/global/modal-report.blade.php:23
+#: classes/controllers/PA_Ajax.class.php:44
+msgid "Message"
+msgstr "Mensaje"
+
+#: components/global/modal-report.blade.php:27
+msgid "Write the message content."
+msgstr "Escribe el contenido del mensaje."
+
+#: components/global/modal-report.blade.php:36
+msgid "Sending..."
+msgstr "Enviando…"
+
+#: components/global/modal-report.blade.php:37
+msgid "To send"
+msgstr "Mandar"
+
+#: components/global/modal-report.blade.php:54
+msgid "Thanks for cooperating"
+msgstr "Gracias por cooperar"
+
+#: components/global/modal-report.blade.php:55
+msgid "Error"
+msgstr ""
+
+#: components/global/modal-report.blade.php:57
+msgid "Your message has been sent successfully!"
+msgstr "¡Tu mensaje ha sido enviado exitosamente!"
+
+#: components/global/modal-report.blade.php:58
+msgid "There was an error in sending"
+msgstr "Hubo un error al enviar"
+
+#: components/global/modal-report.blade.php:60
+msgid "To close"
+msgstr "Cerrar"
+
+#: components/header/title.blade.php:5
+msgid "Adventist downloads"
+msgstr "Downloads Adventistas"
+
+#: single-kit.blade.php:11 single-kit.blade.php:19
+msgid "Kit materials"
+msgstr "Materiales del kit"
+
+#: single.blade.php:10
+msgid "File details"
+msgstr "Detalles del archivo"
+
+#: template-parts/feature.blade.php:3 Blocks/PAFeaturePost/PAFeaturePost.php:38
+msgid "Feature"
+msgstr "Destaque"
+
+#: template-parts/global/card-post.blade.php:27
+#: template-parts/single/related-posts.blade.php:40
+msgid "View more"
+msgstr "View more"
+
+#: template-parts/single/list-downloads.blade.php:3
+#: template-parts/single/list-downloads.blade.php:10
+#: template-parts/single/list-downloads.blade.php:32
+msgid "Download"
+msgstr "Descargar"
+
+#: template-parts/single/list-downloads.blade.php:6
+#: classes/controllers/PA_ACF_PostFields.class.php:27
+msgid "Name"
+msgstr "Nombre"
+
+#: template-parts/single/list-downloads.blade.php:8
+#: classes/controllers/PA_ACF_PostFields.class.php:34
+msgid "Size"
+msgstr "Tamaño"
+
+#: template-parts/single/list-downloads.blade.php:12
+msgid "Files for download"
+msgstr "Archivos para descargar"
+
+#: template-parts/single/list-kit-downloads.blade.php:24
+#: classes/controllers/PA_ACF_KitFields.class.php:13
+#: classes/controllers/PA_ACF_PostFields.class.php:17
+msgid "Downloads"
+msgstr "Downloads"
+
+#: template-parts/single/list-kit-downloads.blade.php:45
+msgid "Access content"
+msgstr "Acceder al contenido"
+
+#: template-parts/single/related-posts.blade.php:8
+msgid "Related files"
+msgstr "Archivos relacionados"
 
 #: Blocks/PACarouselPosts/PACarouselPosts.php:20
 msgid "IASD - Carousel - Posts"
@@ -79,10 +191,6 @@ msgstr ""
 "Bloquear para mostrar el contenido de una sola publicación en formato de "
 "función."
 
-#: Blocks/PAFeaturePost/PAFeaturePost.php:38
-msgid "Feature"
-msgstr "Destaque"
-
 #: Blocks/PAListLinks/PAListLinks.php:19 Blocks/PAListLinks/PAListLinks.php:35
 msgid "IASD - List - Links"
 msgstr ""
@@ -120,35 +228,18 @@ msgid "Block to show posts contents in list format."
 msgstr ""
 "Bloquear para mostrar el contenido de las publicaciones en formato de lista."
 
-#: archive.blade.php:22
-msgid "Materials"
-msgstr "Materiales"
-
 #: classes/PA_Directives.php:7 classes/PA_Directives.php:14
 msgid "Post ID is required."
 msgstr "Se requiere ID de publicación."
 
-#: classes/controllers/PA_ACF_KitFields.class.php:14
-#: classes/controllers/PA_ACF_PostFields.class.php:17
-msgid "Downloads"
-msgstr "Downloads"
-
-#: classes/controllers/PA_ACF_KitFields.class.php:18
+#: classes/controllers/PA_ACF_KitFields.class.php:17
 #: classes/controllers/PA_ACF_PostFields.class.php:21
 msgid "List"
 msgstr "Lista"
 
-#: classes/controllers/PA_ACF_PostFields.class.php:27
-msgid "Name"
-msgstr "Nombre"
-
 #: classes/controllers/PA_ACF_PostFields.class.php:29
 msgid "Format"
 msgstr "Formato"
-
-#: classes/controllers/PA_ACF_PostFields.class.php:34
-msgid "Size"
-msgstr "Tamaño"
 
 #: classes/controllers/PA_ACF_PostFields.class.php:41
 msgid "Link"
@@ -190,67 +281,6 @@ msgstr "Nuevo problema informado: "
 #: classes/controllers/PA_Ajax.class.php:43
 msgid "Url"
 msgstr ""
-
-#: classes/controllers/PA_Ajax.class.php:44
-#: components/global/modal-report.blade.php:23
-msgid "Message"
-msgstr "Mensaje"
-
-#: components/global/link-report.blade.php:9
-msgid "Report problem"
-msgstr "Reportar problema"
-
-#: components/global/modal-report.blade.php:10
-msgid "I want to report an error"
-msgstr "Quiero reportar un error"
-
-#: components/global/modal-report.blade.php:15
-msgid "Message title"
-msgstr "Título del mensaje"
-
-#: components/global/modal-report.blade.php:16
-msgid "Enter a title"
-msgstr "Ingrese un título"
-
-#: components/global/modal-report.blade.php:18
-msgid "Write a title for the message."
-msgstr "Escribe un título para el mensaje."
-
-#: components/global/modal-report.blade.php:24
-msgid "Write the problem you found"
-msgstr "Escribe el problema que encontraste"
-
-#: components/global/modal-report.blade.php:27
-msgid "Write the message content."
-msgstr "Escribe el contenido del mensaje."
-
-#: components/global/modal-report.blade.php:36
-msgid "Sending..."
-msgstr "Enviando…"
-
-#: components/global/modal-report.blade.php:37
-msgid "To send"
-msgstr "Mandar"
-
-#: components/global/modal-report.blade.php:54
-msgid "Thanks for cooperating"
-msgstr "Gracias por cooperar"
-
-#: components/global/modal-report.blade.php:55
-msgid "Error"
-msgstr ""
-
-#: components/global/modal-report.blade.php:57
-msgid "Your message has been sent successfully!"
-msgstr "¡Tu mensaje ha sido enviado exitosamente!"
-
-#: components/global/modal-report.blade.php:58
-msgid "There was an error in sending"
-msgstr "Hubo un error al enviar"
-
-#: components/global/modal-report.blade.php:60
-msgid "To close"
-msgstr "Cerrar"
 
 #: components/menu/header-logo.php:3
 msgid "Seventh-day Adventist Church"
@@ -305,36 +335,8 @@ msgstr "No se encontró ningún kit."
 msgid "No kit found in Trash."
 msgstr "No se encontró ningún kit en la Papelera."
 
-#: single-kit.blade.php:11
-msgid "Kit materials"
-msgstr "Materiales del kit"
-
-#: single.blade.php:10
-msgid "File details"
-msgstr "Detalles del archivo"
-
-#: template-parts/global/card-post.blade.php:27
-#: template-parts/single/related-posts.blade.php:40
-msgid "View more"
-msgstr "View more"
-
-#: template-parts/single/list-downloads.blade.php:3
-#: template-parts/single/list-downloads.blade.php:32
-msgid "Download"
-msgstr "Descargar"
-
-#: template-parts/single/list-kit-downloads.blade.php:45
-msgid "Access content"
-msgstr "Acceder al contenido"
-
-#~ msgid "Adventist videos"
-#~ msgstr "Vídeos adventistas"
-
 #~ msgid "Share:"
 #~ msgstr "Compartilhar:"
-
-#~ msgid "Related video"
-#~ msgstr "Vídeos relacionados"
 
 #~ msgid "Videos"
 #~ msgstr "Vídeos"
