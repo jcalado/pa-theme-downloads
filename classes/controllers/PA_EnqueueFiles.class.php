@@ -40,9 +40,10 @@ class PaEnqueueFiles {
           [
             'post_type'    => 'post',
             'taxonomies'   => [
-              'xtt-pa-editorias',
+              'xtt-pa-departamentos',
               'xtt-pa-owner',
-              'xtt-pa-sedes'
+              'xtt-pa-sedes',
+              'xtt-pa-materiais'
             ],
           ]
         ],
