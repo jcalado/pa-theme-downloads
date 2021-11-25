@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-11-23 19:54-0300\n"
-"PO-Revision-Date: 2021-11-23 19:56-0300\n"
+"POT-Creation-Date: 2021-11-24 22:39-0300\n"
+"PO-Revision-Date: 2021-11-24 22:39-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -81,7 +81,11 @@ msgstr "Cerrar"
 msgid "Adventist downloads"
 msgstr "Downloads Adventistas"
 
-#: single-kit.blade.php:11 single-kit.blade.php:19
+#: single-kit.blade.php:11
+msgid "Kit description"
+msgstr ""
+
+#: single-kit.blade.php:15 single-kit.blade.php:23
 msgid "Kit materials"
 msgstr "Materiales del kit"
 
@@ -96,7 +100,7 @@ msgstr "Destaque"
 #: template-parts/global/card-post.blade.php:27
 #: template-parts/single/related-posts.blade.php:40
 msgid "View more"
-msgstr "View more"
+msgstr "Ver más"
 
 #: template-parts/single/list-downloads.blade.php:3
 #: template-parts/single/list-downloads.blade.php:10
@@ -334,6 +338,55 @@ msgstr "No se encontró ningún kit."
 #: core/PA_Theme_Downloads_Install.php:35
 msgid "No kit found in Trash."
 msgstr "No se encontró ningún kit en la Papelera."
+
+#: core/PA_Theme_Downloads_Install.php:61
+#: core/PA_Theme_Downloads_Install.php:71
+msgid "Tipos de Materiais"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:62
+#, fuzzy
+#| msgid "Materials"
+msgid "Tipo de Material"
+msgstr "Materiales"
+
+#: core/PA_Theme_Downloads_Install.php:63
+msgid "Buscar Tipo de Material"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:64
+msgid "Todos os Tipos de Materiais"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:65
+msgid "Tipo Superior"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:66
+msgid "Tipo Superior:"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:67
+msgid "Editar Tipo de Material"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:68
+msgid "Atualizar Tipo de Material"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:69
+msgid "Adicionar Novo Tipo de Material"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:70
+msgid "Nome do Tipo de Material"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:80
+#, fuzzy
+#| msgid "Kit materials"
+msgid "tipo-material"
+msgstr "Materiales del kit"
 
 #~ msgid "Share:"
 #~ msgstr "Compartilhar:"
