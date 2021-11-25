@@ -45,6 +45,13 @@ class PaEnqueueFiles {
               'xtt-pa-sedes',
               'xtt-pa-materiais'
             ],
+          ],
+          [
+            'post_type'    => 'kit',
+            'taxonomies'   => [
+              'xtt-pa-departamentos',
+              'xtt-pa-owner',
+            ],
           ]
         ],
         'unregisterBlocks' => [
