@@ -5,6 +5,23 @@
     {
       "type":"composer",
       "url":"https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "airesvsg/acf-to-rest-api",
+        "type": "wordpress-plugin",
+        "version": "dev-master",
+        "dist": {
+          "url": "https://github.com/airesvsg/acf-to-rest-api/archive/refs/heads/master.zip",
+          "type": "zip"
+        },
+        "autoload": {
+          "files": [
+            "class-acf-to-rest-api.php"
+          ]
+        }
+      }
     }
 	],
   "autoload": {
@@ -14,6 +31,7 @@
     }
   },
   "require": {
-    "lordealeister/popular-posts": "1.3.1"
+    "lordealeister/popular-posts": "1.3.1",
+    "airesvsg/acf-to-rest-api": "dev-master"
   }
 }

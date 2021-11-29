@@ -9,12 +9,15 @@ define('THEME_DIR', get_stylesheet_directory() . '/');
 define('THEME_CSS', THEME_URI . 'assets/css/');
 define('THEME_JS', THEME_URI . 'assets/js/');
 define('THEME_IMGS', THEME_URI . 'assets/images/');
+define('ACF_TO_REST_API_REQUEST_VERSION', 2 );
 
 $ChildBlocks = new \Blocks\ChildBlocks;
 
 add_filter('popular-posts/settings/url', function () {
   return THEME_URI . 'vendor/lordealeister/popular-posts/';
 });
+
+add_action('init', array( 'ACF_To_REST_API', 'init' ) );
 
 require_once(dirname(__FILE__) . '/vendor/lordealeister/popular-posts/popular-posts.php');
 require_once(dirname(__FILE__) . '/core/PA_Theme_Downloads_Install.php');
