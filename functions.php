@@ -9,7 +9,7 @@ define('THEME_DIR', get_stylesheet_directory() . '/');
 define('THEME_CSS', THEME_URI . 'assets/css/');
 define('THEME_JS', THEME_URI . 'assets/js/');
 define('THEME_IMGS', THEME_URI . 'assets/images/');
-define('ACF_TO_REST_API_REQUEST_VERSION', 2 );
+define('ACF_TO_REST_API_REQUEST_VERSION', 2);
 
 $ChildBlocks = new \Blocks\ChildBlocks;
 
@@ -17,7 +17,7 @@ add_filter('popular-posts/settings/url', function () {
   return THEME_URI . 'vendor/lordealeister/popular-posts/';
 });
 
-add_action('init', array( 'ACF_To_REST_API', 'init' ) );
+//add_action('init', array('ACF_To_REST_API', 'init'));
 
 require_once(dirname(__FILE__) . '/vendor/lordealeister/popular-posts/popular-posts.php');
 require_once(dirname(__FILE__) . '/core/PA_Theme_Downloads_Install.php');
@@ -89,3 +89,31 @@ add_action('after_setup_theme', function () {
 
   load_theme_textdomain('iasd', get_stylesheet_directory() . '/language/');
 }, 9);
+
+
+add_action('acf/save_post', 'set_post_default_category');
+
+function set_post_default_category($post_id)
+{
+
+  //Only set for post_type = post!
+  if (get_post_type($post_id) == 'post') {
+    if (have_rows('downloads', $post_id)) {
+      while (have_rows('downloads', $post_id)) {
+        the_row();
+
+        $download = get_sub_field('link');
+        //Isso foi preciso porque o link "http://deptos.adventistas.org.s3.amazonaws.com..." não valida o certificado e não efetua o download em uma nova aba. 
+        if (strpos($download, 'http://deptos.adventistas.org.s3.amazonaws.com') !== false) {
+          $link = str_replace('http://deptos.adventistas.org.s3.amazonaws.com', 'https://deptos.adventistas.org', $download);
+          update_sub_field('link', $link);
+        }
+
+        if (strpos($download, 'http://deptos.adventistas.org.s3.us-east-1.amazonaws.com') !== false) {
+          $link = str_replace('http://deptos.adventistas.org.s3.us-east-1.amazonaws.com', 'https://deptos.adventistas.org', $download);
+          update_sub_field('link', $link);
+        }
+      }
+    }
+  }
+}
