@@ -6,17 +6,21 @@ use WordPlate\Acf\Fields\Text;
 use WordPlate\Acf\Fields\Url;
 use WordPlate\Acf\Location;
 
-class PaAcfPostFields {
+class PaAcfPostFields
+{
 
-  public function __construct() {
+  public function __construct()
+  {
     add_action('init', [$this, 'createACFFields']);
   }
 
-  function createACFFields() {
+  function createACFFields()
+  {
     register_extended_field_group([
       'title' => __('Downloads', 'iasd'),
       'key'   => 'downloads',
       'style' => 'default',
+      'show_in_rest' => true,
       'fields' => [
         Repeater::make(__('List', 'iasd'), 'downloads')
           ->min(1)
@@ -46,11 +50,10 @@ class PaAcfPostFields {
           ])
       ],
       'location' => [
-          Location::if('post_type', 'post'),
+        Location::if('post_type', 'post'),
       ]
     ]);
   }
-
 }
 
 $PaAcfPostFields = new PaAcfPostFields();
