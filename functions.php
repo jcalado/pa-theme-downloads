@@ -91,9 +91,9 @@ add_action('after_setup_theme', function () {
 }, 9);
 
 
-add_action('acf/save_post', 'set_post_default_category');
+add_action('acf/save_post', 'replace_s3_urls');
 
-function set_post_default_category($post_id)
+function replace_s3_urls($post_id)
 {
 
   //Only set for post_type = post!
@@ -117,3 +117,14 @@ function set_post_default_category($post_id)
     }
   }
 }
+
+function clear_cf_cache()
+{
+
+  //RESET CF CACHE
+  $url = "https://" . API_PA . "/clear-cache?zone=adventistas.dev";
+  $json = file_get_contents($url);
+  $obj = json_decode($json);
+  unset($json, $obj);
+}
+add_action('acf/save_post', 'clear_cf_cache');
