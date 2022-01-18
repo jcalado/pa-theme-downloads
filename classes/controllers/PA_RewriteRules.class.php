@@ -26,12 +26,13 @@ class PaRewriteRules
       $original = get_option('permalink_structure');
       if ($permalink == $original) {
         $material = get_the_terms($post->ID, 'xtt-pa-materiais');
-        $material = $material[0]->slug;
-        $departamento = get_the_terms($post->ID, 'xtt-pa-departamentos');
-        $departamento = $departamento[0]->slug;
-
-        $permalink = str_replace('/%postname%/', $departamento .'/'. $material .'/%postname%/', $permalink);
-        // die(var_dump($permalink));
+        if (!is_wp_error($material)) {
+          $material = $material[0]->slug;
+          $departamento = get_the_terms($post->ID, 'xtt-pa-departamentos');
+          $departamento = $departamento[0]->slug;
+          $permalink = str_replace('/%postname%/', $departamento . '/' . $material . '/%postname%/', $permalink);
+          // die(var_dump($permalink));
+        }
       }
     }
 
