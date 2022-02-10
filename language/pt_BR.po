@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-11-23 18:38-0300\n"
-"PO-Revision-Date: 2021-11-23 18:40-0300\n"
+"POT-Creation-Date: 2022-02-10 14:05-0300\n"
+"PO-Revision-Date: 2022-02-10 14:07-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_html__;esc_html_e;esc_html_x;esc_attr__;"
 "esc_attr_e;esc_attr_x\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -81,9 +81,13 @@ msgstr "Fechar"
 msgid "Adventist downloads"
 msgstr "Downloads Adventistas"
 
-#: single-kit.blade.php:11 single-kit.blade.php:19
+#: single-kit.blade.php:11
+msgid "Kit description"
+msgstr "Descrição"
+
+#: single-kit.blade.php:15 single-kit.blade.php:23
 msgid "Kit materials"
-msgstr "Kit do meterial"
+msgstr "Materiais"
 
 #: single.blade.php:10
 msgid "File details"
@@ -105,12 +109,12 @@ msgid "Download"
 msgstr "Baixar"
 
 #: template-parts/single/list-downloads.blade.php:6
-#: classes/controllers/PA_ACF_PostFields.class.php:27
+#: classes/controllers/PA_ACF_PostFields.class.php:31
 msgid "Name"
 msgstr "Nome"
 
 #: template-parts/single/list-downloads.blade.php:8
-#: classes/controllers/PA_ACF_PostFields.class.php:34
+#: classes/controllers/PA_ACF_PostFields.class.php:38
 msgid "Size"
 msgstr "Tamanho"
 
@@ -120,7 +124,7 @@ msgstr "Arquivos para download"
 
 #: template-parts/single/list-kit-downloads.blade.php:24
 #: classes/controllers/PA_ACF_KitFields.class.php:13
-#: classes/controllers/PA_ACF_PostFields.class.php:17
+#: classes/controllers/PA_ACF_PostFields.class.php:20
 msgid "Downloads"
 msgstr ""
 
@@ -230,15 +234,15 @@ msgid "Post ID is required."
 msgstr "Post ID é obrigatório."
 
 #: classes/controllers/PA_ACF_KitFields.class.php:17
-#: classes/controllers/PA_ACF_PostFields.class.php:21
+#: classes/controllers/PA_ACF_PostFields.class.php:25
 msgid "List"
 msgstr "Lista"
 
-#: classes/controllers/PA_ACF_PostFields.class.php:29
+#: classes/controllers/PA_ACF_PostFields.class.php:33
 msgid "Format"
 msgstr "Formato"
 
-#: classes/controllers/PA_ACF_PostFields.class.php:41
+#: classes/controllers/PA_ACF_PostFields.class.php:45
 msgid "Link"
 msgstr ""
 
@@ -283,52 +287,52 @@ msgstr ""
 msgid "Seventh-day Adventist Church"
 msgstr "Igreja Adventista do Sétimo Dia"
 
-#: core/PA_Theme_Downloads_Install.php:23
+#: core/PA_Theme_Downloads_Install.php:26
 msgid "Kit"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:24
-#: core/PA_Theme_Downloads_Install.php:25
+#: core/PA_Theme_Downloads_Install.php:27
+#: core/PA_Theme_Downloads_Install.php:28
 msgid "Kits"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:26
+#: core/PA_Theme_Downloads_Install.php:29
 msgid "Add kit"
 msgstr "Adicionar kit"
 
-#: core/PA_Theme_Downloads_Install.php:27
+#: core/PA_Theme_Downloads_Install.php:30
 msgid "Add New"
 msgstr "Adicionar novo"
 
-#: core/PA_Theme_Downloads_Install.php:28
+#: core/PA_Theme_Downloads_Install.php:31
 msgid "Add New kit"
 msgstr "Adicionar novo kit"
 
-#: core/PA_Theme_Downloads_Install.php:29
+#: core/PA_Theme_Downloads_Install.php:32
 msgid "New kit"
 msgstr "Novo kit"
 
-#: core/PA_Theme_Downloads_Install.php:30
+#: core/PA_Theme_Downloads_Install.php:33
 msgid "Edit kit"
 msgstr "Editar kit"
 
-#: core/PA_Theme_Downloads_Install.php:31
+#: core/PA_Theme_Downloads_Install.php:34
 msgid "View kit"
 msgstr "Var kit"
 
-#: core/PA_Theme_Downloads_Install.php:32
+#: core/PA_Theme_Downloads_Install.php:35
 msgid "All kits"
 msgstr "Todos os kits"
 
-#: core/PA_Theme_Downloads_Install.php:33
+#: core/PA_Theme_Downloads_Install.php:36
 msgid "Search kit"
 msgstr "Procurar kit"
 
-#: core/PA_Theme_Downloads_Install.php:34
+#: core/PA_Theme_Downloads_Install.php:37
 msgid "No kit found."
 msgstr "Nenhum kit encontrado."
 
-#: core/PA_Theme_Downloads_Install.php:35
+#: core/PA_Theme_Downloads_Install.php:38
 msgid "No kit found in Trash."
 msgstr "Nenhum kit foi encontrado na lixeira."
 

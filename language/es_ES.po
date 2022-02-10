@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-11-24 22:39-0300\n"
-"PO-Revision-Date: 2021-11-24 22:39-0300\n"
+"POT-Creation-Date: 2022-02-10 14:07-0300\n"
+"PO-Revision-Date: 2022-02-10 14:08-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_html__;esc_html_e;esc_html_x;esc_attr__;"
 "esc_attr_e;esc_attr_x\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -83,11 +83,11 @@ msgstr "Downloads Adventistas"
 
 #: single-kit.blade.php:11
 msgid "Kit description"
-msgstr ""
+msgstr "Descripción"
 
 #: single-kit.blade.php:15 single-kit.blade.php:23
 msgid "Kit materials"
-msgstr "Materiales del kit"
+msgstr "Materiales"
 
 #: single.blade.php:10
 msgid "File details"
@@ -109,12 +109,12 @@ msgid "Download"
 msgstr "Descargar"
 
 #: template-parts/single/list-downloads.blade.php:6
-#: classes/controllers/PA_ACF_PostFields.class.php:27
+#: classes/controllers/PA_ACF_PostFields.class.php:31
 msgid "Name"
 msgstr "Nombre"
 
 #: template-parts/single/list-downloads.blade.php:8
-#: classes/controllers/PA_ACF_PostFields.class.php:34
+#: classes/controllers/PA_ACF_PostFields.class.php:38
 msgid "Size"
 msgstr "Tamaño"
 
@@ -124,7 +124,7 @@ msgstr "Archivos para descargar"
 
 #: template-parts/single/list-kit-downloads.blade.php:24
 #: classes/controllers/PA_ACF_KitFields.class.php:13
-#: classes/controllers/PA_ACF_PostFields.class.php:17
+#: classes/controllers/PA_ACF_PostFields.class.php:20
 msgid "Downloads"
 msgstr "Downloads"
 
@@ -237,15 +237,15 @@ msgid "Post ID is required."
 msgstr "Se requiere ID de publicación."
 
 #: classes/controllers/PA_ACF_KitFields.class.php:17
-#: classes/controllers/PA_ACF_PostFields.class.php:21
+#: classes/controllers/PA_ACF_PostFields.class.php:25
 msgid "List"
 msgstr "Lista"
 
-#: classes/controllers/PA_ACF_PostFields.class.php:29
+#: classes/controllers/PA_ACF_PostFields.class.php:33
 msgid "Format"
 msgstr "Formato"
 
-#: classes/controllers/PA_ACF_PostFields.class.php:41
+#: classes/controllers/PA_ACF_PostFields.class.php:45
 msgid "Link"
 msgstr "Enlace"
 
@@ -290,103 +290,64 @@ msgstr ""
 msgid "Seventh-day Adventist Church"
 msgstr "Iglesia Adventista Del Séptimo Día"
 
-#: core/PA_Theme_Downloads_Install.php:23
+#: core/PA_Theme_Downloads_Install.php:26
 msgid "Kit"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:24
-#: core/PA_Theme_Downloads_Install.php:25
+#: core/PA_Theme_Downloads_Install.php:27
+#: core/PA_Theme_Downloads_Install.php:28
 msgid "Kits"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:26
+#: core/PA_Theme_Downloads_Install.php:29
 msgid "Add kit"
 msgstr "Agregar kit"
 
-#: core/PA_Theme_Downloads_Install.php:27
+#: core/PA_Theme_Downloads_Install.php:30
 msgid "Add New"
 msgstr "Agregar nuevo"
 
-#: core/PA_Theme_Downloads_Install.php:28
+#: core/PA_Theme_Downloads_Install.php:31
 msgid "Add New kit"
 msgstr "Agregar nuevo kit"
 
-#: core/PA_Theme_Downloads_Install.php:29
+#: core/PA_Theme_Downloads_Install.php:32
 msgid "New kit"
 msgstr "Nuevo kit"
 
-#: core/PA_Theme_Downloads_Install.php:30
+#: core/PA_Theme_Downloads_Install.php:33
 msgid "Edit kit"
 msgstr "Editar kit"
 
-#: core/PA_Theme_Downloads_Install.php:31
+#: core/PA_Theme_Downloads_Install.php:34
 msgid "View kit"
 msgstr "Vista kit"
 
-#: core/PA_Theme_Downloads_Install.php:32
+#: core/PA_Theme_Downloads_Install.php:35
 msgid "All kits"
 msgstr "Todos ktis"
 
-#: core/PA_Theme_Downloads_Install.php:33
+#: core/PA_Theme_Downloads_Install.php:36
 msgid "Search kit"
 msgstr "Buscar kit"
 
-#: core/PA_Theme_Downloads_Install.php:34
+#: core/PA_Theme_Downloads_Install.php:37
 msgid "No kit found."
 msgstr "No se encontró ningún kit."
 
-#: core/PA_Theme_Downloads_Install.php:35
+#: core/PA_Theme_Downloads_Install.php:38
 msgid "No kit found in Trash."
 msgstr "No se encontró ningún kit en la Papelera."
 
-#: core/PA_Theme_Downloads_Install.php:61
-#: core/PA_Theme_Downloads_Install.php:71
-msgid "Tipos de Materiais"
-msgstr ""
-
-#: core/PA_Theme_Downloads_Install.php:62
 #, fuzzy
-#| msgid "Materials"
-msgid "Tipo de Material"
-msgstr "Materiales"
+#~| msgid "Materials"
+#~ msgid "Tipo de Material"
+#~ msgstr "Materiales"
 
-#: core/PA_Theme_Downloads_Install.php:63
-msgid "Buscar Tipo de Material"
-msgstr ""
-
-#: core/PA_Theme_Downloads_Install.php:64
-msgid "Todos os Tipos de Materiais"
-msgstr ""
-
-#: core/PA_Theme_Downloads_Install.php:65
-msgid "Tipo Superior"
-msgstr ""
-
-#: core/PA_Theme_Downloads_Install.php:66
-msgid "Tipo Superior:"
-msgstr ""
-
-#: core/PA_Theme_Downloads_Install.php:67
-msgid "Editar Tipo de Material"
-msgstr ""
-
-#: core/PA_Theme_Downloads_Install.php:68
-msgid "Atualizar Tipo de Material"
-msgstr ""
-
-#: core/PA_Theme_Downloads_Install.php:69
-msgid "Adicionar Novo Tipo de Material"
-msgstr ""
-
-#: core/PA_Theme_Downloads_Install.php:70
-msgid "Nome do Tipo de Material"
-msgstr ""
-
-#: core/PA_Theme_Downloads_Install.php:80
 #, fuzzy
-#| msgid "Kit materials"
-msgid "tipo-material"
-msgstr "Materiales del kit"
+#~| msgid "Kit materials"
+#~ msgid "tipo-material"
+#~ msgstr "Materiales del kit"
 
 #~ msgid "Share:"
 #~ msgstr "Compartilhar:"
