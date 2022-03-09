@@ -104,14 +104,26 @@ function replace_s3_urls($post_id)
         the_row();
 
         $download = get_sub_field('link');
+
+
         //Isso foi preciso porque o link "http://deptos.adventistas.org.s3.amazonaws.com..." não valida o certificado e não efetua o download em uma nova aba. 
         if (strpos($download, 'http://deptos.adventistas.org.s3.amazonaws.com') !== false) {
           $link = str_replace('http://deptos.adventistas.org.s3.amazonaws.com', 'https://deptos.adventistas.org', $download);
           update_sub_field('link', $link);
         }
 
+        if (strpos($download, 'https://deptos.adventistas.org.s3.amazonaws.com') !== false) {
+          $link = str_replace('https://deptos.adventistas.org.s3.amazonaws.com', 'https://deptos.adventistas.org', $download);
+          update_sub_field('link', $link);
+        }
+
         if (strpos($download, 'http://deptos.adventistas.org.s3.us-east-1.amazonaws.com') !== false) {
           $link = str_replace('http://deptos.adventistas.org.s3.us-east-1.amazonaws.com', 'https://deptos.adventistas.org', $download);
+          update_sub_field('link', $link);
+        }
+
+        if (strpos($download, 'https://deptos.adventistas.org.s3.us-east-1.amazonaws.com') !== false) {
+          $link = str_replace('https://deptos.adventistas.org.s3.us-east-1.amazonaws.com', 'https://deptos.adventistas.org', $download);
           update_sub_field('link', $link);
         }
       }
