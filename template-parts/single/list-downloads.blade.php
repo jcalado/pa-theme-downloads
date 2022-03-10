@@ -26,7 +26,7 @@
           <td class="p-3">{{ $download['size'] . 'MB' }}</td>
 
           <td class="pa-downloads-table__fit py-3 px-0 px-lg-3 fw-bold">
-            <a class="text-decoration-none d-flex align-items-center" href="{{ utf8_decode($download['link']) }}" download target="_blank">
+            <a class="text-decoration-none d-flex align-items-center" href="{{ iconv("UTF-8","ISO-8859-1//IGNORE",$download['link']) }}" download target="_blank">
               <i class="fas fa-download me-2"></i>
               
               <span class="d-none d-lg-inline-block"><?= __('Download', 'iasd')  ?></span>
