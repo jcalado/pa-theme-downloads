@@ -63,7 +63,7 @@ export function pa_modal_report() {
       
     if(report_permalink)
       report_permalink.value = event.relatedTarget.getAttribute('data-bs-permalink');
-      report_postid.value = event.relatedTarget.getAttribute('data-bs-postid')
+      report_postid.value = event.relatedTarget.getAttribute('data-bs-postid');
   });
 
   form.addEventListener('submit', (event) => {

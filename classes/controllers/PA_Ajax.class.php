@@ -38,8 +38,10 @@ class PAAjax
 
     $author_id = get_post_field('post_author', $_POST['report-postid']);
     $author_email = get_user_by('ID', $author_id)->user_email;
+    $report_email = get_field('report_email', 'pa_settings');
 
-    $to = !empty(get_field('report_email', 'pa_settings')) ? [get_field('report_email', 'pa_settings'), $author_email] : $author_email;
+
+    $to = !empty($report_email) ? [$report_email, $author_email] : $author_email;
 
     $mail = wp_mail(
       $to,
