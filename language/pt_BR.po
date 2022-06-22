@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-02-10 14:05-0300\n"
-"PO-Revision-Date: 2022-02-10 14:07-0300\n"
+"POT-Creation-Date: 2022-06-22 14:06-0300\n"
+"PO-Revision-Date: 2022-06-22 14:10-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Materials"
 msgstr "Materiais"
 
-#: components/global/link-report.blade.php:9
+#: components/global/link-report.blade.php:10
 msgid "Report problem"
 msgstr "Reportar problema"
 
@@ -41,7 +41,7 @@ msgid "Write a title for the message."
 msgstr "Escreva um título para a mensagem."
 
 #: components/global/modal-report.blade.php:23
-#: classes/controllers/PA_Ajax.class.php:44
+#: classes/controllers/PA_Ajax.class.php:52
 msgid "Message"
 msgstr "Mensagem"
 
@@ -49,31 +49,31 @@ msgstr "Mensagem"
 msgid "Write the message content."
 msgstr "Escreva o conteúdo da mensagem."
 
-#: components/global/modal-report.blade.php:36
+#: components/global/modal-report.blade.php:37
 msgid "Sending..."
 msgstr "Enviando …"
 
-#: components/global/modal-report.blade.php:37
+#: components/global/modal-report.blade.php:38
 msgid "To send"
 msgstr "Enviar"
 
-#: components/global/modal-report.blade.php:54
+#: components/global/modal-report.blade.php:55
 msgid "Thanks for cooperating"
 msgstr "Obrigado por cooperar"
 
-#: components/global/modal-report.blade.php:55
+#: components/global/modal-report.blade.php:56
 msgid "Error"
 msgstr "Erro"
 
-#: components/global/modal-report.blade.php:57
+#: components/global/modal-report.blade.php:58
 msgid "Your message has been sent successfully!"
 msgstr "Sua mensagem foi enviada com sucesso!"
 
-#: components/global/modal-report.blade.php:58
+#: components/global/modal-report.blade.php:59
 msgid "There was an error in sending"
 msgstr "Ocorreu um erro no envio"
 
-#: components/global/modal-report.blade.php:60
+#: components/global/modal-report.blade.php:61
 msgid "To close"
 msgstr "Fechar"
 
@@ -81,11 +81,11 @@ msgstr "Fechar"
 msgid "Adventist downloads"
 msgstr "Downloads Adventistas"
 
-#: single-kit.blade.php:11
+#: single-kit.blade.php:14
 msgid "Kit description"
 msgstr "Descrição"
 
-#: single-kit.blade.php:15 single-kit.blade.php:23
+#: single-kit.blade.php:19 single-kit.blade.php:27
 msgid "Kit materials"
 msgstr "Materiais"
 
@@ -149,7 +149,7 @@ msgstr "Bloco para exibir conteúdos em destaque no formato de slides."
 #: Blocks/PAListLinks/PAListLinks.php:34
 #: Blocks/PAListPostsCards/PAListPostsCards.php:39
 #: Blocks/PAListPostsColumn/PAListPostsColumn.php:39
-#: classes/controllers/PA_Ajax.class.php:42
+#: classes/controllers/PA_Ajax.class.php:51
 msgid "Title"
 msgstr "Título"
 
@@ -246,24 +246,24 @@ msgstr "Formato"
 msgid "Link"
 msgstr ""
 
-#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:19
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:20
 msgid "Report settings"
 msgstr "Configurações de relatório"
 
-#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:23
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:24
 msgid "Enable report"
 msgstr "Habilitar relatório"
 
-#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:29
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:30
 msgid "Send email to"
 msgstr "Enviar um email para"
 
-#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:33
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:34
 msgid "reCAPTCHA site key"
 msgstr ""
 
-#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:34
-#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:39
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:35
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:40
 msgid ""
 "If not configured, the site will not activate the captcha and may thus be "
 "vulnerable to spam."
@@ -271,15 +271,22 @@ msgstr ""
 "Se não configurada, o site não ativar o captcha, podendo assim ficar "
 "vulnerável a spam."
 
-#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:38
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:39
 msgid "reCAPTCHA secret key"
-msgstr ""
+msgstr "reCAPTCHA  chave secreta"
 
-#: classes/controllers/PA_Ajax.class.php:41
+#: classes/controllers/PA_Ajax.class.php:49
 msgid "New problem reported: "
 msgstr "Novo problema reportado: "
 
-#: classes/controllers/PA_Ajax.class.php:43
+#: classes/controllers/PA_Ajax.class.php:50
+msgid ""
+"Someone has reported a problem with their material posted on the Downloads "
+"portal."
+msgstr ""
+"Alguém reportou um problema em seu material publicado no portal de Downloads."
+
+#: classes/controllers/PA_Ajax.class.php:53
 msgid "Url"
 msgstr ""
 
@@ -289,7 +296,7 @@ msgstr "Igreja Adventista do Sétimo Dia"
 
 #: core/PA_Theme_Downloads_Install.php:26
 msgid "Kit"
-msgstr ""
+msgstr "Descrição"
 
 #: core/PA_Theme_Downloads_Install.php:27
 #: core/PA_Theme_Downloads_Install.php:28

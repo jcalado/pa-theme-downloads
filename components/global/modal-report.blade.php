@@ -1,4 +1,4 @@
-@hasfield('report_enabled', 'option')
+@hasfield('report_enabled', 'pa_settings')
   <div id="pa-modal-report" class="pa-modal-report modal fade p-0" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content position-relative">
@@ -29,6 +29,7 @@
             </div>
 
             <input id="report-permalink" name="report-permalink" type="hidden" />
+            <input id="report-postid" name="report-postid" type="hidden" />
 
             <div class="d-flex justify-content-end">
               <button type="submit" class="form-report__button btn btn-primary rounded px-5">

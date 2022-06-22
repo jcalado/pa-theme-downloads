@@ -11,7 +11,7 @@ class PAAjax
 
   function sendReport()
   {
-    $secret = get_field('report_recaptcha_secret_key', 'option');
+    $secret = get_field('report_recaptcha_secret_key', 'pa_settings');
     $token = sanitize_text_field(array_key_exists('token', $_POST) ? $_POST['token'] : '');
 
     if (!empty($secret) && !empty($token)) :
@@ -36,12 +36,18 @@ class PAAjax
         wp_send_json_error();
     endif;
 
+    $author_id = get_post_field('post_author', $_POST['report-postid']);
+    $author_email = get_user_by('ID', $author_id)->user_email;
+
+    $to = !empty(get_field('report_email', 'pa_settings')) ? [get_field('report_email', 'pa_settings'), $author_email] : $author_email;
+
     $mail = wp_mail(
-      get_field('report_email', 'option'),
-      __('New problem reported: ') . sanitize_text_field($_POST['report-title']),
-      '<strong>' . __('Title', 'iasd') . ': </strong>' . sanitize_text_field($_POST['report-title']) .
-        '<br /><strong>' . __('Url', 'iasd') . ': </strong>' . sanitize_text_field($_POST['report-permalink']) .
-        '<br /><strong>' . __('Message', 'iasd') . ': </strong>' . sanitize_text_field($_POST['report-message']),
+      $to,
+      __('New problem reported: ', 'iasd') . sanitize_text_field($_POST['report-title']),
+      '<p>' . __('Someone has reported a problem with their material posted on the Downloads portal.', 'iasd') .
+        '</p><strong>' . __('Title', 'iasd') . ': </strong>' . sanitize_text_field($_POST['report-title']) .
+        '<br /><strong>' . __('Message', 'iasd') . ': </strong>' . sanitize_text_field($_POST['report-message']) .
+        '<br /><strong>' . __('Url', 'iasd') . ': </strong>' . sanitize_text_field($_POST['report-permalink']),
       ['Content-Type: text/html; charset=UTF-8']
     );
 

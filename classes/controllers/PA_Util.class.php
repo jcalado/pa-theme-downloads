@@ -87,8 +87,8 @@ class PaUtil {
         if(!empty(get_sub_field($field)))
             return get_sub_field($field);
 
-        if(!empty(get_field($field, 'option')))
-            return get_field($field, 'option');
+        if(!empty(get_field($field, 'pa_settings')))
+            return get_field($field, 'pa_settings');
 
         return false;
     }

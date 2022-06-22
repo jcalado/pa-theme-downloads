@@ -3,6 +3,7 @@ export function pa_modal_report() {
   const modal_callback = document.getElementById('pa-modal-report-callback');
 	const form = document.getElementById('form-report');
   const report_permalink = document.getElementById('report-permalink');
+  const report_postid = document.getElementById('report-postid');
   let request = null;
   let data = null;
 
@@ -62,6 +63,7 @@ export function pa_modal_report() {
       
     if(report_permalink)
       report_permalink.value = event.relatedTarget.getAttribute('data-bs-permalink');
+      report_postid.value = event.relatedTarget.getAttribute('data-bs-postid')
   });
 
   form.addEventListener('submit', (event) => {
