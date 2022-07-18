@@ -13,6 +13,7 @@ class PaAcfKitFields {
       'title' => __('Downloads', 'iasd'),
       'key'   => 'downloads_kits',
       'style' => 'default',
+      'show_in_rest' => true,
       'fields' => [
         LocalData::make(__('List', 'iasd'), 'downloads_kits')
           ->postTypes(['post'])
