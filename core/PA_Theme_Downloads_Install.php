@@ -13,6 +13,7 @@ class PAThemeDownloadsInstall
   {
     add_action('after_setup_theme', array($this, 'installRoutines'), 11);
     add_action('widgets_init', array($this, 'setWidgets'), 11);
+    add_action('rest_api_init', array($this, 'adding_rest_field'));
   }
 
   function installRoutines()
@@ -66,6 +67,26 @@ class PAThemeDownloadsInstall
     unregister_sidebar('front-page');
     unregister_sidebar('index');
     unregister_sidebar('single');
+  }
+
+  function adding_rest_field()
+  {
+
+    register_rest_field(
+      'kit',
+      'featured_media_url',
+      array(
+        'get_callback' => function ($post) {
+          $img_id = get_post_thumbnail_id($post['id']);
+
+          return array(
+            'pa-block-render' => wp_get_attachment_image_src($img_id, 'medium')[0]
+          );
+        },
+        'update_callback'   => null,
+        'schema'            => null,
+      )
+    );
   }
 }
 
