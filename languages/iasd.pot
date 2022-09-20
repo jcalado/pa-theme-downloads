@@ -1,0 +1,342 @@
+# Copyright (C) 2022 WebDSA
+# This file is distributed under the .
+msgid ""
+msgstr ""
+"Project-Id-Version: PA - Downloads (Child) 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/pa-theme-downloads\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-09-20T16:51:27+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: iasd\n"
+
+#. Theme Name of the theme
+msgid "PA - Downloads (Child)"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "adventistas.org"
+msgstr ""
+
+#. Description of the theme
+msgid "Downloads child theme for downloads.adventistas.org website network."
+msgstr ""
+
+#. Author of the theme
+msgid "WebDSA"
+msgstr ""
+
+#: archive.blade.php:22
+msgid "Materials"
+msgstr ""
+
+#: Blocks/PACarouselPosts/PACarouselPosts.php:20
+msgid "IASD - Carousel - Posts"
+msgstr ""
+
+#: Blocks/PACarouselPosts/PACarouselPosts.php:21
+msgid "Block from downloads content on carousel format."
+msgstr ""
+
+#: Blocks/PACarouselPosts/PACarouselPosts.php:37
+#: Blocks/PAFeaturePost/PAFeaturePost.php:37
+#: Blocks/PAListLinks/PAListLinks.php:34
+#: Blocks/PAListPostsCards/PAListPostsCards.php:39
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:39
+#: classes/controllers/PA_Ajax.class.php:50
+msgid "Title"
+msgstr ""
+
+#: Blocks/PACarouselPosts/PACarouselPosts.php:42
+#: Blocks/PAListPostsCards/PAListPostsCards.php:45
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:45
+msgid "Recents"
+msgstr ""
+
+#: Blocks/PACarouselPosts/PACarouselPosts.php:43
+#: Blocks/PAListPostsCards/PAListPostsCards.php:46
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:46
+msgid "Popular"
+msgstr ""
+
+#: Blocks/PACarouselPosts/PACarouselPosts.php:47
+#: Blocks/PACarouselPosts/PACarouselPosts.php:63
+#: Blocks/PAFeaturePost/PAFeaturePost.php:40
+#: Blocks/PAListPostsCards/PAListPostsCards.php:50
+#: Blocks/PAListPostsCards/PAListPostsCards.php:66
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:50
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:66
+msgid "Posts"
+msgstr ""
+
+#: Blocks/PACarouselPosts/PACarouselPosts.php:48
+#: Blocks/PACarouselPosts/PACarouselPosts.php:64
+#: Blocks/PAFeaturePost/PAFeaturePost.php:41
+#: Blocks/PAListPostsCards/PAListPostsCards.php:51
+#: Blocks/PAListPostsCards/PAListPostsCards.php:67
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:51
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:67
+msgid "Select posts"
+msgstr ""
+
+#: Blocks/PAFeaturePost/PAFeaturePost.php:17
+msgid "IASD - Downloads - Feature"
+msgstr ""
+
+#: Blocks/PAFeaturePost/PAFeaturePost.php:18
+msgid "Block to show a single post content on feature format."
+msgstr ""
+
+#: Blocks/PAFeaturePost/PAFeaturePost.php:38
+msgid "Feature"
+msgstr ""
+
+#: Blocks/PAListLinks/PAListLinks.php:19
+#: Blocks/PAListLinks/PAListLinks.php:35
+msgid "IASD - List - Links"
+msgstr ""
+
+#: Blocks/PAListLinks/PAListLinks.php:20
+msgid "Block to show links in list format."
+msgstr ""
+
+#: Blocks/PAListLinks/PAListLinks.php:38
+msgid "Links"
+msgstr ""
+
+#: Blocks/PAListLinks/PAListLinks.php:40
+msgid "Add link"
+msgstr ""
+
+#: Blocks/PAListPostsCards/PAListPostsCards.php:21
+#: Blocks/PAListPostsCards/PAListPostsCards.php:40
+msgid "IASD - Posts - Cards"
+msgstr ""
+
+#: Blocks/PAListPostsCards/PAListPostsCards.php:22
+msgid "Block to show posts contents in card list format."
+msgstr ""
+
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:21
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:40
+msgid "IASD - Posts - List(B)"
+msgstr ""
+
+#: Blocks/PAListPostsColumn/PAListPostsColumn.php:22
+msgid "Block to show posts contents in list format."
+msgstr ""
+
+#: classes/controllers/PA_ACF_KitFields.class.php:13
+#: classes/controllers/PA_ACF_PostFields.class.php:20
+msgid "Downloads"
+msgstr ""
+
+#: classes/controllers/PA_ACF_KitFields.class.php:18
+#: classes/controllers/PA_ACF_PostFields.class.php:25
+msgid "List"
+msgstr ""
+
+#: classes/controllers/PA_ACF_PostFields.class.php:31
+msgid "Name"
+msgstr ""
+
+#: classes/controllers/PA_ACF_PostFields.class.php:33
+msgid "Format"
+msgstr ""
+
+#: classes/controllers/PA_ACF_PostFields.class.php:38
+msgid "Size"
+msgstr ""
+
+#: classes/controllers/PA_ACF_PostFields.class.php:45
+msgid "Link"
+msgstr ""
+
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:19
+msgid "Report settings"
+msgstr ""
+
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:23
+msgid "Enable report"
+msgstr ""
+
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:29
+msgid "Send email to"
+msgstr ""
+
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:33
+msgid "reCAPTCHA site key"
+msgstr ""
+
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:34
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:39
+msgid "If not configured, the site will not activate the captcha and may thus be vulnerable to spam."
+msgstr ""
+
+#: classes/controllers/PA_ACF_Site_Downloads-settings.class.php:38
+msgid "reCAPTCHA secret key"
+msgstr ""
+
+#: classes/controllers/PA_Ajax.class.php:48
+msgid "New problem reported: "
+msgstr ""
+
+#: classes/controllers/PA_Ajax.class.php:49
+msgid "Someone has reported a problem with their material posted on the Downloads portal."
+msgstr ""
+
+#: classes/controllers/PA_Ajax.class.php:51
+#: components/global/modal-report.blade.php:23
+msgid "Message"
+msgstr ""
+
+#: classes/controllers/PA_Ajax.class.php:52
+msgid "Url"
+msgstr ""
+
+#: classes/PA_Directives.php:7
+#: classes/PA_Directives.php:14
+msgid "Post ID is required."
+msgstr ""
+
+#: components/global/link-report.blade.php:10
+msgid "Report problem"
+msgstr ""
+
+#: components/global/modal-report.blade.php:10
+msgid "I want to report an error"
+msgstr ""
+
+#: components/global/modal-report.blade.php:15
+msgid "Message title"
+msgstr ""
+
+#: components/global/modal-report.blade.php:16
+msgid "Enter a title"
+msgstr ""
+
+#: components/global/modal-report.blade.php:18
+msgid "Write a title for the message."
+msgstr ""
+
+#: components/global/modal-report.blade.php:24
+msgid "Write the problem you found"
+msgstr ""
+
+#: components/global/modal-report.blade.php:27
+msgid "Write the message content."
+msgstr ""
+
+#: components/global/modal-report.blade.php:37
+msgid "Sending..."
+msgstr ""
+
+#: components/global/modal-report.blade.php:38
+msgid "To send"
+msgstr ""
+
+#: components/global/modal-report.blade.php:55
+msgid "Thanks for cooperating"
+msgstr ""
+
+#: components/global/modal-report.blade.php:56
+msgid "Error"
+msgstr ""
+
+#: components/global/modal-report.blade.php:58
+msgid "Your message has been sent successfully!"
+msgstr ""
+
+#: components/global/modal-report.blade.php:59
+msgid "There was an error in sending"
+msgstr ""
+
+#: components/global/modal-report.blade.php:61
+msgid "To close"
+msgstr ""
+
+#: components/menu/header-logo.php:3
+msgid "Seventh-day Adventist Church"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:26
+msgid "Kit"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:27
+msgid "Kits"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:29
+msgid "Add kit"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:30
+msgid "Add New"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:31
+msgid "Add New kit"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:32
+msgid "New kit"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:33
+msgid "Edit kit"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:34
+msgid "View kit"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:35
+msgid "All kits"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:36
+msgid "Search kit"
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:37
+msgid "No kit found."
+msgstr ""
+
+#: core/PA_Theme_Downloads_Install.php:38
+msgid "No kit found in Trash."
+msgstr ""
+
+#. Template Name of the theme
+msgid "Page - Front Page"
+msgstr ""
+
+#: single-kit.blade.php:14
+msgid "Kit description"
+msgstr ""
+
+#: single-kit.blade.php:19
+msgid "Kit materials"
+msgstr ""
+
+#: single.blade.php:10
+msgid "File details"
+msgstr ""
+
+#: template-parts/global/card-post.blade.php:27
+#: template-parts/single/related-posts.blade.php:40
+msgid "View more"
+msgstr ""
+
+#: template-parts/single/list-downloads.blade.php:3
+#: template-parts/single/list-downloads.blade.php:32
+msgid "Download"
+msgstr ""
+
+#: template-parts/single/list-kit-downloads.blade.php:45
+msgid "Access content"
+msgstr ""
