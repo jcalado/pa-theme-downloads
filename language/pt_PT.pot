@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-09-20T16:51:27+00:00\n"
+"POT-Creation-Date: 2022-09-21T08:32:23+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: iasd\n"
@@ -263,51 +263,51 @@ msgstr ""
 msgid "Seventh-day Adventist Church"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:26
+#: core/PA_Theme_Downloads_Install.php:27
 msgid "Kit"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:27
+#: core/PA_Theme_Downloads_Install.php:28
 msgid "Kits"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:29
+#: core/PA_Theme_Downloads_Install.php:30
 msgid "Add kit"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:30
+#: core/PA_Theme_Downloads_Install.php:31
 msgid "Add New"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:31
+#: core/PA_Theme_Downloads_Install.php:32
 msgid "Add New kit"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:32
+#: core/PA_Theme_Downloads_Install.php:33
 msgid "New kit"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:33
+#: core/PA_Theme_Downloads_Install.php:34
 msgid "Edit kit"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:34
+#: core/PA_Theme_Downloads_Install.php:35
 msgid "View kit"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:35
+#: core/PA_Theme_Downloads_Install.php:36
 msgid "All kits"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:36
+#: core/PA_Theme_Downloads_Install.php:37
 msgid "Search kit"
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:37
+#: core/PA_Theme_Downloads_Install.php:38
 msgid "No kit found."
 msgstr ""
 
-#: core/PA_Theme_Downloads_Install.php:38
+#: core/PA_Theme_Downloads_Install.php:39
 msgid "No kit found in Trash."
 msgstr ""
 
