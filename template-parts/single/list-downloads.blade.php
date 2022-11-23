@@ -23,7 +23,7 @@
             </span>
           </td>
 
-          <td class="p-3">{{ $download['size'] . 'MB' }}</td>
+          <td class="p-3">{{ size_format($download['size']*1024*1024, 0) }}</td>
 
           <td class="pa-downloads-table__fit py-3 px-0 px-lg-3 fw-bold">
             <a class="text-decoration-none d-flex align-items-center" href="{{ iconv("UTF-8","ISO-8859-1//IGNORE",$download['link']) }}" download target="_blank">
