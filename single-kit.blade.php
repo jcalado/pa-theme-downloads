@@ -7,7 +7,7 @@
     <div class="container pt-5">
       <div class="row justify-content-center">
         <section class="col-auto col-md-8">     
-          <div class="mb-5 pb-4">
+          <div class="mb-5 pb-4 pa-widget">
             
             @if(get_the_content())
 

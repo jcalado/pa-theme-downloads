@@ -8,7 +8,7 @@
 	<div class="pa-content py-5">
 		<div class="container">
 			<div class="row justify-content-md-center">
-				<section class="col-12 col-lg-8 pe-xl-4">
+				<section class="col-12 col-lg-8 pe-xl-4 pa-widget">
           @if(get_query_var('paged') < 1 && $queryFeatured->found_posts > 0)
             @php
               get_template_part('template-parts/global/feature', 'feature', [

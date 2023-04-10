@@ -4,7 +4,7 @@
 
 @notempty($relatedPosts)
   <div class="row mb-3 mb-xl-4">
-    <div class="col-12">
+    <div class="col-12 pa-widget">
       <h2 class="mb-0 mb-xl-2">{{ !empty($title) ? $title : __('Related files', 'iasd') }}</h2>
     </div>
   </div>

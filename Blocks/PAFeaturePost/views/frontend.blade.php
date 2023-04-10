@@ -2,7 +2,7 @@
   <img class="img-preview" src="{{ get_stylesheet_directory_uri() }}/Blocks/PAFeaturePost/preview.png" alt="{{ __('Illustrative image of the front end of the block.', 'iasd') }}"/>
 @else
   <div class="col-lg-8">
-    <div class="pa-blog-itens mb-5">    
+    <div class="pa-blog-itens mb-5 pa-widget">    
       <h2 class="mb-3">{{ $title }}</h2>
 
       <div class="pa-blog-feature">
