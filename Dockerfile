@@ -1,8 +1,10 @@
-FROM php:alpine
+FROM php:8.0-alpine
 
 RUN apk update 
 RUN apk upgrade 
-RUN apk add --no-cache bash lcms2-dev g++ make git pkgconfig autoconf automake libtool nasm build-base zlib-dev libpng libpng-dev jpeg-dev libc6-compat nodejs npm zip
+
+RUN apk add nodejs=16.20.0-r0
+RUN apk add --no-cache bash lcms2-dev g++ make git pkgconfig autoconf automake libtool nasm build-base zlib-dev libpng libpng-dev jpeg-dev libc6-compat npm zip
 RUN apk add --no-cache --update-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.12/community yarn=1.22.4-r0
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
