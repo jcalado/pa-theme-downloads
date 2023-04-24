@@ -22,20 +22,21 @@ class PaRewriteRules
 
   public static function PrePostLink($permalink, $post)
   {
+
     if (is_object($post) && $post->post_type == 'post') {
       $original = get_option('permalink_structure');
       if ($permalink == $original) {
         $material = get_the_terms($post->ID, 'xtt-pa-materiais');
-        if (!is_wp_error($material)) {
+        if (!is_wp_error($material) && is_array($material)) {
           $material = $material[0]->slug;
           $departamento = get_the_terms($post->ID, 'xtt-pa-departamentos');
-          $departamento = $departamento[0]->slug;
-          $permalink = str_replace('/%postname%/', $departamento . '/' . $material . '/%postname%/', $permalink);
-          // die(var_dump($permalink));
+          if(is_array($departamento)){
+            $departamento = $departamento[0]->slug;
+            $permalink = str_replace('/%postname%/', $departamento . '/' . $material . '/%postname%/', $permalink);
+          }
         }
       }
     }
-
     return $permalink;
   }
 }
