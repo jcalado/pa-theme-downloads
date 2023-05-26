@@ -1,10 +1,10 @@
 <?php
 
-use WordPlate\Acf\Fields\Number;
-use WordPlate\Acf\Fields\Repeater;
-use WordPlate\Acf\Fields\Text;
-use WordPlate\Acf\Fields\Url;
-use WordPlate\Acf\Location;
+use Extended\ACF\Fields\Number;
+use Extended\ACF\Fields\Repeater;
+use Extended\ACF\Fields\Text;
+use Extended\ACF\Fields\Url;
+use Extended\ACF\Location;
 
 class PaAcfPostFields
 {

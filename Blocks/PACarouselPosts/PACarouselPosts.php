@@ -4,9 +4,9 @@ namespace Blocks\PACarouselPosts;
 
 use Blocks\Block;
 use Extended\LocalData;
-use WordPlate\Acf\ConditionalLogic;
-use WordPlate\Acf\Fields\ButtonGroup;
-use WordPlate\Acf\Fields\Text;
+use Extended\ACF\ConditionalLogic;
+use Extended\ACF\Fields\ButtonGroup;
+use Extended\ACF\Fields\Text;
 
 /**
  * Class PACarouselPosts

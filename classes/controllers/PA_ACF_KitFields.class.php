@@ -1,6 +1,6 @@
 <?php
 use Extended\LocalData;
-use WordPlate\Acf\Location;
+use Extended\ACF\Location;
 
 class PaAcfKitFields {
 

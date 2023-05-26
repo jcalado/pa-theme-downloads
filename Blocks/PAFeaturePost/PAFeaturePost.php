@@ -3,7 +3,7 @@
 namespace Blocks\PAFeaturePost;
 
 use Blocks\Block;
-use WordPlate\Acf\Fields\Text;
+use Extended\ACF\Fields\Text;
 use Extended\LocalData;
 
 /**
