@@ -3,7 +3,7 @@
 namespace Blocks\PACarouselPosts;
 
 use Blocks\Block;
-use Extended\LocalData;
+use ExtendedLocal\LocalData;
 use Extended\ACF\ConditionalLogic;
 use Extended\ACF\Fields\ButtonGroup;
 use Extended\ACF\Fields\Text;
@@ -57,7 +57,7 @@ class PACarouselPosts extends Block {
           'xtt-pa-editorias',  
         ])
         ->conditionalLogic([
-          ConditionalLogic::if('mode')->equals('latest')
+          ConditionalLogic::where('mode', '==', 'latest')
         ]),
 
       LocalData::make(__('Posts', 'iasd'), 'items_popular')
@@ -73,7 +73,7 @@ class PACarouselPosts extends Block {
           'xtt-pa-editorias', 
         ])
         ->conditionalLogic([
-          ConditionalLogic::if('mode')->equals('popular')
+          ConditionalLogic::where('mode', '==', 'popular')
         ]),
 		];
 	}

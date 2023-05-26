@@ -4,7 +4,7 @@ namespace Blocks\PAFeaturePost;
 
 use Blocks\Block;
 use Extended\ACF\Fields\Text;
-use Extended\LocalData;
+use ExtendedLocal\LocalData;
 
 /**
  * Class PAFeaturePost

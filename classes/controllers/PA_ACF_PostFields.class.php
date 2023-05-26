@@ -50,7 +50,7 @@ class PaAcfPostFields
           ])
       ],
       'location' => [
-        Location::if('post_type', 'post'),
+        Location::where('post_type', 'post'),
       ]
     ]);
   }

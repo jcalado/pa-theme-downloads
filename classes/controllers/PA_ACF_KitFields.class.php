@@ -1,5 +1,5 @@
 <?php
-use Extended\LocalData;
+use ExtendedLocal\LocalData;
 use Extended\ACF\Location;
 
 class PaAcfKitFields {
@@ -25,7 +25,7 @@ class PaAcfKitFields {
           ->initialLimit(10)
       ],
       'location' => [
-          Location::if('post_type', 'kit'),
+          Location::where('post_type', 'kit'),
       ]
     ]);
   }
