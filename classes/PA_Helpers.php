@@ -20,7 +20,7 @@ function getDepartment($post_id) {
  * @return mixed
  */
 function getPrioritySeat($post_id) {
-  if($term = get_the_terms($post_id, 'xtt-pa-owner'))
+  if(!is_wp_error($term = get_the_terms($post_id, 'xtt-pa-owner')))
       return $term[0];
 
   return null;

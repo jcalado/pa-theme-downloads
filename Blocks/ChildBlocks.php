@@ -7,6 +7,7 @@ use Blocks\PAFeaturePost\PAFeaturePost;
 use Blocks\PAListLinks\PAListLinks;
 use Blocks\PAListPostsCards\PAListPostsCards;
 use Blocks\PAListPostsColumn\PAListPostsColumn;
+use Blocks\PARow\PARow;
 
 class ChildBlocks {
 
@@ -24,6 +25,7 @@ class ChildBlocks {
         PACarouselPosts::class,
         PAListLinks::class,
         PAListPostsCards::class,
+        PARow::class,
     ];
 
     return array_merge($blocks, $newBlocks);
