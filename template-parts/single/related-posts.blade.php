@@ -4,8 +4,8 @@
 
 @notempty($relatedPosts)
   <div class="row mb-3 mb-xl-4">
-    <div class="col-12">
-      <h2 class="mb-0 mb-xl-2">{{ !empty($title) ? $title : __('Arquivos relacionados', 'iasd') }}</h2>
+    <div class="col-12 pa-widget">
+      <h2 class="mb-0 mb-xl-2">{{ !empty($title) ? $title : __('Related files', 'iasd') }}</h2>
     </div>
   </div>
 
@@ -37,7 +37,7 @@
                       class="border border-1 px-4 py-1 rounded-pill btn-outline-primary text-uppercase fw-bold" 
                       title="{!! wp_strip_all_tags(get_the_title($post->ID)) !!}"
                     >
-                      Ver mais
+                    <?= __('View more', 'iasd')  ?>
                     </a>
                   </div>
                 </div>

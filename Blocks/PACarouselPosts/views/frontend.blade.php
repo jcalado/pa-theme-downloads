@@ -33,6 +33,7 @@
             <div class="glide__slides">
               @foreach($items as $id)
                 <div class="glide__slide px-1 h-auto">
+
                   <div class="card border-0 shadow-sm">
                     <figure class="ratio ratio-16x9 bg-light rounded-bottom overflow-hidden m-0">
                       <img src="{{ check_immg($id, 'medium') }}" class="card-img-top"	alt="{!! wp_strip_all_tags(get_the_title($id)) !!}" />
@@ -44,18 +45,15 @@
                           <span class="pa-tag rounded-1 text-uppercase d-inline-block px-2 mb-2">{{ $department->name }}</span>
                         </div>
                       @endnotempty
-  
-                      <h3 class="card-title fw-bold h6 mb-3 pa-truncate-2">{!! wp_strip_all_tags(get_the_title($id)) !!}</h3>
+
+                      <a href="{{ get_the_permalink($id) }}" class="stretched-link" title="{!! wp_strip_all_tags(get_the_title($id)) !!}">
+                        <h3 class="card-title fw-bold h6 mb-3 pa-truncate-2">{!! wp_strip_all_tags(get_the_title($id)) !!}</h3>
+                      </a>
 
                       <div class="flex-grow-1"></div>
-                      
-                      <div>
-                        <a href="{{ get_the_permalink($id) }}" class="border border-1 px-4 py-1 rounded-pill btn-outline-primary text-uppercase fw-bold" title="{!! wp_strip_all_tags(get_the_title($id)) !!}">
-                          Ver mais
-                        </a>
-                      </div>
                     </div>
                   </div>
+                
                 </div>
               @endforeach
             </div>

@@ -8,7 +8,7 @@
 	<div class="pa-content py-5">
 		<div class="container">
 			<div class="row justify-content-md-center">
-				<section class="col-12 col-lg-8 pe-xl-4">
+				<section class="col-12 col-lg-8 pe-xl-4 pa-widget">
           @if(get_query_var('paged') < 1 && $queryFeatured->found_posts > 0)
             @php
               get_template_part('template-parts/global/feature', 'feature', [
@@ -19,7 +19,7 @@
           @endif
 
           @if($wp_query->found_posts >= 1)
-            <h2 class="mb-3">Materiais</h2>
+            <h2 class="mb-3"><?= __('Materials', 'iasd')  ?></h2>
 
             <div class="row">
               <div class="col-12">

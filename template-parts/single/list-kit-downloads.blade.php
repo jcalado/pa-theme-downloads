@@ -28,7 +28,7 @@
         <div id="accordion-collapse-{{ $loop->iteration }}" class="accordion-collapse collapse" aria-labelledby="accordion-heading-{{ $loop->iteration }}">
           <div class="accordion-body pt-1 pt-lg-3 pe-3 pe-lg-4 pb-3 pb-lg-4 ps-1 ps-lg-4">
             <div class="ps-2 pt-2 pt-lg-0">
-              <p class="post-excerpt mb-4 pa-truncate-3">{!! get_the_excerpt($id) !!}</p>
+              <p class="post-excerpt mb-4 pa-truncate-3">{!! get_the_content(NULL, NULL, $id) !!}</p>
 
               @include('template-parts.single.list-downloads', [
                 'downloads' => get_field('downloads', $id),
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="col-auto d-flex">
-                  <a href="{{ get_the_permalink($id) }}" role="button" class="accordion-kits__permalink text-primary fw-bold text-decoration-none col-auto">Acessar conteúdo<i class="fas fa-arrow-right ms-2"></i></a>
+                  <a href="{{ get_the_permalink($id) }}" role="button" class="accordion-kits__permalink text-primary fw-bold text-decoration-none col-auto"><?= __('Access content', 'iasd')  ?><i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
             </div>

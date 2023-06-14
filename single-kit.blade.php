@@ -7,16 +7,24 @@
     <div class="container pt-5">
       <div class="row justify-content-center">
         <section class="col-auto col-md-8">     
-          <div class="mb-5 pb-4">
-            <h2 class="mb-4">Materiais do kit</h2>
+          <div class="mb-5 pb-4 pa-widget">
+            
+            @if(get_the_content())
+
+              <h2 class="mb-4"><?= __('Kit description', 'iasd') ?></h2>
+              <div class="mb-5">{!! get_the_content() !!}</div>
+
+            @endif
+
+            <h2 class="mb-4"><?= __('Kit materials', 'iasd') ?></h2>
 
             @include('template-parts.single.list-kit-downloads', [
-              'downloads' => get_field('downloads'),
+              'downloads' => explode(",", get_field('downloads_kits')['sticky']),
             ])
           </div>
           
           @include('template-parts.single.related-posts', [
-            'title' => 'Kits relacionados'
+            'title' => __('Kit materials', 'iasd')
           ])
         </section>
       </div>

@@ -1,54 +1,43 @@
 <?php
 
-class PaRewriteRules {
-	public function __construct(){
-        add_filter( 'do_parse_request', [$this, 'PostRewriteRules'], 3);
-        add_action( 'pre_post_link', [$this,'InitPostUrls'], 3, 3);
-        add_action( 'pre_post_link', [$this,'ReplacePostUrls'], 100, 3);
-	}
+class PaRewriteRules
+{
+  public function __construct()
+  {
+    add_action('init', [$this, 'rewritePost'], 100);
+    add_filter('pre_post_link', [$this, 'PrePostLink'], 10, 3);
+  }
 
-	function InitPostUrls($permalink, $post) {
+  public static function rewritePost()
+  {
+    $permalink = '%xtt-pa-departamentos%/%xtt-pa-materiais%/%postname%/';
+    $permalink = str_replace('%xtt-pa-departamentos%', '([^/]+)', $permalink);
+    $permalink = str_replace('%xtt-pa-materiais%', '([^/]+)', $permalink);
+    $permalink = str_replace('%postname%', '([^/]+)', $permalink);
+    $permalink .= '?$';
+    $rewrite_redirect = 'index.php?name=$matches[3]&post_type=post&xtt-pa-departamentos=$matches[1]&xtt-pa-materiais=$matches[2]';
+    $permalink = add_rewrite_rule($permalink, $rewrite_redirect, 'top');
+    flush_rewrite_rules();
+  }
 
-        if($post->post_type == 'post') {
-            // $permalink = '/editoria/%'.PATaxonomias::TAXONOMY_EDITORIAS.'%/%postname%/';
-            $permalink = '/editoria/%xtt-pa-editorias%/%postname%/';
+  public static function PrePostLink($permalink, $post)
+  {
+
+    if (is_object($post) && $post->post_type == 'post') {
+      $original = get_option('permalink_structure');
+      if ($permalink == $original) {
+        $material = get_the_terms($post->ID, 'xtt-pa-materiais');
+        if (!is_wp_error($material) && is_array($material)) {
+          $material = $material[0]->slug;
+          $departamento = get_the_terms($post->ID, 'xtt-pa-departamentos');
+          if(is_array($departamento)){
+            $departamento = $departamento[0]->slug;
+            $permalink = str_replace('/%postname%/', $departamento . '/' . $material . '/%postname%/', $permalink);
+          }
         }
-    
-        return $permalink;
+      }
     }
-    function PostRewriteRules($bool) {
-        
-        $rewrite_rule = 'editoria/([^/]+)/([^/]+)/?$';
-        $rewrite_redirect = 'index.php?name=$matches[2]&post_type=post&xtt-pa-editorias=$matches[1]';
-        add_rewrite_rule( $rewrite_rule, $rewrite_redirect);
-    
-        flush_rewrite_rules();
-
-        return $bool;
-    }
-    
-    function ReplacePostUrls($permalink, $post) {
-        if($post->post_type == 'post') {
-    
-            $args = array(
-                'object_type' => array(
-                    'post',
-                ),
-            );
-            $output = 'names'; // or objects
-            $operator = 'and'; // 'and' or 'or'
-            $taxonomias = get_taxonomies($args, $output, $operator);
-    
-            $terms = wp_get_object_terms($post->ID, $taxonomias);
-            foreach($terms as $term) {
-                $permalink = str_replace('%'.$term->taxonomy.'%', $term->slug, $permalink);
-            }
-            foreach($taxonomias as $taxonomia){
-                $permalink = str_replace('/%'.$taxonomia.'%', '', $permalink);
-            }
-        }
-    
-        return $permalink;
-    }
+    return $permalink;
+  }
 }
 $PaRewriteRules = new PaRewriteRules();

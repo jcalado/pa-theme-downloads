@@ -10,7 +10,7 @@ class PaEnqueueFiles {
 		wp_enqueue_style('pa-child-style', get_stylesheet_uri());
     wp_enqueue_script('pa-child-script', get_stylesheet_directory_uri() . '/assets/js/script.js', ['scripts'], null, true);
 
-    if(!empty($site_key = get_field('report_recaptcha_site_key', 'option'))):
+    if(!empty($site_key = get_field('report_recaptcha_site_key', 'pa_settings'))):
       wp_enqueue_script('recaptcha', "https://www.google.com/recaptcha/api.js?render={$site_key}", ['scripts'], null, true);
 
       wp_localize_script(
@@ -40,9 +40,17 @@ class PaEnqueueFiles {
           [
             'post_type'    => 'post',
             'taxonomies'   => [
-              'xtt-pa-editorias',
+              'xtt-pa-departamentos',
               'xtt-pa-owner',
-              'xtt-pa-sedes'
+              'xtt-pa-sedes',
+              'xtt-pa-materiais'
+            ],
+          ],
+          [
+            'post_type'    => 'kit',
+            'taxonomies'   => [
+              'xtt-pa-departamentos',
+              'xtt-pa-owner',
             ],
           ]
         ],

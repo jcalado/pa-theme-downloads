@@ -1,20 +1,23 @@
 <?php
 
-use WordPlate\Acf\Fields\Email;
-use WordPlate\Acf\Fields\Password;
-use WordPlate\Acf\Fields\TrueFalse;
-use WordPlate\Acf\Location;
+use Extended\ACF\Fields\Email;
+use Extended\ACF\Fields\Password;
+use Extended\ACF\Fields\TrueFalse;
+use Extended\ACF\Location;
 
-class PaAcfSiteDownloadsSettings {
+class PaAcfSiteDownloadsSettings
+{
 
-	public function __construct() {
-		add_action('after_setup_theme', [$this, 'createAcfFields']);
-	}
+  public function __construct()
+  {
+    add_action('after_setup_theme', [$this, 'createAcfFields']);
+  }
 
-  function createAcfFields() {
+  function createAcfFields()
+  {
     register_extended_field_group([
       'title'  => __('Report settings', 'iasd'),
-			'key'    => 'site_settings_report',
+      'key'    => 'site_settings_report',
       'style'  => 'default',
       'fields' => [
         TrueFalse::make(__('Enable report', 'iasd'), 'report_enabled')
@@ -28,22 +31,21 @@ class PaAcfSiteDownloadsSettings {
             'width' => 50,
           ]),
         Password::make(__('reCAPTCHA site key', 'iasd'), 'report_recaptcha_site_key')
-          ->instructions(__('Se não configurada, o site não ativará o captcha, podendo assim ficar vulnerável a spam.', 'iasd'))
+          ->instructions(__('If not configured, the site will not activate the captcha and may thus be vulnerable to spam.', 'iasd'))
           ->wrapper([
             'width' => 50,
           ]),
         Password::make(__('reCAPTCHA secret key', 'iasd'), 'report_recaptcha_secret_key')
-          ->instructions(__('Se não configurada, o site não ativará o captcha, podendo assim ficar vulnerável a spam.', 'iasd'))
+          ->instructions(__('If not configured, the site will not activate the captcha and may thus be vulnerable to spam.', 'iasd'))
           ->wrapper([
             'width' => 50,
           ]),
       ],
       'location' => [
-        Location::if('options_page', 'iasd_custom_settings'),
+        Location::where('options_page', 'iasd_custom_settings'),
       ],
     ]);
   }
-
 }
 
 $PaAcfSiteDownloadsSettings = new PaAcfSiteDownloadsSettings();

@@ -1,7 +1,6 @@
 <?php
-
-use WordPlate\Acf\Fields\Relationship;
-use WordPlate\Acf\Location;
+use ExtendedLocal\LocalData;
+use Extended\ACF\Location;
 
 class PaAcfKitFields {
 
@@ -14,20 +13,19 @@ class PaAcfKitFields {
       'title' => __('Downloads', 'iasd'),
       'key'   => 'downloads_kits',
       'style' => 'default',
+      'show_in_rest' => true,
       'fields' => [
-        Relationship::make(__('List', 'iasd'), 'downloads')
-          ->min(1)
-          ->required()
-          ->returnFormat('id')
+        LocalData::make(__('List', 'iasd'), 'downloads_kits')
           ->postTypes(['post'])
-          ->elements(['featured_image'])
-          ->filters([
-            'search', 
-            'taxonomy'
+          ->filterTaxonomies([
+            'xtt-pa-projetos',
+            'xtt-pa-departamentos',
+            'xtt-pa-sedes'
           ])
+          ->initialLimit(10)
       ],
       'location' => [
-          Location::if('post_type', 'kit'),
+          Location::where('post_type', 'kit'),
       ]
     ]);
   }
