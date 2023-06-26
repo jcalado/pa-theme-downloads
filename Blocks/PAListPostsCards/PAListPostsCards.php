@@ -3,11 +3,11 @@
 namespace Blocks\PAListPostsCards;
 
 use Blocks\Block;
-use Extended\LocalData;
+use ExtendedLocal\LocalData;
 use Fields\MoreContent;
-use WordPlate\Acf\ConditionalLogic;
-use WordPlate\Acf\Fields\ButtonGroup;
-use WordPlate\Acf\Fields\Text;
+use Extended\ACF\ConditionalLogic;
+use Extended\ACF\Fields\ButtonGroup;
+use Extended\ACF\Fields\Text;
 
 /**
  * Class PAListPostsCards
@@ -60,7 +60,7 @@ class PAListPostsCards extends Block {
 						'xtt-pa-editorias', 
 					])
 					->conditionalLogic([
-						ConditionalLogic::if('mode')->equals('latest')
+						ConditionalLogic::where('mode', '==', 'latest')
 					]),
 
         LocalData::make(__('Posts', 'iasd'), 'items_popular')
@@ -76,7 +76,7 @@ class PAListPostsCards extends Block {
 						'xtt-pa-editorias', 
 					])
 					->conditionalLogic([
-						ConditionalLogic::if('mode')->equals('popular')
+						ConditionalLogic::where('mode', '==', 'popular')
 					]),
 			],
 			MoreContent::make()

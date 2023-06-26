@@ -1,9 +1,9 @@
 <?php
 
-use WordPlate\Acf\Fields\Email;
-use WordPlate\Acf\Fields\Password;
-use WordPlate\Acf\Fields\TrueFalse;
-use WordPlate\Acf\Location;
+use Extended\ACF\Fields\Email;
+use Extended\ACF\Fields\Password;
+use Extended\ACF\Fields\TrueFalse;
+use Extended\ACF\Location;
 
 class PaAcfSiteDownloadsSettings
 {
@@ -42,7 +42,7 @@ class PaAcfSiteDownloadsSettings
           ]),
       ],
       'location' => [
-        Location::if('options_page', 'iasd_custom_settings'),
+        Location::where('options_page', 'iasd_custom_settings'),
       ],
     ]);
   }
