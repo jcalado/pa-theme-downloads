@@ -30,6 +30,7 @@ require_once(dirname(__FILE__) . '/classes/controllers/PA_EnqueueFiles.class.php
 require_once(dirname(__FILE__) . '/classes/controllers/PA_Util.class.php');
 require_once(dirname(__FILE__) . '/classes/controllers/PA_RewriteRules.class.php');
 require_once(dirname(__FILE__) . '/classes/PA_Helpers.php');
+require_once(dirname(__FILE__) . '/classes/PA_Theme_Handler.php');
 
 add_filter('blade/view/paths', function ($paths) {
   $paths = (array)$paths;
