@@ -3,6 +3,7 @@
 use Extended\ACF\Fields\Number;
 use Extended\ACF\Fields\Repeater;
 use Extended\ACF\Fields\Text;
+use Extended\ACF\Fields\TrueFalse;
 use Extended\ACF\Fields\Url;
 use Extended\ACF\Location;
 
