@@ -3,6 +3,7 @@
 use WordPlate\Acf\Fields\Number;
 use WordPlate\Acf\Fields\Repeater;
 use WordPlate\Acf\Fields\Text;
+use WordPlate\Acf\Fields\TrueFalse;
 use WordPlate\Acf\Fields\Url;
 use WordPlate\Acf\Location;
 
@@ -28,8 +29,17 @@ class PaAcfPostFields
           ->collapsed('name')
           ->required()
           ->fields([
+            TrueFalse::make(__('Active', 'iasd'), 'active')
+              ->defaultValue(true)
+              ->stylisedUi()
+              ->wrapper([
+                'width' => 15,
+              ]),
             Text::make(__('Name', 'iasd'), 'name')
-              ->required(),
+              ->required()
+              ->wrapper([
+                'width' => 85,
+              ]),
             Text::make(__('Format', 'iasd'), 'format')
               ->required()
               ->wrapper([
