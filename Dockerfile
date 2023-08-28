@@ -1,9 +1,9 @@
 FROM php:8.0-alpine
 
 RUN apk update 
-RUN apk upgrade 
+RUN apk upgrade
 
-RUN apk add nodejs=16.20.0-r0
+RUN apk add nodejs
 RUN apk add --no-cache bash lcms2-dev g++ make git pkgconfig autoconf automake libtool nasm build-base zlib-dev libpng libpng-dev jpeg-dev libc6-compat npm zip
 RUN apk add --no-cache --update-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.12/community yarn=1.22.4-r0
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
@@ -11,6 +11,7 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 COPY --chown=www-data:www-data . /var/www/build
 
 RUN composer clearcache
+# RUN export NODE_OPTIONS=--openssl-legacy-provider
 
 RUN cd /var/www/build \
   && composer install --no-dev \
@@ -27,4 +28,6 @@ RUN cd /var/www/build \
   && find . -type f -name 'README*' -exec rm {} + \
   && find . -type f -name '*.lock' -exec rm {} + \
   && find . -type f -name '*.mix.*' -exec rm {} + \
-  && find . -type f -name '*.txt' -exec rm {} + \
+  && find . -type f -name '*.txt' -exec rm {} + 
+
+#  RUN cat /var/www/build/assets/js/script.js
