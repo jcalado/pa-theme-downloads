@@ -1,3 +1,7 @@
+@php
+  $downloads = !empty($downloads) ? array_filter($downloads, function ($download) { return !empty($download['active']); }) : [];
+@endphp
+
 @notempty($downloads)
   <table class="pa-downloads-table table table-hover align-middle">
     <caption class="d-none"><?= __('Download', 'iasd')  ?></caption>
@@ -37,3 +41,4 @@
     </tbody>
   </table>
 @endnotempty
+ 

@@ -39,7 +39,7 @@ class PAFeaturePost extends Block {
 
       LocalData::make(__('Posts', 'iasd'), 'items')
 				->instructions(__('Select posts', 'iasd'))
-        ->postTypes(['post'])
+        ->postTypes(['post', 'kit'])
         ->initialLimit(10)
         ->manualItems(false)
         ->limitFilter(false)
@@ -51,6 +51,7 @@ class PAFeaturePost extends Block {
 					'xtt-pa-colecoes',
 					'xtt-pa-editorias', 
         ]),
+
 		];
 	}
 
