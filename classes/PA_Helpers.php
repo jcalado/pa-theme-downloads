@@ -6,9 +6,10 @@
  * @param string $post_id The post ID
  * @return mixed
  */
-function getDepartment($post_id) {
-  if(!empty($term = get_the_terms($post_id, 'xtt-pa-departamentos')) && !is_wp_error($term))
-      return $term[0];
+function getDepartment($post_id)
+{
+  if (!empty($term = get_the_terms($post_id, 'xtt-pa-departamentos')) && !is_wp_error($term))
+    return $term[0];
 
   return null;
 }
@@ -19,9 +20,10 @@ function getDepartment($post_id) {
  * @param string $post_id The post ID
  * @return mixed
  */
-function getPrioritySeat($post_id) {
-  if(!is_wp_error($term = get_the_terms($post_id, 'xtt-pa-owner')))
-      return $term[0];
+function getPrioritySeat($post_id)
+{
+  if (!is_wp_error($term = get_the_terms($post_id, 'xtt-pa-owner')))
+    return $term[0];
 
   return null;
 }
@@ -32,9 +34,10 @@ function getPrioritySeat($post_id) {
  * @param string $post_id The post ID
  * @return mixed
  */
-function getProject($post_id) {
-  if($term = get_the_terms($post_id, 'xtt-pa-projetos'))
-      return $term[0];
+function getProject($post_id)
+{
+  if ($term = get_the_terms($post_id, 'xtt-pa-projetos'))
+    return $term[0];
 
   return null;
 }
@@ -46,11 +49,12 @@ function getProject($post_id) {
  * @param int $limit Maximum posts per query. Default = 3
  * @return array
  */
-function getRelatedPosts($post_id, $post_type = 'post', $limit = 3): array {
-  if(get_the_terms($post_id, 'xtt-pa-projetos') || get_the_terms($post_id, 'xtt-pa-departamentos')):
+function getRelatedPosts($post_id, $post_type = 'post', $limit = 3): array
+{
+  if (get_the_terms($post_id, 'xtt-pa-projetos') || get_the_terms($post_id, 'xtt-pa-departamentos')) :
     $terms_projetos = get_the_terms($post_id, 'xtt-pa-projetos') ? wp_list_pluck(get_the_terms($post_id, 'xtt-pa-projetos'), 'term_id') : null;
     $terms_deptos   = get_the_terms($post_id, 'xtt-pa-departamentos') ? wp_list_pluck(get_the_terms($post_id, 'xtt-pa-departamentos'), 'term_id') : null;
-    
+
     $args = array(
       'post_type'      => $post_type,
       'post__not_in'   => array($post_id),
@@ -67,21 +71,23 @@ function getRelatedPosts($post_id, $post_type = 'post', $limit = 3): array {
         ),
       ),
     );
-    
+
     return get_posts($args);
   endif;
 
   return array();
 }
 
-function getHeaderTitle($post_id = NULL) {
-  if(is_post_type_archive('kit'))
+function getHeaderTitle($post_id = NULL)
+{
+
+  if (is_post_type_archive('kit'))
     $title = get_queried_object()->label;
-  elseif(is_tax()) //is archive
-    $title = get_taxonomy(get_queried_object()->taxonomy)->label . ' | ' . get_queried_object()->name;
-  elseif(is_singular('kit')) //is single
+  elseif (is_tax()) //is archive
+    $title = get_taxonomy(get_queried_object()->taxonomy)->labels->singular_name . ' | ' . get_queried_object()->name;
+  elseif (is_singular('kit')) //is single
     $title = 'Kits' . ' | ' . (!empty($project = getProject($post_id)) ? $project->name : get_the_title());
-  elseif(is_single()) //is single
+  elseif (is_single()) //is single
     $title = !empty($department = getDepartment($post_id)) ? $department->name : get_the_title();
   else
     $title = get_the_title(); //default
@@ -89,8 +95,8 @@ function getHeaderTitle($post_id = NULL) {
   $words = explode(' ', $title);
   $regex = '/^([a-z]+(?:-[a-z]+)?)$/i';
 
-  foreach($words as $word):
-    if(preg_match($regex, $word, $m))
+  foreach ($words as $word) :
+    if (preg_match($regex, $word, $m))
       $title = str_replace($word, "<span>{$word}</span>", $title);
   endforeach;
 
