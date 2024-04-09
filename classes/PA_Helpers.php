@@ -8,10 +8,17 @@
  */
 function getDepartment($post_id)
 {
-  if (!empty($term = get_the_terms($post_id, 'xtt-pa-departamentos')) && !is_wp_error($term))
-    return $term[0];
+  $wpseo_primary_term = new WPSEO_Primary_Term('xtt-pa-departamentos', get_the_id());
+  $wpseo_primary_term = $wpseo_primary_term->get_primary_term();
 
-  return null;
+  // Verifica se o termo primário foi encontrado
+  if ($wpseo_primary_term) {
+    $term = get_term($wpseo_primary_term);
+    return $term;
+  } else {
+    if (!empty($term = get_the_terms($post_id, 'xtt-pa-departamentos')) && !is_wp_error($term))
+      return $term[0];
+  }
 }
 
 /**
@@ -22,7 +29,7 @@ function getDepartment($post_id)
  */
 function getPrioritySeat($post_id)
 {
-  if (!is_wp_error($term = get_the_terms($post_id, 'xtt-pa-owner')))
+  if ($term = get_the_terms($post_id, 'xtt-pa-owner'))
     return $term[0];
 
   return null;
@@ -80,11 +87,10 @@ function getRelatedPosts($post_id, $post_type = 'post', $limit = 3): array
 
 function getHeaderTitle($post_id = NULL)
 {
-
   if (is_post_type_archive('kit'))
     $title = get_queried_object()->label;
   elseif (is_tax()) //is archive
-    $title = get_taxonomy(get_queried_object()->taxonomy)->labels->singular_name . ' | ' . get_queried_object()->name;
+    $title = get_taxonomy(get_queried_object()->taxonomy)->label . ' | ' . get_queried_object()->name;
   elseif (is_singular('kit')) //is single
     $title = 'Kits' . ' | ' . (!empty($project = getProject($post_id)) ? $project->name : get_the_title());
   elseif (is_single()) //is single
