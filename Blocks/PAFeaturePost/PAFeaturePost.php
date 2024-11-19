@@ -3,8 +3,8 @@
 namespace Blocks\PAFeaturePost;
 
 use Blocks\Block;
-use WordPlate\Acf\Fields\Text;
-use Extended\LocalData;
+use Extended\ACF\Fields\Text;
+use ExtendedLocal\LocalData;
 
 /**
  * Class PAFeaturePost
@@ -39,7 +39,7 @@ class PAFeaturePost extends Block {
 
       LocalData::make(__('Posts', 'iasd'), 'items')
 				->instructions(__('Select posts', 'iasd'))
-        ->postTypes(['post'])
+        ->postTypes(['post', 'kit'])
         ->initialLimit(10)
         ->manualItems(false)
         ->limitFilter(false)
@@ -51,6 +51,7 @@ class PAFeaturePost extends Block {
 					'xtt-pa-colecoes',
 					'xtt-pa-editorias', 
         ]),
+
 		];
 	}
 
@@ -60,9 +61,11 @@ class PAFeaturePost extends Block {
 	 * @return array
 	 */
 	public function with(): array {
+    $items = get_field('items');
+
 		return [
 			'title'	=> get_field('title'),
-			'id'	=> !empty($items = get_field('items')) && array_key_exists('data', $items) ? $items['data'][0]['id'] : null,
+			'id'	=> !empty($items) && array_key_exists('data', $items) && !empty($items['data']) ? $items['data'][0]['id'] : null,
 		];
 	}
 }

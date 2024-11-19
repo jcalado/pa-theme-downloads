@@ -1,10 +1,11 @@
 <?php
 
-use WordPlate\Acf\Fields\Number;
-use WordPlate\Acf\Fields\Repeater;
-use WordPlate\Acf\Fields\Text;
-use WordPlate\Acf\Fields\Url;
-use WordPlate\Acf\Location;
+use Extended\ACF\Fields\Number;
+use Extended\ACF\Fields\Repeater;
+use Extended\ACF\Fields\Text;
+use Extended\ACF\Fields\TrueFalse;
+use Extended\ACF\Fields\Url;
+use Extended\ACF\Location;
 
 class PaAcfPostFields
 {
@@ -28,8 +29,17 @@ class PaAcfPostFields
           ->collapsed('name')
           ->required()
           ->fields([
+            TrueFalse::make(__('Active', 'iasd'), 'active')
+              ->defaultValue(true)
+              ->stylisedUi()
+              ->wrapper([
+                'width' => 15,
+              ]),
             Text::make(__('Name', 'iasd'), 'name')
-              ->required(),
+              ->required()
+              ->wrapper([
+                'width' => 85,
+              ]),
             Text::make(__('Format', 'iasd'), 'format')
               ->required()
               ->wrapper([
@@ -50,7 +60,7 @@ class PaAcfPostFields
           ])
       ],
       'location' => [
-        Location::if('post_type', 'post'),
+        Location::where('post_type', 'post'),
       ]
     ]);
   }
