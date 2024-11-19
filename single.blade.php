@@ -23,7 +23,7 @@
             </div>
           </div>
           
-          @include('template-parts.single.comments')
+          <!-- @include('template-parts.single.comments') -->
           
           @include('template-parts.single.related-posts')
         </section>
