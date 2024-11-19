@@ -46,6 +46,16 @@ add_filter('template_include', function ($template) {
     return '';
   endif;
 
+  if (is_post_type_archive('tribe_events') && file_exists(dirname(__FILE__) . '/archive-tribe_events.blade.php')) :
+    blade('archive-tribe_events');
+    return '';
+  endif;
+
+  if (is_singular('tribe_events') && file_exists(dirname(__FILE__) . '/single-tribe_event.blade.php')) :
+    blade('single-tribe_event');
+    return '';
+  endif;
+
   $path = explode('/', $template);
   $template_chosen = basename(end($path), '.php');
   $template_chosen = str_replace('.blade', '', $template_chosen);
