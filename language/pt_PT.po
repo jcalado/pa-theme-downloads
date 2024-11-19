@@ -347,3 +347,18 @@ msgstr "Descarregar"
 #: template-parts/single/list-kit-downloads.blade.php:45
 msgid "Access content"
 msgstr "Aceder ao conteúdo"
+
+msgid "Adventist downloads"
+msgstr "Recursos UPASD"
+
+msgid "Ministry"
+msgstr "Departamento"
+
+msgid "Ministries"
+msgstr "Departamentos"
+
+msgid "Related files"
+msgstr "Relacionados"
+
+msgid "Featured"
+msgstr "Em destaque"
