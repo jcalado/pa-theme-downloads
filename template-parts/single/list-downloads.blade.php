@@ -23,7 +23,8 @@
           <td class="py-3 px-3 pe-lg-3">
             <span class="pa-truncate-1" title="{!! $loop->iteration . '. ' . wp_strip_all_tags($download['name']) !!}">
               <span class="pa-tag rounded-1 text-uppercase d-inline-block px-1 me-2">{{ $download['format'] }}</span>
-              {!! $loop->iteration . '. ' . wp_strip_all_tags($download['name']) !!}
+              {!! wp_strip_all_tags($download['name']) !!}
+              {{-- {!! $loop->iteration . '. ' . wp_strip_all_tags($download['name']) !!} --}}
             </span>
           </td>
 
