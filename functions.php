@@ -99,7 +99,7 @@ add_action('after_setup_theme', function () {
   unregister_taxonomy_for_object_type('category', 'post');
   unregister_taxonomy_for_object_type('xtt-pa-regiao', 'post');
 
-  load_theme_textdomain('iasd', get_stylesheet_directory() . '/language/');
+  load_theme_textdomain('downloads', get_stylesheet_directory() . '/language/');
 }, 9);
 
 
