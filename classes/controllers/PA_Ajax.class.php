@@ -45,11 +45,11 @@ class PAAjax
 
     $mail = wp_mail(
       $to,
-      __('New problem reported: ', 'iasd') . sanitize_text_field($_POST['report-title']),
-      '<p>' . __('Someone has reported a problem with their material posted on the Downloads portal.', 'iasd') .
-        '</p><strong>' . __('Title', 'iasd') . ': </strong>' . sanitize_text_field($_POST['report-title']) .
-        '<br /><strong>' . __('Message', 'iasd') . ': </strong>' . sanitize_text_field($_POST['report-message']) .
-        '<br /><strong>' . __('Url', 'iasd') . ': </strong>' . sanitize_text_field($_POST['report-permalink']),
+      __('New problem reported: ', 'downloads') . sanitize_text_field($_POST['report-title']),
+      '<p>' . __('Someone has reported a problem with their material posted on the Downloads portal.', 'downloads') .
+        '</p><strong>' . __('Title', 'downloads') . ': </strong>' . sanitize_text_field($_POST['report-title']) .
+        '<br /><strong>' . __('Message', 'downloads') . ': </strong>' . sanitize_text_field($_POST['report-message']) .
+        '<br /><strong>' . __('Url', 'downloads') . ': </strong>' . sanitize_text_field($_POST['report-permalink']),
       ['Content-Type: text/html; charset=UTF-8']
     );
 

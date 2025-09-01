@@ -21,7 +21,7 @@
 
             <span class="col p-0 me-3 pa-truncate-3">{!! wp_strip_all_tags(get_the_title($id)) !!}</span>
             
-            <span class="accordion-kits__tag col-auto p-0 pe-2 d-none d-lg-flex text-primary">{!! __('Downloads', 'iasd') !!}</span>
+            <span class="accordion-kits__tag col-auto p-0 pe-2 d-none d-lg-flex text-primary">{!! __('Downloads', 'downloads') !!}</span>
           </button>
         </h3>
 
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="col-auto d-flex">
-                  <a href="{{ get_the_permalink($id) }}" role="button" class="accordion-kits__permalink text-primary fw-bold text-decoration-none col-auto"><?= __('Access content', 'iasd')  ?><i class="fas fa-arrow-right ms-2"></i></a>
+                  <a href="{{ get_the_permalink($id) }}" role="button" class="accordion-kits__permalink text-primary fw-bold text-decoration-none col-auto"><?= __('Access content', 'downloads')  ?><i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
             </div>

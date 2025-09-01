@@ -16,27 +16,27 @@ class PaAcfSiteDownloadsSettings
   function createAcfFields()
   {
     register_extended_field_group([
-      'title'  => __('Report settings', 'iasd'),
+      'title'  => __('Report settings', 'downloads'),
       'key'    => 'site_settings_report',
       'style'  => 'default',
       'fields' => [
-        TrueFalse::make(__('Enable report', 'iasd'), 'report_enabled')
+        TrueFalse::make(__('Enable report', 'downloads'), 'report_enabled')
           ->stylisedUi()
           ->defaultValue(true)
           ->wrapper([
             'width' => 50,
           ]),
-        Email::make(__('Send email to', 'iasd'), 'report_email')
+        Email::make(__('Send email to', 'downloads'), 'report_email')
           ->wrapper([
             'width' => 50,
           ]),
-        Password::make(__('reCAPTCHA site key', 'iasd'), 'report_recaptcha_site_key')
-          ->instructions(__('If not configured, the site will not activate the captcha and may thus be vulnerable to spam.', 'iasd'))
+        Password::make(__('reCAPTCHA site key', 'downloads'), 'report_recaptcha_site_key')
+          ->instructions(__('If not configured, the site will not activate the captcha and may thus be vulnerable to spam.', 'downloads'))
           ->wrapper([
             'width' => 50,
           ]),
-        Password::make(__('reCAPTCHA secret key', 'iasd'), 'report_recaptcha_secret_key')
-          ->instructions(__('If not configured, the site will not activate the captcha and may thus be vulnerable to spam.', 'iasd'))
+        Password::make(__('reCAPTCHA secret key', 'downloads'), 'report_recaptcha_secret_key')
+          ->instructions(__('If not configured, the site will not activate the captcha and may thus be vulnerable to spam.', 'downloads'))
           ->wrapper([
             'width' => 50,
           ]),

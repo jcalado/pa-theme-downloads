@@ -18,41 +18,41 @@ class PaAcfPostFields
   function createACFFields()
   {
     register_extended_field_group([
-      'title' => __('Downloads', 'iasd'),
+      'title' => __('Downloads', 'downloads'),
       'key'   => 'downloads',
       'style' => 'default',
       'show_in_rest' => true,
       'fields' => [
-        Repeater::make(__('List', 'iasd'), 'downloads')
+        Repeater::make(__('List', 'downloads'), 'downloads')
           ->min(1)
           ->layout('block')
           ->collapsed('name')
           ->required()
           ->fields([
-            TrueFalse::make(__('Active', 'iasd'), 'active')
+            TrueFalse::make(__('Active', 'downloads'), 'active')
               ->defaultValue(true)
               ->stylisedUi()
               ->wrapper([
                 'width' => 15,
               ]),
-            Text::make(__('Name', 'iasd'), 'name')
+            Text::make(__('Name', 'downloads'), 'name')
               ->required()
               ->wrapper([
                 'width' => 85,
               ]),
-            Text::make(__('Format', 'iasd'), 'format')
+            Text::make(__('Format', 'downloads'), 'format')
               ->required()
               ->wrapper([
                 'width' => 33,
               ]),
-            Number::make(__('Size', 'iasd'), 'size')
+            Number::make(__('Size', 'downloads'), 'size')
               ->min(0)
               ->required()
               ->append('MB')
               ->wrapper([
                 'width' => 33,
               ]),
-            Url::make(__('Link', 'iasd'), 'link')
+            Url::make(__('Link', 'downloads'), 'link')
               ->required()
               ->wrapper([
                 'width' => 33,

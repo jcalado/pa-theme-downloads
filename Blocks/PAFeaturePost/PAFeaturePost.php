@@ -14,8 +14,8 @@ class PAFeaturePost extends Block {
 
 	public function __construct() {
 		parent::__construct([
-			'title' 	    => __('IASD - Downloads - Feature', 'iasd'),
-			'description' => __('Block to show a single post content on feature format.', 'iasd'),
+			'title' 	    => __('IASD - Downloads - Feature', 'downloads'),
+			'description' => __('Block to show a single post content on feature format.', 'downloads'),
 			'category' 	  => 'pa-adventista',
 			'post_types'  => ['post', 'page'],
 			'keywords' 	  => ['featured'],
@@ -34,11 +34,11 @@ class PAFeaturePost extends Block {
 	 */
 	protected function setFields(): array {
 		return [
-      Text::make(__('Title', 'iasd'), 'title')
-        ->defaultValue(__('Feature', 'iasd')),
+      Text::make(__('Title', 'downloads'), 'title')
+        ->defaultValue(__('Feature', 'downloads')),
 
-      LocalData::make(__('Posts', 'iasd'), 'items')
-				->instructions(__('Select posts', 'iasd'))
+      LocalData::make(__('Posts', 'downloads'), 'items')
+				->instructions(__('Select posts', 'downloads'))
         ->postTypes(['post', 'kit'])
         ->initialLimit(10)
         ->manualItems(false)

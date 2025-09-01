@@ -19,7 +19,7 @@
           @endif
 
           @if($wp_query->found_posts >= 1)
-            <h2 class="mb-3"><?= __('Materials', 'iasd')  ?></h2>
+            <h2 class="mb-3"><?= __('Materials', 'downloads')  ?></h2>
 
             <div class="row">
               <div class="col-12">

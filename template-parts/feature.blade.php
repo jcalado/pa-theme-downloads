@@ -1,6 +1,6 @@
 @notempty($post)
     <div class="pa-blog-itens mb-5">
-        <h2 class="mb-4">{{ __('Feature', 'iasd') }}</h2>
+        <h2 class="mb-4">{{ __('Feature', 'downloads') }}</h2>
 
         <div class="pa-blog-feature pa-w-list-videos">
             <a href="{{ get_the_permalink($post->ID) }}" title="{{ get_the_title($post->ID) }}">

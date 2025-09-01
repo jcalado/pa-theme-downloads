@@ -1,5 +1,5 @@
 @if(is_admin())
-	<img class="img-preview" src="{{ get_stylesheet_directory_uri() }}/Blocks/PACarouselPosts/preview.png" alt='{{ __('Illustrative image of the front end of the block.', 'iasd') }}'/>
+	<img class="img-preview" src="{{ get_stylesheet_directory_uri() }}/Blocks/PACarouselPosts/preview.png" alt='{{ __('Illustrative image of the front end of the block.', 'downloads') }}'/>
 @else 
   @notempty($items) 
     <div class="pa-widget pa-carousel-download col-12 mb-5">

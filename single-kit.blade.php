@@ -11,12 +11,12 @@
             
             @if(get_the_content())
 
-              <h2 class="mb-4"><?= __('Kit description', 'iasd') ?></h2>
+              <h2 class="mb-4"><?= __('Kit description', 'downloads') ?></h2>
               <div class="mb-5">{!! get_the_content() !!}</div>
 
             @endif
 
-            <h2 class="mb-4"><?= __('Kit materials', 'iasd') ?></h2>
+            <h2 class="mb-4"><?= __('Kit materials', 'downloads') ?></h2>
 
             @include('template-parts.single.list-kit-downloads', [
               'downloads' => explode(",", get_field('downloads_kits')['sticky']),
@@ -24,7 +24,7 @@
           </div>
           
           @include('template-parts.single.related-posts', [
-            'title' => __('Kit materials', 'iasd')
+            'title' => __('Kit materials', 'downloads')
           ])
         </section>
       </div>

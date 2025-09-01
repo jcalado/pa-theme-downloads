@@ -18,8 +18,8 @@ class PAListPostsColumn extends Block {
 	public function __construct() {
 		// Set block settings
 		parent::__construct([
-			'title'       => __('IASD - Posts - List(B)', 'iasd'),
-			'description' => __('Block to show posts contents in list format.', 'iasd'),
+			'title'       => __('IASD - Posts - List(B)', 'downloads'),
+			'description' => __('Block to show posts contents in list format.', 'downloads'),
 			'category'    => 'pa-adventista',
 			'keywords'    => ['list', 'posts'],
 			'icon'        => 'list-view',
@@ -36,19 +36,19 @@ class PAListPostsColumn extends Block {
 	protected function setFields(): array {
 		return array_merge(
 			[
-				Text::make(__('Title', 'iasd'), 'title')
-					->defaultValue(__('IASD - Posts - List(B)', 'iasd'))
+				Text::make(__('Title', 'downloads'), 'title')
+					->defaultValue(__('IASD - Posts - List(B)', 'downloads'))
 					->required(),
 
 				ButtonGroup::make('Modo', 'mode')
 					->choices([
-						'latest' => __('Recents', 'iasd'),
-						'popular' => __('Popular', 'iasd'),
+						'latest' => __('Recents', 'downloads'),
+						'popular' => __('Popular', 'downloads'),
 					])
 					->defaultValue('latest'),
 
-					LocalData::make(__('Posts', 'iasd'), 'items_latest')
-					->instructions(__('Select posts', 'iasd'))
+					LocalData::make(__('Posts', 'downloads'), 'items_latest')
+					->instructions(__('Select posts', 'downloads'))
 					->postTypes(['post'])
 					->initialLimit(4)
 					->manualItems(false)
@@ -63,8 +63,8 @@ class PAListPostsColumn extends Block {
 						ConditionalLogic::where('mode', '==', 'latest')
 					]),
 
-					LocalData::make(__('Posts', 'iasd'), 'items_popular')
-					->instructions(__('Select posts', 'iasd'))
+					LocalData::make(__('Posts', 'downloads'), 'items_popular')
+					->instructions(__('Select posts', 'downloads'))
 					->postTypes(['post'])
 					->initialLimit(4)
 					->manualItems(false)

@@ -17,8 +17,8 @@ class PACarouselPosts extends Block {
   public function __construct() {
     // Set block settings
     parent::__construct([
-      'title' 	  => __('IASD - Carousel - Posts', 'iasd'),
-      'description' => __('Block from downloads content on carousel format.', 'iasd'),
+      'title' 	  => __('IASD - Carousel - Posts', 'downloads'),
+      'description' => __('Block from downloads content on carousel format.', 'downloads'),
       'category' 	  => 'pa-adventista',
       'keywords' 	  => ['app', 'posts'],
       'icon' 		  => 'download',
@@ -34,18 +34,18 @@ class PACarouselPosts extends Block {
 	 */
 	protected function setFields(): array {
 		return [
-			Text::make(__('Title', 'iasd'), 'title')
+			Text::make(__('Title', 'downloads'), 'title')
         ->defaultValue('IASD - Carrosel de posts'),
 
 			ButtonGroup::make('Modo', 'mode')
 				->choices([
-					'latest' => __('Recents', 'iasd'),
-					'popular' => __('Popular', 'iasd'),
+					'latest' => __('Recents', 'downloads'),
+					'popular' => __('Popular', 'downloads'),
 				])
 				->defaultValue('latest'),
 
-      LocalData::make(__('Posts', 'iasd'), 'items_latest')
-        ->instructions(__('Select posts', 'iasd'))
+      LocalData::make(__('Posts', 'downloads'), 'items_latest')
+        ->instructions(__('Select posts', 'downloads'))
         ->postTypes(['post'])
         ->initialLimit(10)
         ->manualItems(false)
@@ -60,8 +60,8 @@ class PACarouselPosts extends Block {
           ConditionalLogic::where('mode', '==', 'latest')
         ]),
 
-      LocalData::make(__('Posts', 'iasd'), 'items_popular')
-        ->instructions(__('Select posts', 'iasd'))
+      LocalData::make(__('Posts', 'downloads'), 'items_popular')
+        ->instructions(__('Select posts', 'downloads'))
         ->postTypes(['post'])
         ->initialLimit(10)
         ->manualItems(false)

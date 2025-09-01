@@ -7,7 +7,7 @@
     <div class="container pt-5">
       <div class="row justify-content-center">
         <section class="col-auto col-md-8 pa-widget">     
-          <h2 class="mb-3"><?= __('File details', 'iasd') ?></h2>     
+          <h2 class="mb-3"><?= __('File details', 'downloads') ?></h2>     
           
           <div class="mb-4">{!! get_the_content() !!}</div>
 

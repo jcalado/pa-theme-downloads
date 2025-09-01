@@ -16,8 +16,8 @@ class PAListLinks extends Block {
 	public function __construct() {
 		// Set block settings
 		parent::__construct([
-			'title'       => __('IASD - List - Links', 'iasd'),
-			'description' => __('Block to show links in list format.', 'iasd'),
+			'title'       => __('IASD - List - Links', 'downloads'),
+			'description' => __('Block to show links in list format.', 'downloads'),
 			'category'    => 'pa-adventista',
 			'keywords'    => ['list', 'links'],
 			'icon'        => 'list-view',
@@ -31,13 +31,13 @@ class PAListLinks extends Block {
 	 */
 	protected function setFields(): array {
 		return [
-      Text::make(__('Title', 'iasd'), 'title')
-        ->defaultValue(__('IASD - List - Links', 'iasd'))
+      Text::make(__('Title', 'downloads'), 'title')
+        ->defaultValue(__('IASD - List - Links', 'downloads'))
         ->required(),
 
-      Repeater::make(__('Links', 'iasd'), 'items')
+      Repeater::make(__('Links', 'downloads'), 'items')
         ->min(1)
-        ->buttonLabel(__('Add link', 'iasd'))
+        ->buttonLabel(__('Add link', 'downloads'))
         ->layout('block')
         ->fields([
           Link::make('', 'link')

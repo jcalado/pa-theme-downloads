@@ -4,16 +4,16 @@
 
 @notempty($downloads)
   <table class="pa-downloads-table table table-hover align-middle">
-    <caption class="d-none"><?= __('Download', 'iasd')  ?></caption>
+    <caption class="d-none"><?= __('Download', 'downloads')  ?></caption>
     <thead>
       <tr>
-        <th class="px-3 border-0 d-none d-lg-table-cell" scope="col">{{ __('Name', 'iasd') }}</th>
+        <th class="px-3 border-0 d-none d-lg-table-cell" scope="col">{{ __('Name', 'downloads') }}</th>
 
-        <th class="px-3 border-0 d-none d-lg-table-cell" scope="col">{{ __('Size', 'iasd') }}</th>
+        <th class="px-3 border-0 d-none d-lg-table-cell" scope="col">{{ __('Size', 'downloads') }}</th>
 
-        <th class="pa-downloads-table__fit px-3 border-0 text-end d-none d-lg-table-cell" scope="col">{{ __('Download', 'iasd') }}</th>
+        <th class="pa-downloads-table__fit px-3 border-0 text-end d-none d-lg-table-cell" scope="col">{{ __('Download', 'downloads') }}</th>
 
-        {{-- <th class="px-0 border-0 d-block d-lg-none" scope="col">{{ __('Files for download', 'iasd') }}</th> --}}
+        {{-- <th class="px-0 border-0 d-block d-lg-none" scope="col">{{ __('Files for download', 'downloads') }}</th> --}}
       </tr>
     </thead> 
 
@@ -34,7 +34,7 @@
             <a class="text-decoration-none d-flex align-items-center" href="{{ iconv("UTF-8","ISO-8859-1//IGNORE",$download['link']) }}" download target="_blank">
               <i class="fas fa-download me-2"></i>
               
-              <span class="d-none d-lg-inline-block"><?= __('Download', 'iasd')  ?></span>
+              <span class="d-none d-lg-inline-block"><?= __('Download', 'downloads')  ?></span>
             </a>
           </td>
         </tr>

@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.14.1\n"
-"X-Domain: iasd\n"
+"X-Domain: downloads\n"
 
 #. Theme Name of the theme
 msgid "PA - Downloads (Child)"

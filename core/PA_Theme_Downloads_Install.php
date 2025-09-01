@@ -24,19 +24,19 @@ class PAThemeDownloadsInstall
      * 
      */
     $labels = array(
-      'singular_name'         => __('Kit', 'iasd'),
-      'name'                  => __('Kits', 'iasd'),
+      'singular_name'         => __('Kit', 'downloads'),
+      'name'                  => __('Kits', 'downloads'),
       'menu_name'             => __('Kits', 'Admin Menu text', 'iasd'),
-      'name_admin_bar'        => __('Add kit', 'iasd'),
-      'add_new'               => __('Add New', 'iasd'),
-      'add_new_item'          => __('Add New kit', 'iasd'),
-      'new_item'              => __('New kit', 'iasd'),
-      'edit_item'             => __('Edit kit', 'iasd'),
-      'view_item'             => __('View kit', 'iasd'),
-      'all_items'             => __('All kits', 'iasd'),
-      'search_items'          => __('Search kit', 'iasd'),
-      'not_found'             => __('No kit found.', 'iasd'),
-      'not_found_in_trash'    => __('No kit found in Trash.', 'iasd'),
+      'name_admin_bar'        => __('Add kit', 'downloads'),
+      'add_new'               => __('Add New', 'downloads'),
+      'add_new_item'          => __('Add New kit', 'downloads'),
+      'new_item'              => __('New kit', 'downloads'),
+      'edit_item'             => __('Edit kit', 'downloads'),
+      'view_item'             => __('View kit', 'downloads'),
+      'all_items'             => __('All kits', 'downloads'),
+      'search_items'          => __('Search kit', 'downloads'),
+      'not_found'             => __('No kit found.', 'downloads'),
+      'not_found_in_trash'    => __('No kit found in Trash.', 'downloads'),
     );
 
     $args = array(

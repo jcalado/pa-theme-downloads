@@ -10,12 +10,12 @@ class PaAcfKitFields {
 
   function createACFFields() {
     register_extended_field_group([
-      'title' => __('Downloads', 'iasd'),
+      'title' => __('Downloads', 'downloads'),
       'key'   => 'downloads_kits',
       'style' => 'default',
       'show_in_rest' => true,
       'fields' => [
-        LocalData::make(__('List', 'iasd'), 'downloads_kits')
+        LocalData::make(__('List', 'downloads'), 'downloads_kits')
           ->postTypes(['post'])
           ->filterTaxonomies([
             'xtt-pa-projetos',

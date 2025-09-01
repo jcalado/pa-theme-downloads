@@ -4,14 +4,14 @@ use Illuminate\Support\Str;
 
 blade_directive('getPrioritySeat', function ($expression) {
   if (empty($expression))
-    return __('Post ID is required.', 'iasd');
+    return __('Post ID is required.', 'downloads');
 
   return "<?= getPrioritySeat({$expression}) ?>";
 });
 
 blade_directive('getDepartment', function ($expression) {
   if (empty($expression))
-    return __('Post ID is required.', 'iasd');
+    return __('Post ID is required.', 'downloads');
 
   return "<?= getDepartment({$expression})->name ?>";
 });

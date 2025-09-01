@@ -1,5 +1,5 @@
 @if(is_admin())
-	<img class="img-preview" src="{{ get_stylesheet_directory_uri() }}/Blocks/PAListPostsCards/preview.png" alt="{{ __('Illustrative image of the front end of the block.', 'iasd') }}"/>
+	<img class="img-preview" src="{{ get_stylesheet_directory_uri() }}/Blocks/PAListPostsCards/preview.png" alt="{{ __('Illustrative image of the front end of the block.', 'downloads') }}"/>
 @else
 	@notempty($items) 
 		<div class="pa-widget pa-w-list-posts-cards col-lg-4 mb-5">			
