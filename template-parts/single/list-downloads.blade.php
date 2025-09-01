@@ -22,19 +22,37 @@
         <tr>
           <td class="py-3 px-3 pe-lg-3">
             <span class="pa-truncate-1" title="{!! $loop->iteration . '. ' . wp_strip_all_tags($download['name']) !!}">
-              <span class="pa-tag rounded-1 text-uppercase d-inline-block px-1 me-2">{{ $download['format'] }}</span>
+                @if($download['format'] !== 'link')
+                        <i class="fas fa-file-{{ strtolower($download['format']) }} me-2"></i>
+                @endif
+                
+                @if($download['format'] !== 'link')
+                <span class="pa-tag rounded-1 text-uppercase d-inline-block px-1 me-2">{{ $download['format'] }}</span>
               {!! wp_strip_all_tags($download['name']) !!}
               {{-- {!! $loop->iteration . '. ' . wp_strip_all_tags($download['name']) !!} --}}
             </span>
+                @else
+              {!! wp_strip_all_tags($download['name']) !!}
+              {{-- {!! $loop->iteration . '. ' . wp_strip_all_tags($download['name']) !!} --}}
+            </span>
+            @endif
           </td>
 
-          <td class="p-3">{{ size_format($download['size']*1024*1024, 0) }}</td>
-
+          @if($download['format'] !== 'link')
+            <td class="p-3">{{ size_format($download['size']*1024*1024, 0) }}</td>
+          @else
+            <td></td>
+          @endif
           <td class="pa-downloads-table__fit py-3 px-0 px-lg-3 fw-bold">
             <a class="text-decoration-none d-flex align-items-center" href="{{ iconv("UTF-8","ISO-8859-1//IGNORE",$download['link']) }}" target="_blank">
+              
+              @if($download['format'] !== 'link')
               <i class="fas fa-download me-2"></i>
-
               <span class="d-none d-lg-inline-block"><?= __('Download', 'downloads')  ?></span>
+              @else
+              <i class="fas fa-link me-2"></i>
+              <span class="d-none d-lg-inline-block"><?= __('Open', 'downloads')  ?></span>
+              @endif
             </a>
           </td>
         </tr>

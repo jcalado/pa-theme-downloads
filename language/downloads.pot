@@ -370,3 +370,5 @@ msgstr ""
 msgid "Illustrative image of the front end of the block."
 msgstr ""
 
+msgid "Open"
+msgstr ""

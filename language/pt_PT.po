@@ -362,3 +362,6 @@ msgstr "Relacionados"
 
 msgid "Featured"
 msgstr "Em destaque"
+
+msgid "Open"
+msgstr "Abrir"
