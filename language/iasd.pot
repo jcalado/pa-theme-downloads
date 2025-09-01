@@ -340,3 +340,33 @@ msgstr ""
 #: template-parts/single/list-kit-downloads.blade.php:45
 msgid "Access content"
 msgstr ""
+
+#: ../components/header/event-title.blade.php:10
+#: ../components/header/title.blade.php:10
+msgid "Adventist downloads"
+msgstr ""
+
+#: ../core/PA_Theme_Downloads_Install.php:29
+msgid "Kits', 'Admin Menu text"
+msgstr ""
+
+#: ../classes/controllers/PA_ACF_PostFields.class.php:32
+msgid "Active"
+msgstr ""
+
+#: ../template-parts/single/related-posts.blade.php:8
+msgid "Related files"
+msgstr ""
+
+#: ../template-parts/single/list-downloads.blade.php:16
+msgid "Files for download"
+msgstr ""
+
+#: ../Blocks/PACarouselPosts/views/frontend.blade.php:2
+#: ../Blocks/PAFeaturePost/views/frontend.blade.php:2
+#: ../Blocks/PAListLinks/views/frontend.blade.php:2
+#: ../Blocks/PAListPostsCards/views/frontend.blade.php:2
+#: ../Blocks/PAListPostsColumn/views/frontend.blade.php:2
+msgid "Illustrative image of the front end of the block."
+msgstr ""
+
