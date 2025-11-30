@@ -48,10 +48,10 @@
               
               @if($download['format'] !== 'link')
               <i class="fas fa-download me-2"></i>
-              <span class="d-none d-lg-inline-block"><?= __('Download', 'downloads')  ?></span>
+              <span class="d-lg-inline-block"><?= __('Download', 'downloads')  ?></span>
               @else
               <i class="fas fa-link me-2"></i>
-              <span class="d-none d-lg-inline-block"><?= __('Open', 'downloads')  ?></span>
+              <span class="d-lg-inline-block"><?= __('Open', 'downloads')  ?></span>
               @endif
             </a>
           </td>
