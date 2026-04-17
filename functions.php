@@ -103,53 +103,22 @@ add_action('after_setup_theme', function () {
 }, 9);
 
 
-add_action('acf/save_post', 'replace_s3_urls');
+// add_action('acf/save_post', 'replace_s3_urls');
 
-function replace_s3_urls($post_id)
-{
-
-  //Only set for post_type = post!
-  if (get_post_type($post_id) == 'post') {
-    if (have_rows('downloads', $post_id)) {
-      while (have_rows('downloads', $post_id)) {
-        the_row();
-
-        $download = get_sub_field('link');
-
-
-        //Isso foi preciso porque o link "http://deptos.adventistas.org.s3.amazonaws.com..." não valida o certificado e não efetua o download em uma nova aba. 
-        if (strpos($download, 'http://deptos.adventistas.org.s3.amazonaws.com') !== false) {
-          $link = str_replace('http://deptos.adventistas.org.s3.amazonaws.com', 'https://deptos.adventistas.org', $download);
-          update_sub_field('link', $link);
-        }
-
-        if (strpos($download, 'https://deptos.adventistas.org.s3.amazonaws.com') !== false) {
-          $link = str_replace('https://deptos.adventistas.org.s3.amazonaws.com', 'https://deptos.adventistas.org', $download);
-          update_sub_field('link', $link);
-        }
-
-        if (strpos($download, 'http://deptos.adventistas.org.s3.us-east-1.amazonaws.com') !== false) {
-          $link = str_replace('http://deptos.adventistas.org.s3.us-east-1.amazonaws.com', 'https://deptos.adventistas.org', $download);
-          update_sub_field('link', $link);
-        }
-
-        if (strpos($download, 'https://deptos.adventistas.org.s3.us-east-1.amazonaws.com') !== false) {
-          $link = str_replace('https://deptos.adventistas.org.s3.us-east-1.amazonaws.com', 'https://deptos.adventistas.org', $download);
-          update_sub_field('link', $link);
-        }
-      }
-    }
-  }
-}
+// function replace_s3_urls($post_id)
+// {
+//   // Inherited from partner theme — not needed for our deployment (we don't use deptos.adventistas.org)
+//   // Replaced S3 URLs with CDN URLs in ACF download links on save
+// }
 
 function clear_cf_cache()
 {
-
   //RESET CF CACHE
   $url = "https://" . API_PA . "/clear-cache?zone=adventistas.dev";
-  $json = file_get_contents($url);
-  $obj = json_decode($json);
-  unset($json, $obj);
+  wp_remote_get($url, [
+    'timeout'  => 5,
+    'blocking' => false,
+  ]);
 }
 add_action('acf/save_post', 'clear_cf_cache');
 
