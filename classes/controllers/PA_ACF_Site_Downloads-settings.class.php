@@ -10,7 +10,7 @@ class PaAcfSiteDownloadsSettings
 
   public function __construct()
   {
-    add_action('after_setup_theme', [$this, 'createAcfFields']);
+    add_action('acf/init', [$this, 'createAcfFields']);
   }
 
   function createAcfFields()

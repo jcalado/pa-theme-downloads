@@ -12,7 +12,7 @@ class PaAcfPostFields
 
   public function __construct()
   {
-    add_action('init', [$this, 'createACFFields']);
+    add_action('acf/init', [$this, 'createACFFields']);
   }
 
   function createACFFields()

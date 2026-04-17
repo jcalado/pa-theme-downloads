@@ -5,6 +5,7 @@ class PaRewriteRules
   public function __construct()
   {
     add_action('init', [$this, 'rewritePost'], 100);
+    add_action('after_switch_theme', [$this, 'flushRewrites']);
     add_filter('pre_post_link', [$this, 'PrePostLink'], 10, 3);
   }
 
@@ -16,7 +17,12 @@ class PaRewriteRules
     $permalink = str_replace('%postname%', '([^/]+)', $permalink);
     $permalink .= '?$';
     $rewrite_redirect = 'index.php?name=$matches[3]&post_type=post&xtt-pa-departamentos=$matches[1]&xtt-pa-materiais=$matches[2]';
-    $permalink = add_rewrite_rule($permalink, $rewrite_redirect, 'top');
+    add_rewrite_rule($permalink, $rewrite_redirect, 'top');
+  }
+
+  public static function flushRewrites()
+  {
+    self::rewritePost();
     flush_rewrite_rules();
   }
 

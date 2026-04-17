@@ -3,12 +3,9 @@
 namespace Extended;
 
 use Extended\ACF\Fields\Field;
-use Extended\ACF\Fields\Attributes\ConditionalLogic;
-use Extended\ACF\Fields\Attributes\DefaultValue;
-use Extended\ACF\Fields\Attributes\Instructions;
-use Extended\ACF\Fields\Attributes\Nullable;
-use Extended\ACF\Fields\Attributes\Required;
-use Extended\ACF\Fields\Attributes\Wrapper;
+use Extended\ACF\Fields\Settings\ConditionalLogic;
+use Extended\ACF\Fields\Settings\Instructions;
+use Extended\ACF\Fields\Settings\Wrapper;
 
 /**
  * Register Taxonomy Terms field
@@ -16,13 +13,10 @@ use Extended\ACF\Fields\Attributes\Wrapper;
 class TaxonomyTerms extends Field {
 
   use ConditionalLogic;
-  use DefaultValue;
   use Instructions;
-  use Nullable;
-  use Required;
   use Wrapper;
 
-  protected $type = 'acfe_taxonomy_terms';
+  protected null|string $type = 'acfe_taxonomy_terms';
 
 	/**
 	 * taxonomies Allowed terms
@@ -31,7 +25,7 @@ class TaxonomyTerms extends Field {
 	 * @return self
 	 */
 	public function allowTerms(array $value): self {
-    $this->config->set('allow_terms', $value);
+    $this->withSettings(array('allow_terms' => $value));
 
     return $this;
   }
@@ -43,7 +37,7 @@ class TaxonomyTerms extends Field {
 	 * @return self
 	 */
 	public function taxonomies(array $value): self {
-    $this->config->set('taxonomy', $value);
+    $this->withSettings(array('taxonomy' => $value));
 
     return $this;
   }
@@ -58,22 +52,22 @@ class TaxonomyTerms extends Field {
     if(!in_array($value, ['checkbox', 'radio', 'select']))
       throw new \InvalidArgumentException("Invalid argument return format [$value].");
 
-    $this->config->set('field_type', $value);
+    $this->withSettings(array('field_type' => $value));
 
     return $this;
   }
-  
+
   /**
    * stylisedUi Improved field interface
    *
    * @return self
    */
   public function stylisedUi(): self {
-    $this->config->set('ui', true);
+    $this->withSettings(array('ui' => true));
 
     return $this;
   }
-  
+
   /**
    * saveTerms Connects selected terms to the post object
    *
@@ -81,11 +75,11 @@ class TaxonomyTerms extends Field {
    * @return self
    */
   public function saveTerms(bool $saveTerms = true): self {
-    $this->config->set('save_terms', $saveTerms);
+    $this->withSettings(array('save_terms' => $saveTerms));
 
     return $this;
   }
-  
+
   /**
    * loadTerms Loads selected terms from the post object
    *
@@ -93,7 +87,7 @@ class TaxonomyTerms extends Field {
    * @return self
    */
   public function loadTerms(bool $loadTerms = true): self {
-    $this->config->set('load_terms', $loadTerms);
+    $this->withSettings(array('load_terms' => $loadTerms));
 
     return $this;
   }
@@ -104,7 +98,7 @@ class TaxonomyTerms extends Field {
    * @return self
    */
   public function useAjax(): self {
-    $this->config->set('ajax', true);
+    $this->withSettings(array('ajax' => true));
 
     return $this;
   }
@@ -115,7 +109,7 @@ class TaxonomyTerms extends Field {
    * @return self
    */
   public function multiple(): self {
-    $this->config->set('multiple', true);
+    $this->withSettings(array('multiple' => true));
 
     return $this;
   }
@@ -126,7 +120,7 @@ class TaxonomyTerms extends Field {
    * @return self
    */
   public function placeholder(string $value): self {
-    $this->config->set('placeholder', $value);
+    $this->withSettings(array('placeholder' => $value));
 
     return $this;
   }
@@ -140,7 +134,7 @@ class TaxonomyTerms extends Field {
       if(!in_array($format, ['object', 'name', 'id']))
         throw new \InvalidArgumentException("Invalid argument return format [$format].");
 
-      $this->config->set('return_format', $format);
+      $this->withSettings(array('return_format' => $format));
 
       return $this;
   }
