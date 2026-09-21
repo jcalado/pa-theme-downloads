@@ -19,7 +19,7 @@
             <h2 class="mb-4"><?= __('Kit materials', 'downloads') ?></h2>
 
             @include('template-parts.single.list-kit-downloads', [
-              'downloads' => explode(",", get_field('downloads_kits')['sticky']),
+              'downloads' => array_filter(explode(",", get_field('downloads_kits')['sticky']), fn($id) => $id && get_post_status($id) === 'publish'),
             ])
           </div>
           
