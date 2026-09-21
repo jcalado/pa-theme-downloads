@@ -37,7 +37,7 @@ Pode ser executado mais do que uma vez: artigos já copiados para o kit de desti
 
 ## Passo a passo (produção)
 
-No servidor `deploy@adventistas.org.pt`, na pasta `~/downloads`. O wp-cli corre no serviço `cli`:
+No servidor, O wp-cli corre no serviço `cli`:
 
 ```
 docker compose --profile debug run --rm -T cli wp <comando>
