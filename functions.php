@@ -32,6 +32,9 @@ require_once(dirname(__FILE__) . '/classes/controllers/PA_RewriteRules.class.php
 require_once(dirname(__FILE__) . '/classes/PA_Helpers.php');
 require_once(dirname(__FILE__) . '/classes/PA_Theme_Handler.php');
 
+if (defined('WP_CLI') && WP_CLI)
+  require_once(dirname(__FILE__) . '/classes/cli/PA_CLI_VejKits.php');
+
 add_filter('blade/view/paths', function ($paths) {
   $paths = (array)$paths;
 
