@@ -25,37 +25,36 @@ class PaAcfPostFields
       'fields' => [
         Repeater::make(__('List', 'downloads'), 'downloads')
           ->min(1)
-          ->layout('block')
-          ->collapsed('name')
+          ->layout('table')
           ->required()
           ->fields([
             TrueFalse::make(__('Active', 'downloads'), 'active')
               ->defaultValue(true)
               ->stylisedUi()
               ->wrapper([
-                'width' => 15,
+                'width' => 8,
               ]),
             Text::make(__('Name', 'downloads'), 'name')
               ->required()
               ->wrapper([
-                'width' => 85,
+                'width' => 35,
               ]),
             Text::make(__('Format', 'downloads'), 'format')
               ->required()
               ->wrapper([
-                'width' => 33,
+                'width' => 10,
               ]),
             Number::make(__('Size', 'downloads'), 'size')
               ->min(0)
               ->required()
               ->append('MB')
               ->wrapper([
-                'width' => 33,
+                'width' => 17,
               ]),
             Url::make(__('Link', 'downloads'), 'link')
               ->required()
               ->wrapper([
-                'width' => 33,
+                'width' => 30,
               ])
           ])
       ],
