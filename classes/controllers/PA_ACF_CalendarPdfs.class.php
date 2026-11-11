@@ -28,6 +28,22 @@ class PaAcfCalendarPdfs
   {
     add_action('acf/init', [$this, 'addOptionsPage']);
     add_action('acf/init', [$this, 'createAcfFields']);
+    add_action('wp_enqueue_scripts', [$this, 'enqueueStyles'], 20);
+  }
+
+  /**
+   * The Events Calendar's events-bar.js hides the view selector list (jQuery .hide())
+   * whenever focus leaves it. On desktop that list is the always-visible tab row, and
+   * our "PDF" toggle is the only item in it that takes focus without navigating, so
+   * opening the PDF menu and clicking elsewhere hid Lista/Mês/PDF. Keep the tab row
+   * visible on desktop; on mobile it is a real dropdown and the plugin's close is wanted.
+   */
+  function enqueueStyles()
+  {
+    wp_add_inline_style(
+      'pa-child-style',
+      '.tribe-common--breakpoint-medium .tribe-events-c-view-selector--tabs .tribe-events-c-view-selector__content{display:block!important}'
+    );
   }
 
   function addOptionsPage()
