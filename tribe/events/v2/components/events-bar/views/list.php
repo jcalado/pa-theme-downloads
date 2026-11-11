@@ -36,10 +36,9 @@
 				<span class="tribe-events-c-view-selector__list-item-text">PDF</span>
 			</a>
 			<ul role="menu" class="dropdown-menu p-4">
-				<li class="nav-item menu-item"><a class="tribe-events-c-view-selector__list-item-link" href="https://s3.eu-central-003.backblazeb2.com/upasd-recursos/comunicacao/calendarios/2026/Datas%20e%20Plano%20Ac%CC%A7a%CC%83o%20UPASD%20%202026.pdf">Atividades</a></li>
-				<li class="nav-item menu-item"><a class="tribe-events-c-view-selector__list-item-link" href="https://s3.eu-central-003.backblazeb2.com/upasd-recursos/comunicacao/calendarios/2026/Datas%20Sugestivas%20UPASD%202026.pdf">Datas Sugestivas</a></li>
-				<li class="nav-item menu-item"><a class="tribe-events-c-view-selector__list-item-link" href="https://s3.eu-central-003.backblazeb2.com/upasd-recursos/comunicacao/calendarios/2026/RTP.pdf">RTP 2 / RTP Antena 1</a></li>
-				<li class="nav-item menu-item"><a class="tribe-events-c-view-selector__list-item-link" href="https://s3.eu-central-003.backblazeb2.com/upasd-recursos/ministerial/calendarios/2026/Ora%C3%A7%C3%A3o.pdf">Oração</a></li>
+				<?php foreach ( PaAcfCalendarPdfs::getLinks() as $pdf ) : ?>
+					<li class="nav-item menu-item"><a class="tribe-events-c-view-selector__list-item-link" href="<?php echo esc_url( $pdf['url'] ); ?>"><?php echo esc_html( $pdf['label'] ); ?></a></li>
+				<?php endforeach; ?>
 			</ul>
 		</li>
 	</ul>
